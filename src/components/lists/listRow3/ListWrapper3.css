@@ -1,0 +1,9 @@
+.list__wrapper3 {
+    display: flex;
+    flex-direction: row;
+    width: 1254px;
+    height: 544px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

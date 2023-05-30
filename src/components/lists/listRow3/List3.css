@@ -1,0 +1,36 @@
+.list3-block {
+    position:relative;
+    width: auto;
+}
+
+.list3-item {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    align-items:center;
+    text-align: left;
+    background-color: white;
+    width: 1254px;
+    height: 96px;
+    margin-top: 32px;
+    border: 1px solid #D0D3DD;
+    border-radius: 6px;
+    font-family: 'SB Sans Text';
+    font-style: normal;
+ }
+
+  .list3-item__text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #101828;
+    align-self: baseline;
+    margin: 36px;
+  }
+
+  .list3-item__picture {
+    margin-right: 32px;
+  }
+
+

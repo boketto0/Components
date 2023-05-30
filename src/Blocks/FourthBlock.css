@@ -1,0 +1,89 @@
+.fourth-block {
+    width: 100%;
+    height: 1600px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: white;
+    font-family: 'SB Sans Text';
+    font-style: normal;
+    white-space:pre-wrap;
+  }
+
+  .fourth-block__color-container {
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #BCCBFB;
+    white-space:pre-wrap;
+  }
+  
+  .fourth-block__title {
+    color: #1D293F;
+    margin-top: 32px;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    margin-top: 32px;
+  }
+  
+
+  .fourth-block__text {
+    color: #797E8B;
+    margin-top: 32px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .fourth-block__container {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .fourth-block__container__title{
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #101828;
+    font-weight: bold;
+    align-self: center;
+    margin-top: 100px;
+  }
+
+  .fourth-block__container__subtitle{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #797E8B;
+    align-self: center;
+  }
+
+  
+  .fourth-block__container__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #797E8B;
+    margin-top: 50px;
+    box-sizing: border-box;
+    padding: 36px;
+    width: 1254px;
+    height: 96px;
+    border: 1px solid #D0D3DD;
+    border-radius: 6px;
+    color: #101828;
+  }
+
+  .fourth-block__cards {
+    margin-top: 32px;
+  }

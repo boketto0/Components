@@ -1,0 +1,61 @@
+.footer-block {
+    font-family: 'SB Sans Text';
+    font-style: normal;
+    letter-spacing: 0.02em;
+    color: #797E8B;
+    height: 314px;
+    background: #E2E9FD;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content:space-between;
+    align-items:baseline;
+    padding: 8px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+
+.footer-button {
+    position: absolute;
+    color: #FFFFFF;
+    line-height: 16px;
+    height: 16px;
+    padding: 8px;
+}
+
+
+.footer-text1 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 6px;
+}
+
+.footer-text2 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 6px;
+}
+
+.footer-text {
+    display: flex;
+    letter-spacing: 0.03em;
+    line-height: 16px;
+    padding-left: 45%;
+    height: 16px;
+    margin: 6px;
+}
+
+.button3-style {
+    margin-top: 32px;
+    margin-bottom: 48px;
+}

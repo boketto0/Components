@@ -1,0 +1,95 @@
+.second-block {
+    text-align: center;
+    background-color: white;
+    font-family: 'SB Sans Text';
+    font-style: normal;
+    height: 1200px;
+  }
+
+  .second-block_cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 32px;
+  }
+  
+  .second-block__container {
+    display: flex;
+    flex-direction: row;
+    width: 1400px;
+    height: 624px;
+    margin-top: 79px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    white-space:pre-wrap;
+    margin-left: 20%;
+  }
+  
+  .second-block__container__title{
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #101828;
+    font-weight: bold;
+  }
+  
+  .second-block__container__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #797E8B;
+    margin-top: 16px;
+  }
+  
+  .second-block__picture {
+    width: 624px;
+    height: 516px;
+    box-sizing: content-box;
+    border-radius: 20px;
+  }
+  
+  .second-block__title {
+    color: #1D293F;
+    margin-top: 32px;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+  
+  .second-block__text {
+    color: #797E8B;
+    margin-top: 32px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: 20px;
+  }
+  
+  .second-block__container__circles {
+    background: #E2E9FD;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 16px;
+  }
+  
+  .second-block__button {
+    margin-left: 43%;    
+    margin-top: 32px;
+  }
+  
+  .second-block__text__block {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    text-align: left;
+  }
+  
+  
+ 
