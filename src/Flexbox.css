@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 1000px;
+    background-color: antiquewhite;
+    height: 1000px;
+}
+
+.block {
+    width: 800px;
+    height: 40px;
+    background-color: rgb(83, 57, 23);
+    margin: 20px;
+}
