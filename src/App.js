@@ -1,12 +1,10 @@
 import './App.css';
-import { Flexbox } from './Flexbox';
+import MainBlock from './Blocks/MainBlock';
 
 function App() {
-  return (
-    <div className="App">
-      <Flexbox/>
-    </div>
-  );
+  return(
+    <MainBlock></MainBlock>
+  )
 }
 
 export default App;
