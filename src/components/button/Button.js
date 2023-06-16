@@ -1,60 +1,47 @@
-import "./Button.css";
-import Loader from "../Loader";
-import {useState} from "react";
-import {PropTypes} from 'prop-types';
+import classnames from 'classnames';
+import './Button.css'
+import { PropTypes } from 'prop-types';
+
+export const ButtonSize = {
+  SMALL: "small",
+  MEDIUM: "medium",
+  LARGE: "large"
+}
 
 export const ButtonType = {
-  PRIMARY: "primary",
-  SECONDARY: "secondary",
-  LINE: "line"
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  LINK:'link',
+  TEXT:'text',
+}
+
+export const Button = (props) => {
+  const { size, type = ButtonType.PRIMARY, text, disabled } = props;
+
+  const buttonClasses = classnames(
+    'button',
+    type && `button-${type}`,
+    size &&`button-${size}`,
+    `button-${type}__${disabled}`,
+    `button-text__${type}__${disabled}`
+  );
+
+  return (
+    <div className={buttonClasses}>
+        <div className='button-content'>
+            {text && <span className={`button-text button-text__${type}__${disabled ? 'disabled' : ''}`}>{text}</span>}
+        </div>
+    </div>
+  );
+};
+
+Button.propTypes = {
+  size: PropTypes.oneOf(Object.values(ButtonSize)),
+  type: PropTypes.oneOf(Object.values(ButtonType)),
+  text: PropTypes.string,
+  icon: PropTypes.node,
+  round: PropTypes.bool,
+  isLoading: PropTypes.bool
 };
 
 
-export const Button = (props) => {
-
-    const [isLoading, setIsLoading] = useState(false);
-
-    const handleClick = (e) => {
-        setIsLoading(true);
-
-    setTimeout(() => {
-        setIsLoading(false);
-        }, 5000);
-    };
-
-    const defaultButtonType = ButtonType.PRIMARY;
-
-    const loader1 = "loader1"
-    const loader2 = "loader2"
-
-  return(
-    <div className={`
-        button button-${props.type || defaultButtonType}`}>
-        {props.icon && <div className="button-icon">{props.icon}</div>} 
-        {props.Type === ButtonType.PRIMARY && (
-          <div className=" button-text" onClick={handleClick}>
-            {!isLoading ? props.text : <Loader/>} 
-          </div>
-        )}
-        {props.Type === ButtonType.SECONDARY && (
-          <div className="button-text__border" onClick={handleClick}>
-             {!isLoading ? props.text : <Loader/>} 
-          </div>
-        )}
-        {props.Type === ButtonType.LINE && (
-          <div className="button-line__text">{props.text}</div>
-        )}
-    </div>
-  )
-
-}
-
-Button.propTypes = {
-    type:PropTypes.oneOf([
-        ButtonType.PRIMARY, 
-        ButtonType.SECONDARY, 
-        ButtonType.LINE
-      ]).isRequired,
-      text: PropTypes.string,
-      icon: PropTypes.element,
-}
