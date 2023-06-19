@@ -1,5 +1,5 @@
 import './Cell3.css';
-import Checkbox from '../Checkbox';
+import Checkbox from '../checkbox/Checkbox';
 import { useState, useEffect } from 'react';
 
 export const Cell3 = () => {

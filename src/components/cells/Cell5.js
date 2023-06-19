@@ -1,7 +1,7 @@
-import './Cell5.css';
-import Checkbox from '../Checkbox';
-import { useState } from 'react';
+import CheckboxGroup from '../checkbox/Checkboxgroup';
 import { Button, ButtonType, ButtonSize } from '../button/Button';
+import { useState } from 'react';
+import Checkbox from '../checkbox/Checkbox';
 
 export const Cell5 = () => {
   const size = ButtonSize.SMALL;
@@ -24,11 +24,14 @@ export const Cell5 = () => {
 
   return (
     <div className="cell5">
-      <Checkbox
-        text={isChecked ? 'Checked-Enabled' : 'Unchecked-Enabled'}
-        checked={isChecked}
-        onChange={handleCheckboxChange}
-      />
+      <CheckboxGroup>
+        <Checkbox
+          value="checkbox1"
+          text={isChecked ? 'Checked-Enabled' : 'Unchecked-Enabled'}
+          checked={isChecked}
+          onChange={handleCheckboxChange}
+        />
+      </CheckboxGroup>
       <div className="list">
         <Button size={size} type={type} text={buttonText} onClick={handleButtonClick} />
         <Button size={size} type={type} text="Disable" onClick={() => setIsChecked(false)} />
