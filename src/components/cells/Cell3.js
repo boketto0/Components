@@ -3,7 +3,7 @@ import Checkbox from '../Checkbox';
 import { useState, useEffect } from 'react';
 
 export const Cell3 = () => {
-  const [selectAllChecked, setSelectAllChecked] = useState(false);
+  const [selectAllState, setSelectAllState] = useState('unchecked');
   const [checkboxesChecked, setCheckboxesChecked] = useState([]);
 
   const handleCheckboxChange = (checkboxValue) => {
@@ -20,14 +20,22 @@ export const Cell3 = () => {
   };
 
   useEffect(() => {
-    setSelectAllChecked(checkboxesChecked.length === 3);
+    if (checkboxesChecked.length === 0) {
+      setSelectAllState('unchecked');
+    } else if (checkboxesChecked.length < 3) {
+      setSelectAllState('indeterminate');
+    } else {
+      setSelectAllState('checked');
+    }
   }, [checkboxesChecked]);
 
-  const handleCheckAllChange = (checked) => {
-    if (checked) {
+  const handleCheckAllChange = () => {
+    if (selectAllState === 'unchecked' || selectAllState === 'indeterminate') {
       setCheckboxesChecked(['apple', 'pear', 'orange']);
+      setSelectAllState('checked');
     } else {
       setCheckboxesChecked([]);
+      setSelectAllState('unchecked');
     }
   };
 
@@ -35,7 +43,8 @@ export const Cell3 = () => {
     <div className="cell1">
       <Checkbox
         text="Check all"
-        checked={selectAllChecked}
+        checked={selectAllState === 'checked'}
+        indeterminate={selectAllState === 'indeterminate'}
         onChange={handleCheckAllChange}
       />
       <div className="list">
