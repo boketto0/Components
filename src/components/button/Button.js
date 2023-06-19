@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useEffect } from 'react';
 import classnames from 'classnames';
 import "./Button.css";
 import { PropTypes } from 'prop-types';
@@ -17,7 +17,7 @@ export const ButtonType = {
 }
 
 export const Button = (props) => {
-  const { size, type = ButtonType.PRIMARY, text, disabled } = props;
+  const { size, type = ButtonType.PRIMARY, text, disabled, onClick } = props;
 
   const buttonClasses = classnames(
     'button',
@@ -27,8 +27,14 @@ export const Button = (props) => {
     `button-text__${type}__${disabled}`
   );
 
+  const handleClick = useCallback(() => {
+    if (onClick) {
+      onClick();
+    }
+  }, [onClick]);
+
   return (
-    <div className={buttonClasses}>
+    <div className={buttonClasses} onClick={handleClick}>
         <div className='button-content'>
             {text && <span className={`button-text button-text__${type}__${disabled ? 'disabled' : ''}`}>{text}</span>}
         </div>
