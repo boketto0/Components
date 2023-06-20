@@ -15,7 +15,6 @@
   height: 16px;
   border: 1px solid #ccc;
   border-radius: 2px;
-  margin-right: 6px;
   transition: background-color 0.3s ease;
 }
 
@@ -25,6 +24,10 @@
 
 .checkbox input:checked ~ .checkmark {
   background-color: #007bff;
+}
+
+.checkbox input:checked ~ .checkmark-indeterminate {
+  background-color: white;
 }
 
 .checkmark-disabled {
@@ -43,7 +46,7 @@
   position: absolute;
   display: block;
   left: 5px;
-  bottom: 2px;
+  bottom: 3px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -53,4 +56,16 @@
 
 .checkbox .label {
   font-size: 14px;
+}
+
+.checkbox input:checked ~ .checkmark-indeterminate::after {
+  content: "";
+  top: 50%;
+  inset-inline-start: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #1677ff;
+  border: 0;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }

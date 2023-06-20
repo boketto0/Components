@@ -23,8 +23,9 @@ export class Checkbox extends React.Component {
   };
 
   render() {
-    const { text, disabled, indeterminate } = this.props;
-    const { checked } = this.state;
+    const { text, disabled, indeterminate, checked: checkedProps } = this.props;
+    const { checked: checkedState } = this.state;
+    const checked = checkedProps || indeterminate || checkedState;
 
     const checkboxClasses = classnames('checkbox', {
       'checkbox-disabled': disabled,

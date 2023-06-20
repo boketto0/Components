@@ -1,5 +1,5 @@
 import './Cell2.css'
-import Checkbox from '../checkbox/Checkbox'
+import { Checkbox } from '../checkbox'
 
 export const Cell2 = () => {
 
@@ -7,7 +7,9 @@ export const Cell2 = () => {
 
     return(
         <div className='cell1'>
-            <Checkbox disabled={true}/>
+            <Checkbox disabled />
+            <Checkbox checked disabled />
+            <Checkbox indeterminate disabled/>
         </div>
     )
 }
