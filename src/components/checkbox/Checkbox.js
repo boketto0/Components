@@ -2,31 +2,47 @@ import React from 'react';
 import classnames from 'classnames';
 import './Checkbox.css';
 
-const Checkbox = (props) => {
-  const { text, disabled, checked, indeterminate, onChange } = props;
+export class Checkbox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      checked: props.checked || false,
+    };
+  }
 
-  const handleCheckboxChange = () => {
-    if (!disabled && onChange) {
-      onChange(!checked);
+  handleCheckboxChange = () => {
+    const { disabled, onChange } = this.props;
+    if (!disabled) {
+      const { checked } = this.state;
+      const newChecked = !checked;
+      this.setState({ checked: newChecked });
+      if (onChange) {
+        onChange(newChecked);
+      }
     }
   };
 
-  const checkboxClasses = classnames('checkbox', {
-    'checkbox-disabled': disabled,
-  });
+  render() {
+    const { text, disabled, indeterminate } = this.props;
+    const { checked } = this.state;
 
-  const checkmarkClasses = classnames('checkmark', {
-    'checkmark-disabled': disabled,
-    'checkmark-indeterminate': indeterminate,
-  });
+    const checkboxClasses = classnames('checkbox', {
+      'checkbox-disabled': disabled,
+    });
 
-  return (
-    <label className={checkboxClasses}>
-      <input type="checkbox" checked={checked} onChange={handleCheckboxChange} disabled={disabled} />
-      <span className={checkmarkClasses}></span>
-      {text && <span className="label">{text}</span>}
-    </label>
-  );
-};
+    const checkmarkClasses = classnames('checkmark', {
+      'checkmark-disabled': disabled,
+      'checkmark-indeterminate': indeterminate,
+    });
+
+    return (
+      <label className={checkboxClasses}>
+        <input type="checkbox" checked={checked} onChange={this.handleCheckboxChange} disabled={disabled} />
+        <span className={checkmarkClasses}></span>
+        {text && <span className="label">{text}</span>}
+      </label>
+    );
+  }
+}
 
 export default Checkbox;

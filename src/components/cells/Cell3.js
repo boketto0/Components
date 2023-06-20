@@ -1,69 +1,94 @@
-import './Cell3.css';
+import React, { useState, useEffect } from 'react';
 import Checkbox from '../checkbox/Checkbox';
-import { useState, useEffect } from 'react';
+import CheckboxGroup from '../checkbox/CheckboxGroup';
+import './Cell3.css';
 
 export const Cell3 = () => {
-  const [selectAllState, setSelectAllState] = useState('unchecked');
   const [checkboxesChecked, setCheckboxesChecked] = useState([]);
-
-  const handleCheckboxChange = (checkboxValue) => {
-    const updatedCheckboxes = [...checkboxesChecked];
-    const checkboxIndex = updatedCheckboxes.indexOf(checkboxValue);
-
-    if (checkboxIndex === -1) {
-      updatedCheckboxes.push(checkboxValue);
-    } else {
-      updatedCheckboxes.splice(checkboxIndex, 1);
-    }
-
-    setCheckboxesChecked(updatedCheckboxes);
-  };
+  const [isCheckAll, setIsCheckAll] = useState(false);
+  const [indeterminate, setIndeterminate] = useState(false);
 
   useEffect(() => {
-    if (checkboxesChecked.length === 0) {
-      setSelectAllState('unchecked');
-    } else if (checkboxesChecked.length < 3) {
-      setSelectAllState('indeterminate');
-    } else {
-      setSelectAllState('checked');
-    }
+    handleCheckAll();
   }, [checkboxesChecked]);
 
-  const handleCheckAllChange = () => {
-    if (selectAllState === 'unchecked' || selectAllState === 'indeterminate') {
-      setCheckboxesChecked(['apple', 'pear', 'orange']);
-      setSelectAllState('checked');
+  const handleCheckboxChange = (value, isChecked) => {
+    let updatedCheckboxesChecked = [...checkboxesChecked];
+
+    if (isChecked) {
+      updatedCheckboxesChecked.push(value);
+    } else {
+      updatedCheckboxesChecked = updatedCheckboxesChecked.filter((item) => item !== value);
+    }
+
+    setCheckboxesChecked(updatedCheckboxesChecked);
+  };
+
+  const handleCheckAllChange = (isChecked) => {
+    setIsCheckAll(isChecked);
+    setIndeterminate(false);
+
+    if (isChecked) {
+      const allValues = ['A', 'B', 'C', 'D'];
+      setCheckboxesChecked(allValues);
     } else {
       setCheckboxesChecked([]);
-      setSelectAllState('unchecked');
+    }
+  };
+
+  const handleCheckAll = () => {
+    if (checkboxesChecked.length === 0) {
+      setIsCheckAll(false);
+      setIndeterminate(false);
+      return;
+    }
+
+    const allValues = ['A', 'B', 'C', 'D'];
+    const isAllChecked = allValues.every((value) => checkboxesChecked.includes(value));
+    const isSomeChecked = checkboxesChecked.some((value) => !allValues.includes(value));
+
+    if (isAllChecked) {
+      setIsCheckAll(true);
+      setIndeterminate(false);
+    } else if (isSomeChecked) {
+      setIsCheckAll(false);
+      setIndeterminate(true);
+    } else {
+      setIsCheckAll(false);
+      setIndeterminate(false);
     }
   };
 
   return (
-    <div className="cell1">
-      <Checkbox
-        text="Check all"
-        checked={selectAllState === 'checked'}
-        indeterminate={selectAllState === 'indeterminate'}
-        onChange={handleCheckAllChange}
-      />
-      <div className="list">
+    <div className="cell3">
+      <CheckboxGroup>
         <Checkbox
-          text="Apple"
-          checked={checkboxesChecked.includes('apple')}
-          onChange={() => handleCheckboxChange('apple')}
+          value="A"
+          text="Checkbox A"
+          checked={checkboxesChecked.includes('A')}
+          onChange={handleCheckboxChange}
         />
         <Checkbox
-          text="Pear"
-          checked={checkboxesChecked.includes('pear')}
-          onChange={() => handleCheckboxChange('pear')}
+          value="B"
+          text="Checkbox B"
+          checked={checkboxesChecked.includes('B')}
+          onChange={handleCheckboxChange}
         />
         <Checkbox
-          text="Orange"
-          checked={checkboxesChecked.includes('orange')}
-          onChange={() => handleCheckboxChange('orange')}
+          value="C"
+          text="Checkbox C"
+          checked={checkboxesChecked.includes('C')}
+          onChange={handleCheckboxChange}
         />
-      </div>
+        <Checkbox
+          value="D"
+          text="Checkbox D"
+          checked={checkboxesChecked.includes('D')}
+          onChange={handleCheckboxChange}
+        />
+      </CheckboxGroup>
     </div>
   );
 };
+
+export default Cell3;

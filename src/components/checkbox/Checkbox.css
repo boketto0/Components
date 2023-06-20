@@ -28,8 +28,14 @@
 }
 
 .checkmark-disabled {
-  background: rgb(131, 131, 131);
+  border: 1px solid rgb(131, 131, 131);
   cursor: not-allowed;
+}
+
+.checkbox-disabled_checked {
+  background-color: rgb(131, 131, 131);
+  cursor: not-allowed;
+  content: '';
 }
 
 .checkbox input:checked ~ .checkmark::after {
@@ -37,7 +43,7 @@
   position: absolute;
   display: block;
   left: 5px;
-  top: 2px;
+  bottom: 2px;
   width: 5px;
   height: 10px;
   border: solid white;
