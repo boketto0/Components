@@ -34,6 +34,7 @@ export class Checkbox extends React.Component {
     const checkmarkClasses = classnames('checkmark', {
       'checkmark-disabled': disabled,
       'checkmark-indeterminate': indeterminate,
+      'checkmark-indeterminate-disabled': indeterminate && disabled,
     });
 
     return (

@@ -30,8 +30,13 @@
   background-color: white;
 }
 
-.checkmark-disabled {
+.checkbox input:checked ~ .checkmark-disabled {
   border: 1px solid rgb(131, 131, 131);
+  cursor: not-allowed;
+  background-color: rgb(131, 131, 131);
+}
+
+.checkbox-disabled {
   cursor: not-allowed;
 }
 
@@ -68,4 +73,8 @@
   border: 0;
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
+}
+
+.checkbox input:checked ~ .checkmark-indeterminate-disabled::after {
+  background-color: black;
 }
