@@ -2,7 +2,6 @@
   display: inline-flex;
   align-items: center;
   cursor: pointer;
-  margin: 8px;
 }
 
 .checkbox input {
@@ -13,17 +12,26 @@
   position: relative;
   width: 16px;
   height: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(131, 131, 131);
   border-radius: 2px;
   transition: background-color 0.3s ease;
+  margin: 8px;
 }
 
 .checkmark:hover {
   border: 1px solid #007bff;
 }
 
+.checkmark-disabled:hover {
+  border: 1px solid rgb(131, 131, 131);
+}
+
 .checkbox input:checked ~ .checkmark {
   background-color: #007bff;
+}
+
+.checkbox input:checked ~ .checkmark-disabled {
+  background-color: rgb(131, 131, 131);
 }
 
 .checkbox input:checked ~ .checkmark-indeterminate {
@@ -33,21 +41,10 @@
 .checkbox input:checked ~ .checkmark-disabled {
   border: 1px solid rgb(131, 131, 131);
   cursor: not-allowed;
-  background-color: rgb(131, 131, 131);
-}
-
-.checkbox-disabled {
-  cursor: not-allowed;
-}
-
-.checkbox-disabled_checked {
-  background-color: rgb(131, 131, 131);
-  cursor: not-allowed;
-  content: '';
 }
 
 .checkbox input:checked ~ .checkmark::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   left: 5px;
@@ -65,16 +62,24 @@
 
 .checkbox input:checked ~ .checkmark-indeterminate::after {
   content: "";
+  position: absolute;
   top: 50%;
-  inset-inline-start: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 8px;
   height: 8px;
-  background-color: #1677ff;
-  border: 0;
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
+  background-color: gray;
+  border: none;
 }
 
 .checkbox input:checked ~ .checkmark-indeterminate-disabled::after {
-  background-color: black;
+  background-color: gray;
+}
+
+.checkbox input:indeterminate ~ .checkmark-indeterminate::after {
+  background-color: gray;
+}
+
+.checkbox input:indeterminate ~ .checkmark-indeterminate-disabled::after {
+  background-color: gray;
 }

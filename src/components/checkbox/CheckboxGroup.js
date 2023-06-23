@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Checkbox from './Checkbox';
+import { Checkbox } from '.';
 import './CheckboxGroup.css';
 
 export const CheckboxGroup = ({ children }) => {

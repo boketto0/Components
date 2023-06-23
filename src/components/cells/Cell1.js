@@ -1,5 +1,5 @@
 import './Cell1.css'
-import Checkbox from '../checkbox/Checkbox'
+import { Checkbox } from '../checkbox/Checkbox'
 
 export const Cell1 = () => {
 

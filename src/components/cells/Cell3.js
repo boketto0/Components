@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Checkbox from '../checkbox/Checkbox';
+import { Checkbox } from '../checkbox/Checkbox'
 import CheckboxGroup from '../checkbox/CheckboxGroup';
 import './Cell3.css';
 

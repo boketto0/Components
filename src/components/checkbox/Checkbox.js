@@ -1,50 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classnames from 'classnames';
 import './Checkbox.css';
 
-export class Checkbox extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      checked: props.checked || false,
-    };
-  }
+export const Checkbox = (props) => {
+  const { text, disabled, indeterminate, checked: checkedProps, onChange } = props;
 
-  handleCheckboxChange = () => {
-    const { disabled, onChange } = this.props;
+  const [checkedState, setCheckedState] = useState(checkedProps || false);
+
+  const handleCheckboxChange = () => {
     if (!disabled) {
-      const { checked } = this.state;
-      const newChecked = !checked;
-      this.setState({ checked: newChecked });
+      const newChecked = !checkedState;
+      setCheckedState(newChecked);
       if (onChange) {
         onChange(newChecked);
       }
     }
   };
 
-  render() {
-    const { text, disabled, indeterminate, checked: checkedProps } = this.props;
-    const { checked: checkedState } = this.state;
-    const checked = checkedProps || indeterminate || checkedState;
+  const checked = checkedProps ||  indeterminate ||  checkedState;
 
-    const checkboxClasses = classnames('checkbox', {
-      'checkbox-disabled': disabled,
-    });
+  const checkboxClasses = classnames('checkbox', {
+    'checkbox-disabled': disabled,
+  });
 
-    const checkmarkClasses = classnames('checkmark', {
-      'checkmark-disabled': disabled,
-      'checkmark-indeterminate': indeterminate,
-      'checkmark-indeterminate-disabled': indeterminate && disabled,
-    });
+  const checkmarkClasses = classnames('checkmark', {
+    'checkmark-disabled': disabled,
+    'checkmark-indeterminate': indeterminate,
+    'checkmark-indeterminate-disabled': indeterminate && disabled,
+  });
 
-    return (
-      <label className={checkboxClasses}>
-        <input type="checkbox" checked={checked} onChange={this.handleCheckboxChange} disabled={disabled} />
-        <span className={checkmarkClasses}></span>
-        {text && <span className="label">{text}</span>}
-      </label>
-    );
-  }
-}
-
-export default Checkbox;
+  return (
+    <label className={checkboxClasses}>
+      <input type="checkbox" checked={checked} onChange={handleCheckboxChange} disabled={disabled} />
+      <span className={checkmarkClasses}></span>
+      {text && <span className="label">{text}</span>}
+    </label>
+  );
+};

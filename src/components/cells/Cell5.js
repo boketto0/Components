@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Cell5.css';
-import Checkbox from '../checkbox/Checkbox';
+import { Checkbox } from '../checkbox/Checkbox'
 import { Button, ButtonType, ButtonSize } from '../button/Button';
 
 export const Cell5 = () => {
