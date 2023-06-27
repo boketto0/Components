@@ -10,7 +10,9 @@ export const Checkbox = (props) => {
   const handleCheckboxChange = () => {
     if (!disabled) {
       const newChecked = !checkedState;
+
       setCheckedState(newChecked);
+      
       if (onChange) {
         onChange(newChecked);
       }
