@@ -17,8 +17,9 @@ export const Cell3 = (props) => {
     <div className="cell3">
       <CheckboxGroup>
         <Checkbox
-          value="A"
+          value="A" // TODO: В компоненте нет пропса value
           text="Checkbox A"
+          checked
           onClick={handleClick}
         />
         <Checkbox
@@ -29,6 +30,7 @@ export const Cell3 = (props) => {
         <Checkbox
           value="C"
           text="Checkbox C"
+          checked
           onClick={handleClick}
         />
         <Checkbox

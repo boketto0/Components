@@ -5,69 +5,67 @@ import './CheckboxGroup.css';
 export const CheckboxGroup = ({ children }) => {
   const [checkedItems, setCheckedItems] = useState([]);
   const [isCheckAll, setIsCheckAll] = useState(false);
-
+  const [isIndeterminate, setIsIndeterminate] = useState(false);
   /**
-   * Странный useEffect
+   * TODO: Добавить логику с indeterminate
    */
+
+  /** Инициализация массива checkedItems */
   useEffect(() => {
-    handleCheckAll();
-  }, [checkedItems]);
+    const allValues = React.Children.map(children, (child) => {
+      if (!child.props.checked) {
+        return false;
+      }
 
-  /**
-   * При инициализации компонента, когда изменится список children, необходимо проинициализировать checkedItems
-   * useEffect(() => {}, [children])
-   */
+      return true;
+    });
 
-  const handleCheckboxChange = (value, isChecked) => {
-    /**
-     * Нужно научиться менять конкретный индекс checkedItems в зависимости от того, что пришло в isChecked
-     * Нужно уметь вычислять состояния checked и indeterminate 
-     */
-    let updatedCheckedItems = [...checkedItems];
+    setCheckedItems([...allValues]);
+  }, [React.Children.count(children)]);
 
-    if (isChecked) {
-      updatedCheckedItems.push(value);
-    } else {
-      updatedCheckedItems = updatedCheckedItems.filter((item) => item !== value);
-    }
 
-    setCheckedItems(updatedCheckedItems);
-    setIsCheckAll(updatedCheckedItems.length === React.Children.count(children));
-  };
+  /** доделать indeterminate */
+  const handleCheckboxChange = (index) => (isChecked) => {
+    const newCheckedItems = [...checkedItems];
+    newCheckedItems[index] = isChecked;
 
-  const handleCheckAll = () => {
-    const allValues = React.Children.map(children, (child) => child.props.value);
-    const isAllChecked = allValues.length > 0 && allValues.every((value) => checkedItems.includes(value));
+    const isCheckAllNew = newCheckedItems.reduce((acc, value) => {
+      return acc && value;
+    }, true);
 
-    setIsCheckAll(isAllChecked);
+    setCheckedItems(newCheckedItems);
+    setIsCheckAll(isCheckAllNew);
   };
 
   /**
+   * Доделать обработку родительского чекбокса
    * Меняешь checkedItems
    * и меняешь checked 
    */
   const handleCheckAllChange = (isChecked) => {
     if (isChecked) {
       const allValues = React.Children.map(children, (child) => child.props.value);
-      setCheckedItems(allValues);
+      //setCheckedItems(allValues);
       setIsCheckAll(true);
     } else {
-      setCheckedItems([]);
+      //setCheckedItems([]);
       setIsCheckAll(false);
     }
   };
 
   return (
     <div className="checkbox-group">
-      <Checkbox
-        text="Check all"
-        checked={isCheckAll}
-        onChange={handleCheckAllChange}
-      />
-      {React.Children.map(children, (child) =>
+      <div>
+        <Checkbox
+          text="Check all"
+          checked={isCheckAll}
+          onChange={handleCheckAllChange}
+        />
+      </div>
+      {React.Children.map(children, (child, index) =>
         React.cloneElement(child, {
-          checked: checkedItems.includes(child.props.value),
-          onChange: handleCheckboxChange,
+          checked: checkedItems[index],
+          onChange: handleCheckboxChange(index),
         })
       )}
     </div>
