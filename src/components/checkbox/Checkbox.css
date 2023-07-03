@@ -24,6 +24,7 @@
 
 .checkmark-disabled:hover {
   border: 1px solid rgb(131, 131, 131);
+  cursor: not-allowed;
 }
 
 .checkbox input:checked ~ .checkmark {
@@ -43,6 +44,11 @@
   cursor: not-allowed;
 }
 
+.checkbox input:disabled ~ .label {
+  color: gray;
+  cursor: not-allowed;
+}
+
 .checkbox input:checked ~ .checkmark::after {
   content: "";
   position: absolute;
@@ -58,6 +64,7 @@
 
 .checkbox .label {
   font-size: 14px;
+  color: black
 }
 
 .checkbox input:checked ~ .checkmark-indeterminate::after {

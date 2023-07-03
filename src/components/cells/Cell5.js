@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Cell5.css';
-import { Checkbox } from '../checkbox/Checkbox'
+import { Checkbox } from '../checkbox';
 import { Button, ButtonType, ButtonSize } from '../button/Button';
 
 export const Cell5 = () => {
@@ -15,23 +15,38 @@ export const Cell5 = () => {
   const handleCheckboxChange = (checked) => {
     setIsChecked(checked);
     setButtonText(checked ? 'Uncheck' : 'Check');
+    setCheckboxText(getCheckboxText(checked, isDisabled));
   };
 
   const handleButtonClick = () => {
     const newChecked = !isChecked;
     setIsChecked(newChecked);
     setButtonText(newChecked ? 'Uncheck' : 'Check');
+    setCheckboxText(getCheckboxText(newChecked, isDisabled));
   };
 
   const handleDisableClick = () => {
-    setIsDisabled(!isDisabled);
-    setCheckboxText(isDisabled ? 'Unchecked-Enabled' : 'Unchecked-Disabled');
+    const newDisabled = !isDisabled;
+    setIsDisabled(newDisabled);
+    setCheckboxText(getCheckboxText(isChecked, newDisabled));
+  };
+
+  const getCheckboxText = (checked, disabled) => {
+    if (checked && disabled) {
+      return 'Checked-Disabled';
+    } else if (checked && !disabled) {
+      return 'Checked-Enabled';
+    } else if (!checked && disabled) {
+      return 'Unchecked-Disabled';
+    } else {
+      return 'Unchecked-Enabled';
+    }
   };
 
   return (
     <div className="cell5">
       <Checkbox
-        text={isChecked ? 'Checked-Enabled' : checkboxText}
+        text={checkboxText}
         checked={isChecked}
         disabled={isDisabled}
         onChange={handleCheckboxChange}

@@ -1,5 +1,5 @@
 import './Home.css'
-import { Cell1, Cell2, Cell3, Cell4, Cell5 } from './components/cells'
+import { Cell1, Cell2, Cell3, Cell4, Cell5, Cell6 } from './components/cells'
 import { CardWrapper } from './components/cards/CardWrapper'
 import { Card, CardType } from './components/cards/Card'
 
@@ -31,6 +31,11 @@ export default function Home() {
             title: 'Controlled Checkbox',
             text: 'Communicated with other components.'
         },
+        {
+            cell: <Cell6/>,
+            title: 'Checkbox Group',
+            text: 'Generate a group of checkboxes from an array.'
+        }
     ]
 
     return(

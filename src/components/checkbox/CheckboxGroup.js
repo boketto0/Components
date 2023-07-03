@@ -59,13 +59,11 @@ export const CheckboxGroup = ({ children }) => {
 
   return (
     <div className="checkbox-group">
-      <div>
-        <Checkbox
-          text="Check all"
-          checked={isCheckAll}
-          onChange={handleCheckAllChange}
-        />
-      </div>
+      <Checkbox
+        text="Check all"
+        checked={isCheckAll}
+        onChange={handleCheckAllChange}
+      />
       {React.Children.map(children, (child) =>
         React.cloneElement(child, {
           checked: checkedItems.includes(child.props.value),
@@ -75,5 +73,3 @@ export const CheckboxGroup = ({ children }) => {
     </div>
   );
 };
-
-export default CheckboxGroup;
