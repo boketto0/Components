@@ -1,5 +1,6 @@
 import './Cell6.css'
 import { Checkbox } from '../checkbox/Checkbox'
+import { CheckboxGroup } from '../checkbox/CheckboxGroup'
 
 export const Cell6 = () => {
 
@@ -8,6 +9,11 @@ export const Cell6 = () => {
 
     return(
         <div className='cell6'>
+            {/* <CheckboxGroup>
+                <Checkbox text={'Apple'}/>
+                <Checkbox text={'Pear'}/>
+                <Checkbox text={'Orange'}/>
+            </CheckboxGroup> */}
             <Checkbox text={'Apple'}/>
             <Checkbox text={'Pear'}/>
             <Checkbox text={'Orange'}/>
