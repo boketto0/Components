@@ -1,9 +1,17 @@
 .switch {
     position: relative;
     display: inline-block;
+    margin-right: 10px;
+  }
+
+  .switch-large {
     width: 40px;
     height: 20px;
-    margin-right: 10px;
+  }
+
+  .switch-small {
+    width: 32px;
+    height: 16px;
   }
   
   .switch input {
@@ -23,6 +31,10 @@
     transition: 0.4s;
     border-radius: 20px;
   }
+
+  .slider:not[disabled]:hover {
+    background-color: rgb(172, 168, 168);
+  }
   
   .slider:before {
     position: absolute;
@@ -39,6 +51,10 @@
   .switch-on .slider {
     background-color: #1890ff;
   }
+
+  .switch-on .slider:not[disabled]:hover {
+    background-color: #5babf7;
+  }
   
   .switch-on .slider:before {
     transform: translateX(20px);
@@ -49,6 +65,9 @@
   }
   
   .slider-disabled {
-    background: rgb(131, 131, 131);
     cursor: not-allowed;
+  }
+
+  .switch-icon {
+      color: rgb(133, 196, 255);
   }

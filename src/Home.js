@@ -1,5 +1,5 @@
 import './Home.css'
-import { Cell1, Cell2 } from './components/cells'
+import { Cell1, Cell2, Cell3 } from './components/cells'
 import { CardWrapper } from './components/cards/CardWrapper'
 import { Card, CardType } from './components/cards/Card'
 
@@ -13,8 +13,18 @@ export default function Home() {
         },
         {
             cell: <Cell2/>,
-            title: 'Basic',
-            text: 'The most basic usage.'
+            title: 'Disabled',
+            text: 'Disabled state of Switch.'
+        },
+        {
+            cell: <Cell3/>,
+            title: 'Text & icon',
+            text: 'With text and icon.'
+        },
+        {
+            cell: <Cell3/>,
+            title: 'Two sizes',
+            text: 'size="small" represents a small sized switch.'
         }
     ]
 

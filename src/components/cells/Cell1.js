@@ -12,8 +12,7 @@ export const Cell1 = () => {
 
     return (
         <div>
-            <Switch checked={isChecked} onChange={handleSwitchChange}/>
-            <span>{isChecked ? 'On' : 'Off'}</span>
+            <Switch checked={isChecked}/>
         </div>
     )
 }
