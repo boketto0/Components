@@ -1,56 +1,54 @@
 import React, { useState, useEffect } from 'react';
 import { Checkbox } from '.';
-import './CheckboxGroup.css';
 
 export const CheckboxGroup = ({ children }) => {
   const [checkedItems, setCheckedItems] = useState([]);
   const [isCheckAll, setIsCheckAll] = useState(false);
   const [isIndeterminate, setIsIndeterminate] = useState(false);
-  /**
-   * TODO: Добавить логику с indeterminate
-   */
 
-  /** Инициализация массива checkedItems */
   useEffect(() => {
-    const allValues = React.Children.map(children, (child) => {
-      if (!child.props.checked) {
-        return false;
-      }
+    handleCheckAll();
+    handleIndeterminate();
+  }, [checkedItems]);
 
-      return true;
-    });
+  useEffect(() => {
+    const allValues = React.Children.map(children, (child) => child.props.checked || false);
+    setCheckedItems(allValues);
+  }, [children]);
 
-    setCheckedItems([...allValues]);
-  }, [React.Children.count(children)]);
-
-
-  /** доделать indeterminate */
   const handleCheckboxChange = (index) => (isChecked) => {
     const newCheckedItems = [...checkedItems];
     newCheckedItems[index] = isChecked;
 
-    const isCheckAllNew = newCheckedItems.reduce((acc, value) => {
-      return acc && value;
-    }, true);
-
     setCheckedItems(newCheckedItems);
-    setIsCheckAll(isCheckAllNew);
+    setIsCheckAll(newCheckedItems.reduce((acc, item) => acc && item, true));
+    setIsIndeterminate(
+      newCheckedItems.reduce((acc, item) => acc || item, false) &&
+        !newCheckedItems.reduce((acc, item) => acc && item, true)
+    );
   };
 
-  /**
-   * Доделать обработку родительского чекбокса
-   * Меняешь checkedItems
-   * и меняешь checked 
-   */
   const handleCheckAllChange = (isChecked) => {
-    if (isChecked) {
-      const allValues = React.Children.map(children, (child) => child.props.value);
-      //setCheckedItems(allValues);
-      setIsCheckAll(true);
-    } else {
-      //setCheckedItems([]);
-      setIsCheckAll(false);
-    }
+    const newCheckedItems = Array(children.length).fill(isChecked);
+
+    setCheckedItems(newCheckedItems);
+    setIsCheckAll(isChecked);
+    setIsIndeterminate(false);
+  };
+
+  const handleCheckAll = () => {
+    setIsCheckAll(checkedItems.reduce((acc, item) => acc && item, true));
+    setIsIndeterminate(
+      checkedItems.reduce((acc, item) => acc || item, false) &&
+        !checkedItems.reduce((acc, item) => acc && item, true)
+    );
+  };
+
+  const handleIndeterminate = () => {
+    setIsIndeterminate(
+      checkedItems.reduce((acc, item) => acc || item, false) &&
+        !checkedItems.reduce((acc, item) => acc && item, true)
+    );
   };
 
   return (
@@ -59,6 +57,7 @@ export const CheckboxGroup = ({ children }) => {
         <Checkbox
           text="Check all"
           checked={isCheckAll}
+          indeterminate={isIndeterminate}
           onChange={handleCheckAllChange}
         />
       </div>
