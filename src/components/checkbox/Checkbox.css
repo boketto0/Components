@@ -1,7 +1,6 @@
 .checkbox {
   display: inline-flex;
   align-items: center;
-  cursor: pointer;
 }
 
 .checkbox input {
@@ -16,6 +15,7 @@
   border-radius: 2px;
   transition: background-color 0.3s ease;
   margin: 8px;
+  cursor: pointer;
 }
 
 .checkmark:hover {
