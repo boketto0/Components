@@ -11,30 +11,21 @@ export const Group = ({ options, optionsProperty }) => {
             key={index}
             value={option.value}
             text={option.label}
-            disabled={optionsProperty[index].disabled}
+            disabled={false}
           />
         ))}
       </div>
 
       {/* Второй ряд */}
       <div className="checkbox-row">
-        <Checkbox
-          value={options[0].value}
-          text={options[0].label}
-          disabled={optionsProperty[0].disabled}
-        />
-        <Checkbox
-          value={options[1].value}
-          text={options[1].label}
-          disabled={optionsProperty[1].disabled}
-          checked={optionsProperty[1].checked}
-        />
-        <Checkbox
-          value={options[2].value}
-          text={options[2].label}
-          disabled={optionsProperty[2].disabled}
-          indeterminate={optionsProperty[2].indeterminate}
-        />
+        {options.map((option, index) => (
+          <Checkbox
+            key={index}
+            value={option.value}
+            text={option.label}
+            disabled={false}
+          />
+        ))}
       </div>
 
       {/* Третий ряд */}
@@ -42,19 +33,19 @@ export const Group = ({ options, optionsProperty }) => {
         <Checkbox
           value={options[0].value}
           text={options[0].label}
-          disabled={optionsProperty[0].disabled}
+          disabled={true}
         />
         <Checkbox
           value={options[1].value}
           text={options[1].label}
-          disabled={optionsProperty[1].disabled}
-          checked={optionsProperty[1].checked}
+          disabled={true}
+          checked={true}
         />
         <Checkbox
           value={options[2].value}
           text={options[2].label}
-          disabled={optionsProperty[2].disabled}
-          indeterminate={optionsProperty[2].indeterminate}
+          disabled={true}
+          indeterminate={true}
         />
       </div>
     </div>
