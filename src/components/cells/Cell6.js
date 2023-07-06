@@ -1,28 +1,22 @@
-import './Cell6.css'
-import { Checkbox } from '../checkbox/Checkbox'
-import { CheckboxGroup } from '../checkbox/CheckboxGroup'
+import React from 'react';
+import { Group } from '../checkbox/Group';
 
 export const Cell6 = () => {
+  const options = [
+    { label: 'Apple', value: 'Apple' },
+    { label: 'Pear', value: 'Pear' },
+    { label: 'Orange', value: 'Orange' }
+  ];
 
-    const disabled = ''
-    const text = ' '
+  const optionsProperty = [
+    { disabled: false },
+    { disabled: true, checked: true },
+    { disabled: true, indeterminate: true }
+  ];
 
-    return(
-        <div className='cell6'>
-            {/* <CheckboxGroup>
-                <Checkbox text={'Apple'}/>
-                <Checkbox text={'Pear'}/>
-                <Checkbox text={'Orange'}/>
-            </CheckboxGroup> */}
-            <Checkbox text={'Apple'}/>
-            <Checkbox text={'Pear'}/>
-            <Checkbox text={'Orange'}/>
-            <Checkbox text={'Apple'}/>
-            <Checkbox text={'Pear'}/>
-            <Checkbox text={'Orange'}/>
-            <Checkbox text={'Apple'} disabled />
-            <Checkbox text={'Pear'} checked disabled />
-            <Checkbox text={'Orange'} indeterminate disabled/>
-        </div>
-    )
-}
+  return (
+    <div className="cell6">
+      <Group options={options} optionsProperty={optionsProperty} />
+    </div>
+  );
+};
