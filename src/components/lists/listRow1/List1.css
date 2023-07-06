@@ -1,0 +1,47 @@
+.list1-block {
+    position:relative;
+    width: auto;
+}
+
+.list1-item {
+    display: flex;
+    justify-content:baseline;
+    flex-direction: row;
+    align-items:center;
+    text-align: left;
+    background-color: white;
+    width: 477px;
+    height: 59px;
+    margin-top: 16px;
+ }
+  
+  .list1-item__title {
+    color: #101828;
+    font-weight: bold;
+  }
+  
+  .list1-item__text {
+    font-family: 'SB Sans Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #797E8B;
+    margin: 16px;
+  }
+
+  .list1-item__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    background: #E2E9FD;
+    border-radius: 100%;
+
+  }
+
+  .list1-item__icon {
+    position: absolute;
+  }
+
