@@ -7,11 +7,13 @@ export const Checkbox = (props) => {
 
   const [checkedState, setCheckedState] = useState(checkedProps || false);
 
-  const handleCheckboxChange = () => {
-    if (!disabled) {
-      const newChecked = !checkedState;
+  const handleCheckboxChange = (e) => {
+    let newChecked = e.currentTarget.checked;
 
-      setCheckedState(newChecked);
+    if (!disabled) {
+      if (checkedProps === undefined) {
+        setCheckedState(newChecked);
+      }
 
       if (onChange) {
         onChange(newChecked);
@@ -25,7 +27,7 @@ export const Checkbox = (props) => {
     }
   }, [onClick]);
 
-  const checked = checkedProps ||  indeterminate ||  checkedState;
+  const checked = checkedProps || indeterminate ||  checkedState;
 
   const checkboxClasses = classnames('checkbox', {
     'checkbox-disabled': disabled,
