@@ -1,5 +1,5 @@
 import './Home.css'
-import { Cell1, Cell2, Cell3 } from './components/cells'
+import { Cell1, Cell2, Cell3, Cell4 } from './components/cells'
 import { CardWrapper } from './components/cards/CardWrapper'
 import { Card, CardType } from './components/cards/Card'
 
@@ -22,7 +22,7 @@ export default function Home() {
             text: 'With text and icon.'
         },
         {
-            cell: <Cell3/>,
+            cell: <Cell4/>,
             title: 'Two sizes',
             text: 'size="small" represents a small sized switch.'
         }

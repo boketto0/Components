@@ -2,6 +2,8 @@
     position: relative;
     display: inline-block;
     margin-right: 10px;
+    width: 40px;
+    height: 20px;
   }
 
   .switch-large {
@@ -18,6 +20,10 @@
     opacity: 0;
     width: 0;
     height: 0;
+  }
+
+  .slider-dragging {
+    transition: 0.2s;
   }
   
   .slider {
@@ -69,5 +75,5 @@
   }
 
   .switch-icon {
-      color: rgb(133, 196, 255);
+      margin: 8px;
   }
