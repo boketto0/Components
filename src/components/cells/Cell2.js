@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Cell2.css';
-import { Switch } from '../Switch';
+import { Switch, SwitchSize } from '../Switch';
 import { Button, ButtonType, ButtonSize } from '../button/Button';
 
 export const Cell2 = () => {
@@ -15,9 +15,11 @@ export const Cell2 = () => {
     setIsDisabled(!isDisabled);
   };
 
+  const size = ''
+
   return (
     <div>
-      <Switch checked={isChecked} onChange={handleSwitchChange} disabled={isDisabled} />
+      <Switch size={SwitchSize.LARGE} checked={isChecked} onChange={handleSwitchChange} disabled={isDisabled} />
       <span>{isChecked ? 'On' : 'Off'}</span>
       <Button
         type={ButtonType.PRIMARY}

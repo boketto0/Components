@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Switch } from '../Switch';
+import './Cell3.css';
+import { useState } from 'react';
+import { Switch, SwitchSize } from '../Switch';
 
 export const Cell3 = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -16,7 +17,7 @@ export const Cell3 = () => {
         checked={isChecked}
         onChange={handleSwitchChange}
       />
-      {isChecked ? <span>On</span> : <span>Off</span>}
+      <span>{isChecked ? 'On' : 'Off'}</span>
     </div>
   );
 };
