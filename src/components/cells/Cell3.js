@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Switch } from '../Switch';
 
 export const Cell3 = () => {
@@ -16,7 +16,7 @@ export const Cell3 = () => {
         checked={isChecked}
         onChange={handleSwitchChange}
       />
-      <span>{isChecked ? 'On' : 'Off'}</span>
+      {isChecked ? <span>On</span> : <span>Off</span>}
     </div>
   );
 };

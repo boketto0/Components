@@ -6,7 +6,7 @@ export const Cell4 = () => {
 
     const [isChecked, setIsChecked] = useState(false);
     
-    const sixe = ''
+    const size = ''
 
     const handleSwitchChange = () => {
         setIsChecked(!isChecked)
@@ -14,7 +14,7 @@ export const Cell4 = () => {
 
     return (
         <div>
-            <Switch checked={isChecked} onChange={handleSwitchChange}/>
+            <Switch size={SwitchSize.SMALL} checked={isChecked} onChange={handleSwitchChange}/>
             <Switch size={SwitchSize.LARGE} checked={isChecked} onChange={handleSwitchChange}/>
         </div>
     )

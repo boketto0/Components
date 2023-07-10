@@ -1,22 +1,14 @@
 import React, { useState, useCallback } from 'react';
-import './Switch.css';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import './Switch.css';
 
 export const SwitchSize = {
   SMALL: 'small',
   LARGE: 'large'
 };
 
-export const Switch = (props) => {
-  const { checked, onChange, disabled, onIcon, offIcon, onClick, size = SwitchSize.LARGE } = props;
+export const Switch = ({ checked, onChange, disabled, onIcon, offIcon, size = SwitchSize.LARGE }) => {
   const [isDragging, setIsDragging] = useState(false);
-
-  const handleClick = useCallback(() => {
-    if (!disabled && onClick) {
-      onClick();
-    }
-  }, [disabled, onClick]);
 
   const handleCheckboxChange = useCallback(() => {
     if (!disabled && onChange) {
@@ -33,20 +25,10 @@ export const Switch = (props) => {
   }, []);
 
   return (
-    <label
-      className={classnames('switch', { 'switch-on': checked, 'switch-off': !checked })}
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseUp}
-    >
-      <input
-        type="checkbox"
-        checked={checked}
-        onChange={handleCheckboxChange}
-        disabled={disabled}
-      />
-      <span className={classnames('slider', { 'slider-dragging': isDragging })}>
-        {checked ? onIcon : offIcon}
-      </span>
+    <label className={`switch switch-${size} ${checked ? 'switch-on' : 'switch-off'} ${isDragging ? 'slider-dragging' : ''}`}>
+      <input type="checkbox" checked={checked} onChange={handleCheckboxChange} disabled={disabled} />
+      <span className={`slider slider-${size} ${disabled ? 'slider-disabled' : ''}`} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}></span>
+      <span className="switch-icon">{checked ? onIcon : offIcon}</span>
     </label>
   );
 };
@@ -57,6 +39,5 @@ Switch.propTypes = {
   disabled: PropTypes.bool,
   onIcon: PropTypes.node,
   offIcon: PropTypes.node,
-  onClick: PropTypes.func,
   size: PropTypes.oneOf(Object.values(SwitchSize))
 };
