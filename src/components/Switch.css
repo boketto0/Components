@@ -84,6 +84,15 @@
     cursor: not-allowed;
   }
 
-  .switch-icon {
-      margin: 8px;
+  .switch-icon {  
+    color: black;
+    padding: 4px;
+  }
+
+  .icon-right {
+      margin: 4px;
+  }
+
+  .icon-left {
+      margin-left: 26px;
   }

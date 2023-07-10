@@ -27,21 +27,12 @@ export const Switch = (props) => {
     setIsDragging(false);
   }, []);
 
-  // const handleSwitchClick = useCallback(() => {
-  //   if (!disabled && onChange) {
-  //     onChange(!checked);
-  //   }
-  // }, [disabled, checked, onChange]);
-
   return (
-    <label
-      className={`switch switch-${size} ${checked ? 'switch-on' : 'switch-off'} ${isDragging ? 'slider-dragging' : ''}`}
-      onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>
+    <label className={`switch switch-${size} ${checked ? 'switch-on' : 'switch-off'} ${isDragging ? 'slider-dragging' : ''}`} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>
       <input type="checkbox" checked={checked} onChange={handleCheckboxChange} disabled={disabled} />
-      <span className={`slider slider-${size} ${disabled ? 'slider-disabled' : ''}`}></span>
-      {/* <span className={classnames('slider', { 'slider-dragging': isDragging })}>
+      <span className={classnames('slider', `slider-${size}`, { 'slider-disabled': disabled })}>
         {checked ? onIcon : offIcon}
-      </span> */}
+      </span>
     </label>
   );
 };

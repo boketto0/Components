@@ -12,8 +12,8 @@ export const Cell3 = () => {
   return (
     <div>
       <Switch
-        onIcon={<span>+</span>}
-        offIcon={<span>-</span>}
+        onIcon={<span className='icon-right'>+</span>}
+        offIcon={<span className='icon-left'>-</span>}
         checked={isChecked}
         onChange={handleSwitchChange}
       />
