@@ -39,9 +39,9 @@ export const Switch = (props) => {
       onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>
       <input type="checkbox" checked={checked} onChange={handleCheckboxChange} disabled={disabled} />
       <span className={`slider slider-${size} ${disabled ? 'slider-disabled' : ''}`}></span>
-      <span className={classnames('slider', { 'slider-dragging': isDragging })}>
+      {/* <span className={classnames('slider', { 'slider-dragging': isDragging })}>
         {checked ? onIcon : offIcon}
-      </span>
+      </span> */}
     </label>
   );
 };
