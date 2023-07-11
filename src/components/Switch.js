@@ -9,7 +9,7 @@ export const SwitchSize = {
 };
 
 export const Switch = (props) => {
-  const { checked, onChange, disabled, onIcon, offIcon, onClick, size = SwitchSize.LARGE } = props;
+  const { checked, onChange, disabled, onIcon, offIcon, onClick, size = SwitchSize.LARGE, loading } = props;
 
   const [isDragging, setIsDragging] = useState(false);
 
@@ -27,10 +27,18 @@ export const Switch = (props) => {
     setIsDragging(false);
   }, []);
 
+  const handleLoaderClick = useCallback(() => {
+    if(loading) return;
+    if(onChange) {
+
+    }
+  }, [loading, checked, onChange])
+
   const sliderClassName = classnames('slider', {
     'slider-small': size === SwitchSize.SMALL,
     'slider-large': size === SwitchSize.LARGE,
-    'slider-disabled': disabled
+    'slider-disabled': disabled,
+    'slider-loading':loading
   });
 
   return (
@@ -42,6 +50,8 @@ export const Switch = (props) => {
       <input type="checkbox" checked={checked} onChange={handleCheckboxChange} disabled={disabled} />
       <span className={sliderClassName}>
         {checked ? onIcon : offIcon}
+        {loading && <span className='slider-loader'></span>}
+        <span className='slider-knob'></span>
       </span>
     </label>
   );

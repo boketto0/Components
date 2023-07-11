@@ -65,6 +65,38 @@
   border-radius: 50%;
 }
 
+slider-loader:before {
+  position: absolute;
+  content: '';
+  height: 12px;
+  width: 12px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-top-color: #1890ff;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.switch-on .slider-knob {
+  transform: translateX(20px);
+}
+
+.switch-off .slider-knob {
+  transform: translateX(0);
+}
+
 .switch-on .slider {
   background-color: #1890ff;
 }
