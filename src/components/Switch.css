@@ -27,6 +27,9 @@
 .slider {
   position: absolute;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 0;
   left: 0;
   right: 0;
@@ -51,6 +54,9 @@
   background-color: white;
   transition: 0.4s;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider-large:before {
@@ -63,38 +69,45 @@
   background-color: white;
   transition: 0.4s;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-slider-loader:before {
+.spinner {
   position: absolute;
-  content: '';
-  height: 12px;
-  width: 12px;
-  left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
+  left: 50%;
+  height: 16px;
+  width: 16px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid transparent;
   border-radius: 50%;
-  border: 2px solid #ccc;
-  border-top-color: #1890ff;
-  animation: spin 1s linear infinite;
+  animation: spinner 1s linear infinite;
 }
 
-@keyframes spin {
+@keyframes spinner {
   from {
-    transform: translate(-50%, -50%) rotate(0deg);
+      transform: rotate(0deg);
   }
+
   to {
-    transform: translate(-50%, -50%) rotate(360deg);
+      transform: rotate(360deg);
   }
 }
 
-.switch-on .slider-knob {
-  transform: translateX(20px);
+.spinner.loading .spinner {
+  animation: spinner 1s linear infinite;
 }
 
-.switch-off .slider-knob {
-  transform: translateX(0);
+
+.spinner-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .switch-on .slider {
