@@ -102,14 +102,6 @@
   animation: spinner 1s linear infinite;
 }
 
-
-.spinner-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .switch-on .slider {
   background-color: #1890ff;
 }
@@ -126,19 +118,7 @@
   transform: translateX(0);
 }
 
-.slider-disabled {
+.slider-disabled:hover {
   cursor: not-allowed;
 }
 
-.switch-icon {
-  color: black;
-  padding: 4px;
-}
-
-.icon-right {
-  margin: 4px;
-}
-
-.icon-left {
-  margin-left: 26px;
-}

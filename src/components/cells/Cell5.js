@@ -3,21 +3,31 @@ import { Switch, SwitchSize } from '../Switch';
 import './Cell5.css';
 
 export const Cell5 = () => {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, ] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSwitchChange = () => {
-    setIsChecked(!isChecked);
-  };
-
   return (
-    <div>
+    <div className='list'>
       <Switch
         size={SwitchSize.LARGE}
         checked={isChecked}
-        onChange={handleSwitchChange}
         loading={isLoading}
         onClick={() => setIsLoading(!isLoading)}
+        disabled
+      />
+      <Switch
+        size={SwitchSize.LARGE}
+        checked={!isChecked}
+        loading={isLoading}
+        onClick={() => setIsLoading(!isLoading)}
+        disabled
+      />
+       <Switch
+        size={SwitchSize.SMALL}
+        checked={!isChecked}
+        loading={isLoading}
+        onClick={() => setIsLoading(!isLoading)}
+        disabled
       />
     </div>
   );

@@ -3,19 +3,21 @@ import { useState } from 'react'
 import { Switch, SwitchSize } from '../Switch';
 
 export const Cell4 = () => {
+  const [isChecked1, setIsChecked1] = useState(false);
+  const [isChecked2, setIsChecked2] = useState(false);
 
-    const [isChecked, setIsChecked] = useState(false);
-    
-    const size = ''
+  const handleSwitch1Change = () => {
+    setIsChecked1(!isChecked1);
+  };
 
-    const handleSwitchChange = () => {
-        setIsChecked(!isChecked)
-    }
+  const handleSwitch2Change = () => {
+    setIsChecked2(!isChecked2);
+  };
 
     return (
-        <div>
-            <Switch size={SwitchSize.SMALL} checked={isChecked} onChange={handleSwitchChange}/>
-            <Switch size={SwitchSize.LARGE} checked={isChecked} onChange={handleSwitchChange}/>
+        <div className='list'>
+            <Switch size={SwitchSize.SMALL} checked={isChecked1} onChange={handleSwitch1Change}/>
+            <Switch size={SwitchSize.LARGE} checked={isChecked2} onChange={handleSwitch2Change}/>
         </div>
     )
 }
