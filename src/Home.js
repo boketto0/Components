@@ -1,5 +1,5 @@
 import './Home.css'
-import { Cell1, Cell2, Cell3, Cell4, Cell5 } from './components/cells'
+import { Cell1, Cell2, Cell3, Cell4, Cell5, Cell6 } from './components/cells'
 import { CardWrapper } from './components/cards/CardWrapper'
 import { Card, CardType } from './components/cards/Card'
 
@@ -9,39 +9,39 @@ export default function Home() {
         {
             cell: <Cell1/>,
             title: 'Basic',
-            text: 'The most basic usage.'
+            text: 'Basic usage of checkbox.'
         },
         {
             cell: <Cell2/>,
             title: 'Disabled',
-            text: 'Disabled state of Switch.'
+            text: 'Disabled checkbox.'
         },
         {
             cell: <Cell3/>,
-            title: 'Text & icon',
-            text: 'With text and icon.'
+            title: 'Check all',
+            text: 'Check all checkbox.'
         },
         {
             cell: <Cell4/>,
-            title: 'Two sizes',
-            text: 'size="small" represents a small sized switch.'
+            title: 'Use with Grid',
+            text: 'We can use Checkbox and Grid to implement complex layout.'
         },
         {
             cell: <Cell5/>,
-            title: 'Loading',
-            text: 'Mark a pending state of switch.'
+            title: 'Controlled Checkbox',
+            text: 'Communicated with other components.'
+        },
+        {
+            cell: <Cell6/>,
+            title: 'Checkbox Group',
+            text: 'Generate a group of checkboxes from an array.'
         }
     ]
 
     return(
         <div className='home'>
-            <div className='par-1'>Switch</div>
-            <div className='text'>Switching Selector.</div>
-            <div className='par-2'>When To Use</div>
-            <ul>
-                <li className='text'>If you need to represent the switching between two states or on-off state.</li>
-                <li className='text'>The difference between Switch and Checkbox is that Switch will trigger a state change directly when you toggle it, while Checkbox is generally used for state marking, which should work in conjunction with submit operation.</li>
-            </ul>
+            <div className='par-1'>Checkbox</div>
+            <div className='text'>Checkbox component.</div>
             <div className='par-2'>Examples</div>
             <CardWrapper>
               { elements.map((el) => {

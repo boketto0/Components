@@ -1,23 +1,15 @@
 import './Cell4.css'
-import { useState } from 'react'
-import { Switch, SwitchSize } from '../Switch';
+import { Checkbox } from '../checkbox/Checkbox'
 
 export const Cell4 = () => {
-  const [isChecked1, setIsChecked1] = useState(false);
-  const [isChecked2, setIsChecked2] = useState(false);
 
-  const handleSwitch1Change = () => {
-    setIsChecked1(!isChecked1);
-  };
-
-  const handleSwitch2Change = () => {
-    setIsChecked2(!isChecked2);
-  };
-
-    return (
-        <div className='list'>
-            <Switch size={SwitchSize.SMALL} checked={isChecked1} onChange={handleSwitch1Change}/>
-            <Switch size={SwitchSize.LARGE} checked={isChecked2} onChange={handleSwitch2Change}/>
+    return(
+        <div className='cell4'>
+            <Checkbox text={'A'}/>
+            <Checkbox text={'B'}/>
+            <Checkbox text={'C'}/>
+            <Checkbox text={'D'}/>
+            <Checkbox text={'E'}/>
         </div>
     )
 }

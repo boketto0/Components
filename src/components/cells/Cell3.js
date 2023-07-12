@@ -1,41 +1,44 @@
+import React, { useCallback } from 'react';
+import { Checkbox } from '../checkbox/Checkbox'
+import { CheckboxGroup } from '../checkbox/CheckboxGroup';
 import './Cell3.css';
-import { useState } from 'react';
-import { Switch, SwitchSize } from '../Switch';
 
-export const Cell3 = () => {
-  const [isChecked1, setIsChecked1] = useState(false);
-  const [isChecked2, setIsChecked2] = useState(false);
+export const Cell3 = (props) => {
 
-  const handleSwitch1Change = () => {
-    setIsChecked1(!isChecked1);
-  };
+  const { onClick } = props
 
-  const handleSwitch2Change = () => {
-    setIsChecked2(!isChecked2);
-  };
+  const handleClick = useCallback(() => {
+    if (onClick) {
+      onClick();
+    }
+  }, [onClick]);
 
   return (
-    <div className='cell3'>
-      <div className='list'>
-        <Switch
-          size={SwitchSize.SMALL}
-          onIcon={<span className='icon icon-right'>+</span>}
-          offIcon={<span className='icon icon-left'>-</span>}
-          checked={isChecked1}
-          onChange={handleSwitch1Change}
+    <div className="cell3">
+      <CheckboxGroup>
+        <Checkbox
+          value="A" // TODO: В компоненте нет пропса value
+          text="Checkbox A"
+          checked
+          onClick={handleClick}
         />
-        <Switch
-          size={SwitchSize.LARGE}
-          onIcon={<span className='icon icon-right'>1</span>}
-          offIcon={<span className='icon icon-left'>0</span>}
-          checked={isChecked2}
-          onChange={handleSwitch2Change}
+        <Checkbox
+          value="B"
+          text="Checkbox B"
+          onClick={handleClick}
         />
-      </div>
-      <div className='list'>
-        <span>{isChecked1 ? 'On' : 'Off'}</span>
-        <span>{isChecked2 ? 'On' : 'Off'}</span>
-      </div>
+        <Checkbox
+          value="C"
+          text="Checkbox C"
+          checked
+          onClick={handleClick}
+        />
+        <Checkbox
+          value="D"
+          text="Checkbox D"
+          onClick={handleClick}
+        />
+      </CheckboxGroup>
     </div>
   );
 };

@@ -1,4 +1,26 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+import { Switch, SwitchSize } from '../Switch';
+import './Cell5.css';
+
+export const Cell5 = () => {
+  const [isChecked, ] = useState(false);
+
+  return (
+    <div className='list'>
+      <Switch
+        size={SwitchSize.LARGE}
+        checked={isChecked}
+        loading={true}
+        disabled
+      />
+      <Switch
+        size={SwitchSize.LARGE}
+        checked={!isChecked}
+        loading={true}
+        disabled
+      />
+=======
 import './Cell5.css';
 import { Checkbox } from '../checkbox';
 import { Button, ButtonType, ButtonSize } from '../button/Button';
@@ -55,6 +77,7 @@ export const Cell5 = () => {
         <Button size={size} type={type} text={buttonText} onClick={handleButtonClick} />
         <Button size={size} type={type} text={isDisabled ? 'Enabled' : 'Disable'} onClick={handleDisableClick} />
       </div>
+>>>>>>> main
     </div>
   );
 };
