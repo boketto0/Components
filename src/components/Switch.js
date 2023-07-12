@@ -43,7 +43,9 @@ export const Switch = (props) => {
       <input type="checkbox" checked={checked} onChange={handleCheckboxChange} disabled={disabled} />
       <div className={sliderClassName}>
         {checked ? onIcon : offIcon}
-        {/* <div className="spinner" /> */}
+        <div className='container'>
+          {loading && <div className="spinner"/>}
+        </div>
       </div>
     </label>
   );
