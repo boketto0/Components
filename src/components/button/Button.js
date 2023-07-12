@@ -9,13 +9,6 @@ export const ButtonSize = {
   LARGE: "large"
 }
 
-export const ButtonSize = {
-  SMALL: "small",
-  MEDIUM: "medium",
-  LARGE: "large"
-}
-
->>>>>>> main
 export const ButtonType = {
   PRIMARY: 'primary',
   SECONDARY: 'secondary',
