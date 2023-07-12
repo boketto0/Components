@@ -67,6 +67,10 @@
   color: black
 }
 
+.label:hover {
+  cursor: pointer;
+}
+
 .checkbox input:checked ~ .checkmark-indeterminate::after {
   content: "";
   position: absolute;
