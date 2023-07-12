@@ -1,9 +1,9 @@
 import './App.css';
-import MainBlock from './Blocks/MainBlock';
+import Home from './Home';
 
 function App() {
   return(
-    <MainBlock></MainBlock>
+    <Home/>
   )
 }
 
