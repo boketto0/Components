@@ -19,12 +19,6 @@ export const Cell5 = () => {
         loading={true}
         disabled
       />
-       <Switch
-        size={SwitchSize.SMALL}
-        checked={!isChecked}
-        loading={true}
-        disabled
-      />
     </div>
   );
 };

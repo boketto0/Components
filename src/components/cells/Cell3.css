@@ -3,13 +3,13 @@
 }
   
 .icon-left {
-  margin-left: 26px;
-  margin-top: 4px;
+  margin-left: 24px;
 }
 
 .icon-right {
   margin-right: 16px;
   margin-top: 2px;
+  margin-bottom: 4px;
 }
 
 .list {
