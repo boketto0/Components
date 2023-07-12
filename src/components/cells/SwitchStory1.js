@@ -2,7 +2,7 @@ import './Cell1.css'
 import { useState } from 'react'
 import { Switch, SwitchSize } from '../Switch';
 
-export const Cell1 = () => {
+export const SwitchStory1 = () => {
 
     const [isChecked, setIsChecked] = useState(false);
 
