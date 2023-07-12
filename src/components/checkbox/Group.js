@@ -4,8 +4,7 @@ import { Checkbox } from '../checkbox/Checkbox';
 export const Group = ({ options, optionsProperty }) => {
   return (
     <div className="checkbox-group">
-      {/* Первый ряд */}
-      <div className="checkbox-row">
+      <div>
         {options.map((option, index) => (
           <Checkbox
             key={index}
@@ -15,9 +14,7 @@ export const Group = ({ options, optionsProperty }) => {
           />
         ))}
       </div>
-
-      {/* Второй ряд */}
-      <div className="checkbox-row">
+      <div>
         {options.map((option, index) => (
           <Checkbox
             key={index}
@@ -27,9 +24,7 @@ export const Group = ({ options, optionsProperty }) => {
           />
         ))}
       </div>
-
-      {/* Третий ряд */}
-      <div className="checkbox-row">
+      <div>
         <Checkbox
           value={options[0].value}
           text={options[0].label}
