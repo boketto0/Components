@@ -1,7 +1,7 @@
-import './Cell2.css'
+import './Cell2Story.css'
 import { Checkbox } from '../checkbox/Checkbox'
 
-export const Cell2 = () => {
+export const Cell2Story = () => {
 
     const disabled = ''
 

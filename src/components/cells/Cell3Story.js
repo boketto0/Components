@@ -1,9 +1,9 @@
 import React, { useCallback } from 'react';
 import { Checkbox } from '../checkbox/Checkbox'
 import { CheckboxGroup } from '../checkbox/CheckboxGroup';
-import './Cell3.css';
+import './Cell3Story.css';
 
-export const Cell3 = (props) => {
+export const Cell3Story = (props) => {
 
   const { onClick } = props
 

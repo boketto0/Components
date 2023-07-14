@@ -21,6 +21,13 @@ export const Card = (props) => {
                         <div className="card-text">{props.text}</div>
                     </div>
                 )}
+                {props.cardType === CardType.SECOND && (
+                    <div>
+                        <div>{props.cell}</div>
+                        <div className="card-title">{props.title}</div>
+                        <div className="card-text">{props.text}</div>
+                    </div>
+                )}
             </div>
         </div>
     )

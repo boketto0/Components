@@ -5,7 +5,20 @@
     font-style: normal;
     display: flex;
     flex-direction: column;
-    padding: 16px;
+}
+
+.home-wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+    flex-direction: row;
+}
+
+.home-list {
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+    flex-direction: column;
 }
 
 .par-1 {

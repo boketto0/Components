@@ -1,7 +1,7 @@
-import './Cell4.css'
+import './Cell4Story.css'
 import { Checkbox } from '../checkbox/Checkbox'
 
-export const Cell4 = () => {
+export const Cell4Story = () => {
 
     return(
         <div className='cell4'>

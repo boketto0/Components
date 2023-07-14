@@ -1,57 +1,41 @@
-import './Home.css'
-import { Cell1, Cell2, Cell3, Cell4, Cell5, Cell6 } from './components/cells'
-import { CardWrapper } from './components/cards/CardWrapper'
-import { Card, CardType } from './components/cards/Card'
+import './Home.css';
+import { CardWrapper } from './components/cards/CardWrapper';
+import { Card, CardType } from './components/cards/Card';
+import SliderbarMenu from './components/SliderbarMenu';
 
-export default function Home() {
+const Home = () => {
+  const componentsStory = [
+    {
+      title: 'Button'
+    },
+    {
+      title: 'Switch'
+    },
+    {
+      title: 'Checkbox'
+    }
+  ];
 
-    const elements = [
-        {
-            cell: <Cell1/>,
-            title: 'Basic',
-            text: 'Basic usage of checkbox.'
-        },
-        {
-            cell: <Cell2/>,
-            title: 'Disabled',
-            text: 'Disabled checkbox.'
-        },
-        {
-            cell: <Cell3/>,
-            title: 'Check all',
-            text: 'Check all checkbox.'
-        },
-        {
-            cell: <Cell4/>,
-            title: 'Use with Grid',
-            text: 'We can use Checkbox and Grid to implement complex layout.'
-        },
-        {
-            cell: <Cell5/>,
-            title: 'Controlled Checkbox',
-            text: 'Communicated with other components.'
-        },
-        {
-            cell: <Cell6/>,
-            title: 'Checkbox Group',
-            text: 'Generate a group of checkboxes from an array.'
-        }
-    ]
-
-    return(
-        <div className='home'>
-            <div className='par-1'>Checkbox</div>
-            <div className='text'>Checkbox component.</div>
-            <div className='par-2'>Examples</div>
-            <CardWrapper>
-              { elements.map((el) => {
-                  return(
-                  <div>
-                    <Card cardType={CardType.FIRST} cell={el.cell} title={el.title} text={el.text}/>
-                  </div>
-                  )
-              })}
-              </CardWrapper>
+  return (
+    <div className="home">
+      <div className="home-wrapper">
+        <SliderbarMenu />
+        <div className="home-list">
+          <div className="par-1">Components Overview</div>
+          <div className="par-2">Components</div>
+          <CardWrapper>
+            {componentsStory.map((el) => {
+              return (
+                <div>
+                  <Card cardType={CardType.SECOND} title={el.title} />
+                </div>
+              );
+            })}
+          </CardWrapper>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
+
+export default Home;

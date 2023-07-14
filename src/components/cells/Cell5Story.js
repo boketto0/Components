@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './Cell5.css';
+import './Cell5Story.css';
 import { Checkbox } from '../checkbox';
 import { Button, ButtonType, ButtonSize } from '../button/Button';
 
-export const Cell5 = () => {
+export const Cell5Story = () => {
   const size = ButtonSize.SMALL;
   const type = ButtonType.PRIMARY;
 

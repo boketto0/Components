@@ -1,7 +1,6 @@
-import React from 'react';
 import { Group } from '../checkbox/Group';
 
-export const Cell6 = () => {
+export const Cell6Story = () => {
   const options = [
     { label: 'Apple', value: 'Apple' },
     { label: 'Pear', value: 'Pear' },
