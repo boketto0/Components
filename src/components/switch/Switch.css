@@ -1,0 +1,145 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.switch-large {
+  width: 40px;
+  height: 20px;
+}
+
+.switch-small {
+  width: 36px;
+  height: 18px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider-dragging {
+  transition: 0.2s;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-top: 2px;
+  padding-left: 2px;
+}
+
+.slider:not([disabled]):hover {
+  background-color: rgb(172, 168, 168);
+}
+
+.slider-small:before {
+  position: absolute;
+  content: '';
+  height: 12px;
+  width: 12px;
+  left: 3px;
+  margin-right: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.slider-large:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-loading:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+}
+/* TODO: svg, вложенные дивы */
+.spinner {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid transparent;
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes slider-loading {
+  from {
+      transform: rotate(0deg);
+  }
+
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  from {
+      transform: rotate(0deg);
+  }
+
+  to {
+      transform: rotate(360deg);
+  }
+} 
+
+.switch-on .slider {
+  background-color: #1890ff;
+}
+
+.switch-on .slider:not([disabled]):hover {
+  background-color: #5babf7;
+}
+
+.switch-on .slider:before {
+  transform: translateX(18px);
+}
+
+.switch-off .slider:before {
+  transform: translateX(0);
+}
+
+.slider-disabled:hover {
+  cursor: not-allowed;
+}
+

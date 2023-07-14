@@ -1,5 +1,5 @@
 import './CheckboxStory.css'
-import { Cell1Story, Cell2Story, Cell3Story, Cell4Story, Cell5Story, Cell6Story } from '../cells'
+import { CheckboxStory1, CheckboxStory2, CheckboxStory3, CheckboxStory4, CheckboxStory5, CheckboxStory6 } from '../checkboxStories/index'
 import { Card, CardType } from '../cards/Card'
 import { CardWrapper } from '../cards/CardWrapper'
 
@@ -7,32 +7,32 @@ export const CheckboxStory = () => {
 
     const elements = [
         {
-            cell: <Cell1Story/>,
+            cell: <CheckboxStory1/>,
             title: 'Basic',
             text: 'Basic usage of checkbox.'
         },
         {
-            cell: <Cell2Story/>,
+            cell: <CheckboxStory2/>,
             title: 'Disabled',
             text: 'Disabled checkbox.'
         },
         {
-            cell: <Cell3Story/>,
+            cell: <CheckboxStory3/>,
             title: 'Check all',
             text: 'Check all checkbox.'
         },
         {
-            cell: <Cell4Story/>,
+            cell: <CheckboxStory4/>,
             title: 'Use with Grid',
             text: 'We can use Checkbox and Grid to implement complex layout.'
         },
         {
-            cell: <Cell5Story/>,
+            cell: <CheckboxStory5/>,
             title: 'Controlled Checkbox',
             text: 'Communicated with other components.'
         },
         {
-            cell: <Cell6Story/>,
+            cell: <CheckboxStory6/>,
             title: 'Checkbox Group',
             text: 'Generate a group of checkboxes from an array.'
         }

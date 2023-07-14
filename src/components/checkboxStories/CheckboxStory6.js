@@ -1,6 +1,6 @@
 import { Group } from '../checkbox/Group';
 
-export const Cell6Story = () => {
+export const CheckboxStory6 = () => {
   const options = [
     { label: 'Apple', value: 'Apple' },
     { label: 'Pear', value: 'Pear' },

@@ -1,8 +1,8 @@
 import './SliderbarMenu.css';
-import Home from '../Home';
 import { CheckboxStory } from './checkbox/ChecboxStory';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ComponenetsOverview } from './ComponentsOverview';
+import { SwitchStory } from './switch/SwitchStory';
 
 const SliderbarMenu = () => {
   return (
@@ -25,6 +25,7 @@ const SliderbarMenu = () => {
         <Routes>
           <Route className='wrapper' path="/" element={<ComponenetsOverview/>} />
           <Route className='wrapper' path="/checkbox" element={<CheckboxStory />} />
+          <Route path="/switch" element={<SwitchStory/>}/>
         </Routes>
       </Router>
     </div>
