@@ -39,19 +39,21 @@ export const CheckboxStory = () => {
     ]
 
     return (
-        <div>
+        <div className='checkbox-wrapper'>
             <div className='par-1'>Checkbox</div>
             <div className='text'>Checkbox component.</div>
             <div className='par-2'>Examples</div>
-            <CardWrapper>
-              { elements.map((el) => {
-                  return(
-                  <div>
-                    <Card cardType={CardType.FIRST} cell={el.cell} title={el.title} text={el.text}/>
-                  </div>
-                  )
-              })}
-              </CardWrapper>
+            <div>
+                <CardWrapper>
+                { elements.map((el) => {
+                    return(
+                    <div>
+                        <Card cardType={CardType.FIRST} cell={el.cell} title={el.title} text={el.text}/>
+                    </div>
+                    )
+                })}
+                </CardWrapper>
+            </div>
         </div>
     )
 }

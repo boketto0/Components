@@ -16,7 +16,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     text-align: left;
     background-color: white;
     border: 1px solid rgb(182, 182, 182);
@@ -25,6 +25,15 @@
     height: 300px;
     padding: 16px;
     margin: 32px;
+  }
+
+  .card-component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-direction: column;
+    margin-top: 16px;
   }
 
   .card-second:hover {
