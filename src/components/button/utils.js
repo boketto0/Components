@@ -1,6 +1,6 @@
 import { ButtonType } from './Button';
 
-export function getColor(type, disabled, selected, pressed) {
+export function getColor(type, disabled) {
     switch(type) {
         case ButtonType.PRIMARY: 
             if (disabled) {

@@ -103,16 +103,6 @@
   animation: spinner 1s linear infinite;
 }
 
-@keyframes slider-loading {
-  from {
-      transform: rotate(0deg);
-  }
-
-  to {
-      transform: rotate(360deg);
-  }
-}
-
 @keyframes spinner {
   from {
       transform: rotate(0deg);
