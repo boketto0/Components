@@ -15,14 +15,14 @@ export const ButtonList4 = () => {
         <div>
             <div className='container'>
                 <div className='button-container'>
-                    <Button pressed size={size} text={text} type={type}/>
-                    <Button pressed size={size} icon={icon} text={text} type={type}/>
-                    <Button disabled size={size} text={text} type={type}/>
-                    <Button disabled size={size} icon={icon} text={text} type={type}/>
-                    <Button selected size={size} text={text} type={type}/>
-                    <Button selected size={size} icon={icon} text={text} type={type}/>
-                    <Button selected size={size} text={text} type={type}/>
-                    <Button selected size={size} isLoading={true} text={text} type={type}/>
+                    <Button colored={'pressed'} size={size} text={text} type={type}/>
+                    <Button colored={'pressed'} size={size} icon={icon} text={text} type={type}/>
+                    <Button colored={'disabled'} size={size} text={text} type={type}/>
+                    <Button colored={'disabled'} size={size} icon={icon} text={text} type={type}/>
+                    <Button colored={'selected'} size={size} text={text} type={type}/>
+                    <Button colored={'selected'} size={size} icon={icon} text={text} type={type}/>
+                    <Button colored={'selected'} size={size} text={text} type={type}/>
+                    <Button colored={'selected'} size={size} isLoading={true} text={text} type={type}/>
                 </div>
             </div>
         </div>

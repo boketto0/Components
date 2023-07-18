@@ -50,7 +50,7 @@ export const Button = (props) => {
       }
       <div className='button-content'>
           {icon && <span className={`icon icon__${type}__${colored}`}>{icon}</span>}
-          {text && <span className={`button-text button-text__${type}__${disabled ? 'disabled' : ''}`}>{text}</span>}
+          {text && <span className={`button-text__${type}__${disabled ? 'disabled' : ''}`}>{text}</span>}
       </div>
     </div>
     

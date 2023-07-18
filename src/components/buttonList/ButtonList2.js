@@ -29,14 +29,14 @@ export const ButtonList2 = () => {
             </div>
             <div className='container'>
                 <div className='button-container'>
-                    <Button pressed size={size} text={'Button'} type={type}/>
-                    <Button pressed size={size} icon={"+"} text={'Button'} type={type}/>
-                    <Button disabled size={size} text={'Button'} type={type}/>
-                    <Button disabled size={size} icon={"+"} text={'Button'} type={type}/>
-                    <Button selected size={size} text={'Button'} type={type}/>
-                    <Button selected size={size} icon={'+'} text={'Button'} type={type}/>
-                    <Button selected size={size} text={'Button'} type={type}/>
-                    <Button selected size={size} isLoading={true} text={'Loading'} type={type}/>
+                    <Button colored={'pressed'} size={size} text={'Button'} type={type}/>
+                    <Button colored={'pressed'} size={size} icon={"+"} text={'Button'} type={type}/>
+                    <Button colored={'disabled'} size={size} text={'Button'} type={type}/>
+                    <Button colored={'disabled'} size={size} icon={"+"} text={'Button'} type={type}/>
+                    <Button colored={'selected'} size={size} text={'Button'} type={type}/>
+                    <Button colored={'selected'} size={size} icon={'+'} text={'Button'} type={type}/>
+                    <Button colored={'selected'} size={size} text={'Button'} type={type}/>
+                    <Button colored={'selected'} size={size} isLoading={true} text={'Loading'} type={type}/>
                 </div>
             </div>
         </div>

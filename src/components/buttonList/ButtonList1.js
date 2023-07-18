@@ -19,11 +19,11 @@ export const ButtonList1 = () => {
         { colored: 'pressed', text: 'Button', icon: '', isLoading: false },
         { colored: 'pressed', text: 'Button', icon: '+', isLoading: false },
         { colored: 'disabled', text: 'Button', icon: '', isLoading: false },
-        { disabled: 'disabled', text: 'Button', icon: '+', isLoading: false },
-        { selected: 'selected', text: 'Button', icon: '', isLoading: false },
-        { selected: 'selected', text: 'Button', icon: '+', isLoading: false },
-        { selected: 'selected', text: 'Button', icon: '', isLoading: false },
-        { selected: 'selected', text: 'Loading', icon: '', isLoading: true }
+        { colored: 'disabled', text: 'Button', icon: '+', isLoading: false },
+        { colored: 'selected', text: 'Button', icon: '', isLoading: false },
+        { colored: 'selected', text: 'Button', icon: '+', isLoading: false },
+        { colored: 'selected', text: 'Button', icon: '', isLoading: false },
+        { colored: 'selected', text: 'Loading', icon: '', isLoading: true }
     ];
 
     return (
