@@ -4,10 +4,11 @@
     gap: 32px;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-@media (max-width: 50%) {
+/* @media (max-width: 50%) {
     .card {
         flex-direction: column;
     }
-}
+} */

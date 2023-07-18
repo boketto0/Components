@@ -3,6 +3,7 @@ import { CheckboxStory } from './checkbox/ChecboxStory';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ComponenetsOverview } from './ComponentsOverview';
 import { SwitchStory } from './switch/SwitchStory';
+import { ButtonStory } from './button/ButtonStory';
 
 const SliderbarMenu = () => {
   return (
@@ -26,6 +27,7 @@ const SliderbarMenu = () => {
           <Route className='wrapper' path="/" element={<ComponenetsOverview/>} />
           <Route className='wrapper' path="/checkbox" element={<CheckboxStory />} />
           <Route path="/switch" element={<SwitchStory/>}/>
+          <Route path="/button" element={<ButtonStory/>}/>
         </Routes>
       </Router>
     </div>

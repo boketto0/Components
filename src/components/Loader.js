@@ -1,6 +1,6 @@
 import './Loader.css'
 
-export default function Loader (props) {
+export const Loader = (props) => {
     return(
         <div>
             <div className ='lds-circle'>

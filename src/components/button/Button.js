@@ -1,6 +1,8 @@
-import React, { useCallback, useEffect } from 'react';
+import { Loader } from '../Loader';
+import { getColor } from './utils';
 import classnames from 'classnames';
-import "./Button.css";
+import { useCallback } from 'react';
+import './Button.css'
 import { PropTypes } from 'prop-types';
 
 export const ButtonSize = {
@@ -17,15 +19,7 @@ export const ButtonType = {
 }
 
 export const Button = (props) => {
-  const { size, type = ButtonType.PRIMARY, text, disabled, onClick } = props;
-
-  const buttonClasses = classnames(
-    'button',
-    type && `button-${type}`,
-    size &&`button-${size}`,
-    `button-${type}__${disabled}`,
-    `button-text__${type}__${disabled}`
-  );
+  const { size, type = ButtonType.PRIMARY, text, disabled, colored, round, onClick, isLoading, icon } = props;
 
   const handleClick = useCallback(() => {
     if (onClick) {
@@ -33,12 +27,33 @@ export const Button = (props) => {
     }
   }, [onClick]);
 
+  const buttonClasses = classnames(
+    'button',
+    type && `button-${type}`,
+    size &&`button-${size}`,
+    `button-${type}__${disabled}`,
+    `button-text__${type}__${disabled}`,
+    colored && `button-${type}__${colored}`,
+    colored && `button-text__${type}__${colored}`,
+    `icon__${type}__${colored}`,
+    { 'button-round': round }
+  );
+
+  const loaderColor = getColor(type, colored);
+
   return (
     <div className={buttonClasses} onClick={handleClick}>
-        <div className='button-content'>
-            {text && <span className={`button-text button-text__${type}__${disabled ? 'disabled' : ''}`}>{text}</span>}
-        </div>
+            {
+        isLoading && (
+          <Loader color={loaderColor} type={type}/>
+        )
+      }
+      <div className='button-content'>
+          {icon && <span className={`icon icon__${type}__${colored}`}>{icon}</span>}
+          {text && <span className={`button-text button-text__${type}__${disabled ? 'disabled' : ''}`}>{text}</span>}
+      </div>
     </div>
+    
   );
 };
 
@@ -50,5 +65,7 @@ Button.propTypes = {
   round: PropTypes.bool,
   isLoading: PropTypes.bool
 };
+
+
 
 
