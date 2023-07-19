@@ -2,9 +2,9 @@
   position: absolute;
   height: 14px;
   width: 14px;
-  border-left: 1px solid;
-  border-bottom: 1px solid;
-  border-right: 1px solid;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
   border-top: 1px solid transparent;
   border-radius: 50%;
   animation: spinner 1s linear infinite;

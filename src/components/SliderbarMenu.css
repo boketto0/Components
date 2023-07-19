@@ -30,3 +30,11 @@
   .sidebar li a:hover {
     color: #c4bfbf;
   }
+
+  .component-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 32px;
+      flex-direction: column;
+  }

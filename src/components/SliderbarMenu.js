@@ -7,28 +7,33 @@ import { ButtonStory } from './button/ButtonStory';
 
 const SliderbarMenu = () => {
   return (
-    <div className='sidebar'>
+    <div>
       <Router>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/button">Button</a>
-          </li>
-          <li>
-            <a href="/checkbox">Checkbox</a>
-          </li>
-          <li>
-            <a href="/switch">Switch</a>
-          </li>
-        </ul>
-        <Routes>
-          <Route className='wrapper' path="/" element={<ComponenetsOverview/>} />
-          <Route className='wrapper' path="/checkbox" element={<CheckboxStory />} />
-          <Route path="/switch" element={<SwitchStory/>}/>
-          <Route path="/button" element={<ButtonStory/>}/>
-        </Routes>
+          <div className='sidebar'>
+            <ul>
+                <li>
+                    <a href="/">Componenets Overview</a>
+                </li>
+                <li>
+                    <a href="/button">Button</a>
+                </li>
+                <li>
+                    <a href="/checkbox">Checkbox</a>
+                </li>
+                <li>
+                    <a href="/switch">Switch</a>
+                </li>
+            </ul>
+          </div>
+
+        <div className="component-wrapper">
+            <Routes>
+            <Route className='wrapper' path="/" element={<ComponenetsOverview/>} />
+            <Route className='wrapper' path="/checkbox" element={<CheckboxStory />} />
+            <Route path="/switch" element={<SwitchStory/>}/>
+            <Route path="/button" element={<ButtonStory/>}/>
+            </Routes>
+        </div>
       </Router>
     </div>
   );

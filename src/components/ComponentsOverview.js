@@ -9,6 +9,10 @@ import { SwitchStory4 } from './switchStories';
 
 export const ComponenetsOverview = () => {
 
+    function hanldePictureClick() {
+
+    }
+
   const componentsStory = [
     {
       title: 'Button',
@@ -39,9 +43,10 @@ export const ComponenetsOverview = () => {
 
   return (
     <div className='components-wrapper'>
-      <div className="par-1">Components Overview</div>
-      <div className="par-2">Components</div>
-      <div>
+        <div className='components-list'>
+            <div className="par-1">Components Overview</div>
+            <div className="par-2">Components</div>
+        </div>
         <CardWrapper>
           {componentsStory.map((el) => {
             return (
@@ -51,7 +56,29 @@ export const ComponenetsOverview = () => {
             );
           })}
         </CardWrapper>
-      </div>
     </div>
   );
 }
+
+// Router>
+//         <ul>
+//           <li>
+//             <a href="/">Home</a>
+//           </li>
+//           <li>
+//             <a href="/button">Button</a>
+//           </li>
+//           <li>
+//             <a href="/checkbox">Checkbox</a>
+//           </li>
+//           <li>
+//             <a href="/switch">Switch</a>
+//           </li>
+//         </ul>
+//         <Routes className="component-wrapper">
+//           <Route className='wrapper' path="/" element={<ComponenetsOverview/>} />
+//           <Route className='wrapper' path="/checkbox" element={<CheckboxStory />} />
+//           <Route path="/switch" element={<SwitchStory/>}/>
+//           <Route path="/button" element={<ButtonStory/>}/>
+//         </Routes>
+//       </Router>

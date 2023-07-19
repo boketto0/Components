@@ -39,10 +39,12 @@ export const ButtonStory = () => {
     ]
 
     return (
-        <div className='checkbox-wrapper'>
-            <div className='par-1'>Button</div>
-            <div className='text'>Checkbox component.</div>
-            <div className='par-2'>Examples</div>
+        <div className='button-wrapper'>
+            <div className='button-list'>
+                <div className='par-1'>Button</div>
+                <div className='text'>Checkbox component.</div>
+                <div className='par-2'>Examples</div>
+            </div>
             <div>
                 <CardWrapper>
                 { elements.map((el) => {
