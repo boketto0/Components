@@ -12,3 +12,7 @@
     align-items: baseline;
     justify-content: center;
 }
+
+.components-list a {
+    text-decoration: none;
+}
