@@ -7,6 +7,9 @@
     justify-content:center;
     border-radius: 6px;
     transition: .7s;
+  }
+
+  .button:hover {
     cursor:pointer;
   }
 

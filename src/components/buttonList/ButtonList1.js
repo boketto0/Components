@@ -5,38 +5,33 @@ import { useState } from 'react';
 
 export const ButtonList1 = () => {
 
-    const type = ButtonType.PRIMARY;
+    // const [size, setSize] = useState(ButtonSize.SMALL);
 
-    const [size, setSize] = useState(ButtonSize.SMALL);
+    // const sizes = [
+    //     {type: ButtonSize.SMALL, text: "Small"},
+    //     {type: ButtonSize.MEDIUM, text: "Medium"},
+    //     {type: ButtonSize.LARGE, text: "Large"}
+    // ]
 
-    const sizes = [
-        {type: ButtonSize.SMALL, text: "Small"},
-        {type: ButtonSize.MEDIUM, text: "Medium"},
-        {type: ButtonSize.LARGE, text: "Large"}
-    ]
 
     const buttonConfigs = [
-        { colored: 'pressed', text: 'Button', icon: '', isLoading: false },
-        { colored: 'pressed', text: 'Button', icon: '+', isLoading: false },
-        { colored: 'disabled', text: 'Button', icon: '', isLoading: false },
-        { colored: 'disabled', text: 'Button', icon: '+', isLoading: false },
-        { colored: 'selected', text: 'Button', icon: '', isLoading: false },
-        { colored: 'selected', text: 'Button', icon: '+', isLoading: false },
-        { colored: 'selected', text: 'Button', icon: '', isLoading: false },
-        { colored: 'selected', text: 'Loading', icon: '', isLoading: true }
+        { colored: 'pressed', text: 'Primary Button', icon: '', isLoading: false, type: ButtonType.PRIMARY },
+        { colored: 'pressed', text: 'Primary Button', icon: '', isLoading: false, type: ButtonType.SECONDARY },
+        { colored: 'selected', text: 'Primary Button', icon: '', isLoading: false, type: ButtonType.LINK },
+        { colored: 'selected', text: 'Primary Button', icon: '', isLoading: false, type: ButtonType.TEXT }
     ];
 
     return (
         <div>
-            <div className='size-divider'>
+            {/* <div className='size-divider'>
                 {
                     sizes.map(el => <div className='text-design' onClick={() => setSize(el.type)}>{el.text}</div>)
                 }
-            </div>
+            </div> */}
             <div className='wrapper'>
             <div className='button-container'>
                     {buttonConfigs.map((config) => (
-                        <Button colored={config.colored} size={size} text={config.text} icon={config.icon} isLoading={config.isLoading} type={type}/>
+                        <Button colored={config.colored} size={ButtonSize.LARGE} text={config.text} icon={config.icon} isLoading={config.isLoading} type={config.type}/>
                     ))}
                 </div>
             </div>

@@ -2,8 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     margin-left: 300px;
+    flex-direction: column;
 }
 
 .components-list {
@@ -15,4 +16,5 @@
 
 .components-list a {
     text-decoration: none;
+    color: black;
 }

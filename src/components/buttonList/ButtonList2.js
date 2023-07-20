@@ -1,10 +1,10 @@
 import './ButtonList2.css'
 import { ButtonType, ButtonSize, Button } from '../button/Button'
 import { useState } from 'react'
+import { IconButton, IconButtonSize } from '../button'
+import Icon from '../../images/Vector.svg'
 
 export const ButtonList2 = () => {
-
-    const type =  ButtonType.SECONDARY
 
     const [size, setSize] = useState(ButtonSize.SMALL);
 
@@ -15,9 +15,9 @@ export const ButtonList2 = () => {
     const selected = ''
 
     const sizes = [
-        {type: ButtonSize.SMALL, text: "Small"},
-        {type: ButtonSize.MEDIUM, text: "Medium"},
-        {type: ButtonSize.LARGE, text: "Large"}
+        {type: ButtonSize.SMALL || IconButtonSize.SMALL, text: "Small"},
+        {type: ButtonSize.MEDIUM || IconButtonSize.MEDIUM, text: "Medium"},
+        {type: ButtonSize.LARGE || IconButtonSize.LARGE, text: "Large"}
     ]
 
     return (
@@ -29,14 +29,15 @@ export const ButtonList2 = () => {
             </div>
             <div className='container'>
                 <div className='button-container'>
-                    <Button colored={'pressed'} size={size} text={'Button'} type={type}/>
-                    <Button colored={'pressed'} size={size} icon={"+"} text={'Button'} type={type}/>
-                    <Button colored={'disabled'} size={size} text={'Button'} type={type}/>
-                    <Button colored={'disabled'} size={size} icon={"+"} text={'Button'} type={type}/>
-                    <Button colored={'selected'} size={size} text={'Button'} type={type}/>
-                    <Button colored={'selected'} size={size} icon={'+'} text={'Button'} type={type}/>
-                    <Button colored={'selected'} size={size} text={'Button'} type={type}/>
-                    <Button colored={'selected'} size={size} isLoading={true} text={'Loading'} type={type}/>
+                <div className='buttonlist2-list'>
+                    <Button colored={'pressed'} size={size} text={'Primary Button'} type={ButtonType.PRIMARY}/>
+                    <Button colored={'pressed'} size={size} text={'Default'} type={ButtonType.SECONDARY}/>
+                    <Button colored={'selected'} size={size} text={'Link'} type={ButtonType.LINK}/>
+                </div>
+                    <div className='buttonlist2-list'>
+                        <IconButton icon={<img src={Icon}/>} colored={'pressed'} size={size}/>
+                    </div>
+                    {/* <Button colored={'selected'} size={size} text={'Primary Button'} type={type}/> */}
                 </div>
             </div>
         </div>

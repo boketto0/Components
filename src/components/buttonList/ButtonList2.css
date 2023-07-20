@@ -1,9 +1,8 @@
 .button-container {
-    display: grid;
-    grid-template-columns: repeat(2, 150px);
-    grid-template-rows: repeat(4, 50px);
-    gap: 24px;
-    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .size-divider {
@@ -32,4 +31,12 @@
 .text-design:hover {
     text-decoration: underline;
     
+}
+
+.buttonlist2-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 32px;
 }

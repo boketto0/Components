@@ -29,10 +29,10 @@ export const Card = (props) => {
         )}
         {props.cardType === CardType.THIRD && (
           <div>
+            <div className='card-component'>{props.component}</div>
+            <div>{props.cell}</div>
             <div className="card-title">{props.title}</div>
             <div className="card-text">{props.text}</div>
-            <div>{props.cell}</div>
-            <div className='card-component'>{props.component}</div>
           </div>
         )}
       </div>
