@@ -22,7 +22,7 @@ export const SwitchStory2 = () => {
       <Switch size={SwitchSize.LARGE} checked={isChecked} onChange={handleSwitchChange} disabled={isDisabled} />
       <span>{isChecked ? 'On' : 'Off'}</span>
       <Button
-        colored={'selected'}
+        colored={'pressed'}
         type={ButtonType.PRIMARY}
         size={ButtonSize.SMALL}
         text={isDisabled ? 'Enable' : 'Disable'}

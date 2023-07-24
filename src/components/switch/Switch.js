@@ -44,7 +44,6 @@ export const Switch = (props) => {
       <div className={sliderClassName}>
         {checked ? onIcon : offIcon}
         <div className='container'>
-          {loading && <div className="spinner"/>}
         </div>
       </div>
     </label>
