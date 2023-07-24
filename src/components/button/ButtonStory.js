@@ -8,18 +8,18 @@ export const ButtonStory = () => {
     const elements = [
         {
             cell: <ButtonList1/>,
-            title: 'Basic',
-            text: 'Basic usage of checkbox.'
+            title: 'Type',
+            text: 'There are primary button, default button, text button and link button.'
         },
         {
             cell: <ButtonList2/>,
-            title: 'Disabled',
-            text: 'Disabled checkbox.'
+            title: 'Size',
+            text: 'A default button size supports as well as a large and small size. If a large or small button is desired, set the size property to either large or small respectively. Omit the size property for a button with the default size.'
         },
         {
             cell: <ButtonList3/>,
-            title: 'Check all',
-            text: 'Check all checkbox.'
+            title: 'Icon',
+            text: 'Button components can contain an Icon. This is done by setting the icon property or placing an Icon component within the Button. If you want specific control over the positioning and placement of the Icon, then that should be done by placing the Icon component within the Button rather than using the icon property.'
         },
         {
             cell: <ButtonList4/>,

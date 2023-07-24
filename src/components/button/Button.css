@@ -20,7 +20,22 @@
 
   .button:hover {
     cursor: pointer;
+  }
+
+  .button-link__pressed:hover,
+  .button-link__selected:hover,
+  .button-text__pressed:hover,
+  .button-text__selected:hover,
+  .button-primary__pressed:hover,
+  .button-secondary__selected:hover {
     background: #92adff;
+  }
+
+  .button-link__disabled:hover,
+  .button-text__disabled:hover,
+  .button-primary__disabled:hover,
+  .button-secondary__disabled:hover {
+    cursor: not-allowed;
   }
 
   .button-primary,

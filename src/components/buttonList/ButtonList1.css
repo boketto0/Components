@@ -1,10 +1,4 @@
-.button-container {
-    display: grid;
-    grid-template-columns: repeat(2, 150px);
-    grid-template-rows: repeat(4, 50px);
-    gap: 24px;
-    padding: 24px;
-}
+
 
 .size-divider {
     box-sizing: border-box;

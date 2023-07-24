@@ -27,17 +27,20 @@ export const ButtonList2 = () => {
                     sizes.map(el => <div onClick={() => setSize(el.type)}>{el.text}</div>)
                 }
             </div>
-            <div className='container'>
-                <div className='button-container'>
-                <div className='buttonlist2-list'>
+            <div className='button-container'>
+                <div className='buttonlist2-container'>
                     <Button colored={'pressed'} size={size} text={'Primary Button'} type={ButtonType.PRIMARY}/>
                     <Button colored={'pressed'} size={size} text={'Default'} type={ButtonType.SECONDARY}/>
                     <Button colored={'selected'} size={size} text={'Link'} type={ButtonType.LINK}/>
                 </div>
-                    <div className='buttonlist2-list'>
-                        <IconButton icon={<img src={Icon}/>} colored={'pressed'} size={size}/>
-                    </div>
-                    {/* <Button colored={'selected'} size={size} text={'Primary Button'} type={type}/> */}
+                <div className='buttonlist2-container'>
+                    <IconButton icon={<img src={Icon}/>} colored={'pressed'} size={size}/>
+                    <IconButton icon={<img src={Icon}/>} colored={'pressed'} size={size} icon_round/>
+                </div>
+                <div className='buttonlist2-container'>
+                    <Button colored={'pressed'} icon={<img src={Icon}/>} round size={size} type={ButtonType.PRIMARY}/>
+                    <Button icon={<img src={Icon}/>} colored={'pressed'} round size={size} text={'Download'} type={ButtonType.PRIMARY}/>
+                    <Button icon={<img src={Icon}/>} colored={'pressed'} size={size} text={'Download'} type={ButtonType.PRIMARY}/>
                 </div>
             </div>
         </div>

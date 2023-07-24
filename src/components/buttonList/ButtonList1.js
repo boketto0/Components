@@ -5,14 +5,6 @@ import { useState } from 'react';
 
 export const ButtonList1 = () => {
 
-    // const [size, setSize] = useState(ButtonSize.SMALL);
-
-    // const sizes = [
-    //     {type: ButtonSize.SMALL, text: "Small"},
-    //     {type: ButtonSize.MEDIUM, text: "Medium"},
-    //     {type: ButtonSize.LARGE, text: "Large"}
-    // ]
-
 
     const buttonConfigs = [
         { colored: 'pressed', text: 'Primary Button', icon: '', isLoading: false, type: ButtonType.PRIMARY },
@@ -23,11 +15,6 @@ export const ButtonList1 = () => {
 
     return (
         <div>
-            {/* <div className='size-divider'>
-                {
-                    sizes.map(el => <div className='text-design' onClick={() => setSize(el.type)}>{el.text}</div>)
-                }
-            </div> */}
             <div className='wrapper'>
             <div className='button-container'>
                     {buttonConfigs.map((config) => (
