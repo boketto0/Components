@@ -32,7 +32,7 @@
   }
 
   .icon-button__primary__disabled {
-    background: #B0B5C4;
+    background: #EDEFF2;
   }
 
   .icon-button__primary__selected {
@@ -44,7 +44,7 @@
   }
 
   .icon-button__secondary__disabled {
-    border: 1px solid #B0B5C4; 
+    border: 1px solid #EDEFF2; 
   }
 
   .icon-button__secondary__selected {
@@ -58,7 +58,7 @@
 
   .icon-button__link__disabled,
   .icon-button__text__disabled {
-      color: #B0B5C4;
+      color: #EDEFF2;
   } 
 
   .icon-button__link__selected,

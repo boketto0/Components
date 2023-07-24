@@ -18,6 +18,18 @@
     margin: auto;
   }
 
+  .button-small .button-text {
+    font-size: 12px;
+  }
+
+  .button-medium .button-text {
+    font-size: 14px;
+  }
+
+  .button-large .button-text {
+    font-size: 16px;
+  }
+
   .button:hover {
     cursor: pointer;
   }
@@ -27,7 +39,8 @@
   .button-text__pressed:hover,
   .button-text__selected:hover,
   .button-primary__pressed:hover,
-  .button-secondary__selected:hover {
+  .button-secondary__selected:hover,
+  .button-secondary__pressed:hover {
     background: #92adff;
   }
 
@@ -160,7 +173,6 @@
   .button-content {
     display: flex;
     align-items: center;
-    justify-content:baseline;
   }
 
   .button-design {

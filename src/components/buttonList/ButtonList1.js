@@ -15,12 +15,10 @@ export const ButtonList1 = () => {
 
     return (
         <div>
-            <div className='wrapper'>
             <div className='button-container'>
                     {buttonConfigs.map((config) => (
                         <Button colored={config.colored} size={ButtonSize.LARGE} text={config.text} icon={config.icon} isLoading={config.isLoading} type={config.type}/>
                     ))}
-                </div>
             </div>
         </div>
     );

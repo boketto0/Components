@@ -27,7 +27,7 @@ export const ButtonList2 = () => {
                     sizes.map(el => <div onClick={() => setSize(el.type)}>{el.text}</div>)
                 }
             </div>
-            <div className='button-container'>
+            <div className='buttons-container'>
                 <div className='buttonlist2-container'>
                     <Button colored={'pressed'} size={size} text={'Primary Button'} type={ButtonType.PRIMARY}/>
                     <Button colored={'pressed'} size={size} text={'Default'} type={ButtonType.SECONDARY}/>

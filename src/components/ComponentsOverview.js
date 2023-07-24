@@ -15,9 +15,9 @@ export const ComponenetsOverview = () => {
       title: 'button',
       component: (
         <div className='card-component'>
-          <Button size={ButtonSize.MEDIUM} type={ButtonType.PRIMARY} text={'Button'} />
-          <Button size={ButtonSize.LARGE} type={ButtonType.SECONDARY} text={'Button'} />
-          <Button type={ButtonType.TEXT} text={'Button'} />
+          <Button colored={"pressed"} size={ButtonSize.MEDIUM} type={ButtonType.PRIMARY} text={'Button'} />
+          <Button colored={"pressed"} size={ButtonSize.LARGE} type={ButtonType.SECONDARY} text={'Button'} />
+          <Button colored={"pressed"} type={ButtonType.TEXT} text={'Button'} />
         </div>
       )
     },

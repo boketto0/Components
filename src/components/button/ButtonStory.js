@@ -23,19 +23,19 @@ export const ButtonStory = () => {
         },
         {
             cell: <ButtonList4/>,
-            title: 'Use with Grid',
-            text: 'We can use Checkbox and Grid to implement complex layout.'
+            title: 'Disabled',
+            text: 'To mark a button as disabled, add the disabled property to the Button.'
         },
         {
             cell: <ButtonList5/>,
-            title: 'Controlled Checkbox',
-            text: 'Communicated with other components.'
-        },
-        {
-            cell: <ButtonPreview/>,
-            title: 'Controlled Checkbox',
-            text: 'Communicated with other components.'
+            title: 'Loading',
+            text: 'A loading indicator can be added to a button by setting the loading property on the Button.'
         }
+        // {
+        //     cell: <ButtonPreview/>,
+        //     title: 'Controlled Checkbox',
+        //     text: 'Communicated with other components.'
+        // }
     ]
 
     return (
