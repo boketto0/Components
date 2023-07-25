@@ -1,7 +1,7 @@
 import './ButtonList5.css'
-import { Button, ButtonType, ButtonSize } from '../button'
-import { IconButton, IconButtonType, IconButtonSize } from '../button'
-import Icon1 from '../../../src/images/Vector.svg'
+import { Button, ButtonType, ButtonSize } from '../..'
+import { IconButton, IconButtonType, IconButtonSize } from '../..'
+import Icon1 from '../../../../images/Vector.svg'
 import { useState } from 'react'
 
 export const ButtonList5 = () => {
@@ -18,8 +18,8 @@ export const ButtonList5 = () => {
                 </div>
                 <div className='buttonlist5-container'>
                     <Button colored={"pressed"} type={ButtonType.PRIMARY} size={ButtonSize.MEDIUM} text={"Click me!"}/>
-                    <Button colored={"pressed"} type={ButtonType.PRIMARY} size={ButtonSize.MEDIUM} text={"Click me!"}/>
-                    <IconButton colored={"pressed"} type={IconButtonType.PRIMARY} size={IconButtonSize.MEDIUM}/>
+                    <Button colored={"pressed"} icon={<img src={Icon1}/>} type={ButtonType.PRIMARY} size={ButtonSize.MEDIUM} text={"Click me!"}/>
+                    <IconButton colored={"pressed"} icon={<img src={Icon1}/>} type={IconButtonType.PRIMARY} size={IconButtonSize.MEDIUM}/>
                 </div>
             </div>
         </div>

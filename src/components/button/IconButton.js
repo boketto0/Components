@@ -1,4 +1,3 @@
-import React from 'react';
 import classnames from 'classnames';
 import "./IconButton.css";
 import { PropTypes } from 'prop-types';
@@ -15,12 +14,6 @@ export const IconButtonType = {
     SECONDARY: "secondary",
     LINK: "link",
     TEXT: "link"
-}
-
-export const IconButtonColor = {
-  DISABLED: "disabled",
-  SELECTED: "selected",
-  PRESSED: "pressed"
 }
 
 export const IconButton = (props) => {

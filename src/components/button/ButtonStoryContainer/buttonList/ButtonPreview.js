@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './ButtonPreview.css';
-import { Button, ButtonType, ButtonSize} from '../button/Button';
-import { IconButton } from '../button';
-import { Loader } from '../loader/Loader';
+import { Button, ButtonType, ButtonSize} from '../../Button';
+import { IconButton } from '../..';
+import { Loader } from '../../../loader/Loader';
 
 export const ButtonPreview = () => {
 

@@ -43,7 +43,7 @@ export const ComponenetsOverview = () => {
 
   return (
     <div className='components-wrapper'>
-      <div className='components-list'>
+      <div>
         <div className="par-1">Components Overview</div>
         <div className="par-2">Components</div>
       </div>

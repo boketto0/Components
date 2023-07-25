@@ -1,2 +1,2 @@
 export {Button, ButtonType, ButtonSize} from './Button'
-export {IconButton, IconButtonSize, IconButtonType, IconButtonColor} from './IconButton'
+export {IconButton, IconButtonSize, IconButtonType} from './IconButton'

@@ -13,20 +13,20 @@
     cursor:pointer;
   }
 
-  .button-text {
+  .text {
     align-self: center;
     margin: auto;
   }
 
-  .button-small .button-text {
+  .button-small .text {
     font-size: 12px;
   }
 
-  .button-medium .button-text {
+  .button-medium .text {
     font-size: 14px;
   }
 
-  .button-large .button-text {
+  .button-large .text {
     font-size: 16px;
   }
 
@@ -91,25 +91,25 @@
     color: #1540C1;
   }
   
-  .button-text__pressed,
-  .button-text__secondary__pressed,
-  .button-text__link__pressed,
-  .button-text__text__pressed {
+  .text__pressed,
+  .text__secondary__pressed,
+  .text__link__pressed,
+  .text__text__pressed {
     color: #0065EB;
   }
   
-  .button-text__disabled,
-  .button-text__primary__disabled,
-  .button-text__secondary__disabled,
-  .button-text__link__disabled,
-  .button-text__text__disabled {
+  .text__disabled,
+  .text__primary__disabled,
+  .text__secondary__disabled,
+  .text__link__disabled,
+  .text__text__disabled {
     color: #B0B5C4;
   }
   
-  .button-text__selected,
-  .button-text__secondary__selected,
-  .button-text__link__selected,
-  .button-text__text__selected {
+  .text__selected,
+  .text__secondary__selected,
+  .text__link__selected,
+  .text__text__selected {
     color: #1540C1;
   }
   
@@ -117,8 +117,8 @@
     text-decoration: underline;
   }
   
-  .button-text__primary__pressed,
-  .button-text__primary__selected {
+  .text__primary__pressed,
+  .text__primary__selected {
     color: #FFFFFF;
   }
   

@@ -1,7 +1,7 @@
 import './ButtonStory.css'
-import { Card, CardType } from '../cards/Card'
-import { CardWrapper } from '../cards/CardWrapper'
-import { ButtonList1, ButtonList2, ButtonList3, ButtonList4, ButtonList5, ButtonPreview  } from '../buttonList/index'
+import { Card, CardType } from '../../cards/Card'
+import { CardWrapper } from '../../cards/CardWrapper'
+import { ButtonList1, ButtonList2, ButtonList3, ButtonList4, ButtonList5, ButtonPreview  } from './buttonList/index'
 
 export const ButtonStory = () => {
 
@@ -31,19 +31,15 @@ export const ButtonStory = () => {
             title: 'Loading',
             text: 'A loading indicator can be added to a button by setting the loading property on the Button.'
         }
-        // {
-        //     cell: <ButtonPreview/>,
-        //     title: 'Controlled Checkbox',
-        //     text: 'Communicated with other components.'
-        // }
     ]
 
     return (
         <div className='button-wrapper'>
             <div className='button-list'>
                 <div className='par-1'>Button</div>
-                <div className='text'>Checkbox component.</div>
-                <div className='par-2'>Examples</div>
+                <div className='text1'>To trigger an operation.</div>
+                <div className='par-2'>When to use</div>
+                <div className='text1'>A button means an operation (or a series of operations). Clicking a button will trigger corresponding business logic.</div>
             </div>
             <div>
                 <CardWrapper>

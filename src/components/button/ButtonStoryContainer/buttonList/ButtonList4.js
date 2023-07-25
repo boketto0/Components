@@ -1,6 +1,6 @@
 import './ButtonList4.css'
-import { ButtonType, Button } from '../button/Button'
-import { ButtonSize } from '../button'
+import { ButtonType, Button } from '../../Button'
+import { ButtonSize } from '../..'
 
 export const ButtonList4 = () => {
 

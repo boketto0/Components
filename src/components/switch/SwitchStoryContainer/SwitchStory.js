@@ -37,11 +37,11 @@ export const SwitchStory = () => {
         <div className='switch-wrapper'>
             <div className='switch-list'>
                 <div className='par-1'>Switch</div>
-                <div className='text'>Switching Selector.</div>
+                <div className='text1'>Switching Selector.</div>
                 <div className='par-2'>When To Use</div>
                 <ul>
-                    <li className='text'>If you need to represent the switching between two states or on-off state.</li>
-                    <li className='text'>The difference between Switch and Checkbox is that Switch will trigger a state change directly when you toggle it, while Checkbox is generally used for state marking, which should work in conjunction with submit operation.</li>
+                    <li className='text1'>If you need to represent the switching between two states or on-off state.</li>
+                    <li className='text1'>The difference between Switch and Checkbox is that Switch will trigger a state change directly when you toggle it, while Checkbox is generally used for state marking, which should work in conjunction with submit operation.</li>
                 </ul>
                 <div className='par-2'>Examples</div>
             </div>

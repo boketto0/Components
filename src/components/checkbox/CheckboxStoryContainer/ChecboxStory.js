@@ -42,7 +42,7 @@ export const CheckboxStory = () => {
         <div className='checkbox-wrapper'>
             <div className='checkbox-list'>
                 <div className='par-1'>Checkbox</div>
-                <div className='text'>Checkbox component.</div>
+                <div className='text1'>Checkbox component.</div>
                 <div className='par-2'>Examples</div>
             </div>
             <div>

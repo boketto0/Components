@@ -28,13 +28,12 @@ export const Button = (props) => {
   }, [onClick]);
 
   const buttonClasses = classnames(
-    'button',
+    `button`,
     type && `button-${type}`,
     size &&`button-${size}`,
     `button-${type}__${disabled}`,
-    `button-text__${type}__${disabled}`,
     colored && `button-${type}__${colored}`,
-    colored && `button-text__${type}__${colored}`,
+    colored && `text__${type}__${colored}`,
     `icon__${type}__${colored}`,
     { 'button-round': round }
   );
@@ -45,7 +44,7 @@ export const Button = (props) => {
     <div className={buttonClasses} onClick={handleClick}>
       <div className='button-content'>
           {icon && <span className={`icon icon__${type}__${colored}`}>{icon}</span>}
-          {text && <span className={`button-text__${type}__${disabled ? 'disabled' : ''}`}>{text}</span>}
+          {text && <span className={`text text__${type}__${disabled ? 'disabled' : ''}`}>{text}</span>}
           {isLoading && (<Loader color={loaderColor} type={type}/>)}
       </div>
     </div>

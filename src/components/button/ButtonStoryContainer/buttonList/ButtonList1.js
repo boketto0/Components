@@ -1,5 +1,5 @@
 import './ButtonList1.css';
-import { ButtonType, ButtonSize, Button } from '../button/Button';
+import { ButtonType, ButtonSize, Button } from '../../Button';
 import { useState } from 'react';
 
 

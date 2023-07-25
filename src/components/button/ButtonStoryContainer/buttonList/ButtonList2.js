@@ -1,8 +1,8 @@
 import './ButtonList2.css'
-import { ButtonType, ButtonSize, Button } from '../button/Button'
+import { ButtonType, ButtonSize, Button } from '../../Button'
 import { useState } from 'react'
-import { IconButton, IconButtonSize } from '../button'
-import Icon from '../../images/Vector.svg'
+import { IconButton, IconButtonSize } from '../..'
+import Icon from '../../../../images/Vector.svg'
 
 export const ButtonList2 = () => {
 
