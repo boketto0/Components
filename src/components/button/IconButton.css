@@ -1,115 +1,114 @@
 
-  .icon-button {
-    position: relative;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: .7s;
-    border-radius: 6px;
-    gap: 2px;
-  }
+.icon-button {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: .7s;
+  border-radius: 6px;
+  gap: 2px;
+}
 
-  .icon-button__primary {
-    background-color: #006EFF;
-  }
+.icon-button__primary {
+  background-color: #006EFF;
+}
 
-  .icon-button__secondary {
-    border: 1px solid #006EFF;
-  }
+.icon-button__secondary {
+  border: 1px solid #006EFF;
+}
 
-  .icon-button__link {
-    text-decoration: underline;
-  }
+.icon-button__link {
+  text-decoration: underline;
+}
 
-  .icon-button__text {
-    color: #0065EB;
-  }
+.icon-button__text {
+  color: #0065EB;
+}
 
-  .icon-button__primary__pressed {
-    background: #0065EB;
-  }
+.icon-button__primary__pressed {
+  background: #0065EB;
+}
 
-  .icon-button__primary__disabled {
-    background: #EDEFF2;
-  }
+.icon-button__primary__disabled {
+  background: #EDEFF2;
+}
 
-  .icon-button__primary__selected {
-    background: #1540C1;
-  }
+.icon-button__primary__selected {
+  background: #1540C1;
+}
 
-  .icon-button__secondary__pressed {
-    border: 1px solid #006EFF;
-  }
+.icon-button__secondary__pressed {
+  border: 1px solid #006EFF;
+}
 
-  .icon-button__secondary__disabled {
-    border: 1px solid #EDEFF2; 
-  }
+.icon-button__secondary__disabled {
+  border: 1px solid #EDEFF2; 
+}
 
-  .icon-button__secondary__selected {
-    border: 1px solid #1540C1;
-  }
+.icon-button__secondary__selected {
+  border: 1px solid #1540C1;
+}
 
-  .icon-button__link__pressed,
-  .icon-button__text__pressed {
-    color: #0065EB;
-  }
+.icon-button__link__pressed,
+.icon-button__text__pressed {
+  color: #0065EB;
+}
 
-  .icon-button__link__disabled,
-  .icon-button__text__disabled {
-      color: #EDEFF2;
-  } 
+.icon-button__link__disabled,
+.icon-button__text__disabled {
+  color: #EDEFF2;
+} 
 
-  .icon-button__link__selected,
-  .icon-button__text__selected {
-    color: #1540C1;
-  }
+.icon-button__link__selected,
+.icon-button__text__selected {
+  color: #1540C1;
+}
 
-  .icon-button__round {
-    border-radius: 30px;
-  }
+.icon-button__round {
+  border-radius: 30px;
+}
 
-  .icon-button__small {
-    width: 32px;
-    height: 32px;
-  }
+.icon-button__small {
+  width: 32px;
+  height: 32px;
+}
 
-  .icon-button__medium {
-    width: 40px;
-    height: 40px;
-  }
+.icon-button__medium {
+  width: 40px;
+  height: 40px;
+}
 
-  .icon-button__large {
-    width: 48px;
-    height: 48px;
-  }
-
-
-  .icon__primary__pressed, 
-  .icon__primary__selected {
-    color: white;
-  }
+.icon-button__large {
+  width: 48px;
+  height: 48px;
+}
+ 
+.icon__primary__pressed, 
+.icon__primary__selected {
+  color: white;
+}
     
-  .icon__primary__disabled,
-  .icon__secondary__disabled,
-  .icon__link__disabled,
-  .icon__text__disabled   {
-    color: #B0B5C4;
-  }
+.icon__primary__disabled,
+.icon__secondary__disabled,
+.icon__link__disabled,
+.icon__text__disabled   {
+  color: #B0B5C4;
+}
 
-  .icon__secondary__pressed,
-  .icon__link__pressed,
-  .icon__text__pressed {
-    color: #006EFF;
-  }
+.icon__secondary__pressed,
+.icon__link__pressed,
+.icon__text__pressed {
+  color: #006EFF;
+}
   
-  .icon__secondary__selected,
-  .icon__link__selected,
-  .icon__text__selected {
-    color: #1540C1;
-  }
+.icon__secondary__selected,
+.icon__link__selected,
+.icon__text__selected {
+  color: #1540C1;
+}
 
-  .icon-button-loader {
-    margin: 20px;
-  }
+.icon-button-loader {
+  margin: 20px;
+}
