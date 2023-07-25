@@ -38,3 +38,7 @@
       margin: 32px;
       flex-direction: column;
   }
+
+  .sidebar li a.active {
+      color: #83a0ff;
+  }
