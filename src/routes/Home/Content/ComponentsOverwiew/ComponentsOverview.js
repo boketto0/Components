@@ -1,12 +1,12 @@
 import './ComponentsOverview.css';
-import { Card, CardType } from './cards/Card';
-import { CardWrapper } from './cards/CardWrapper';
-import { Button, ButtonSize, ButtonType } from './button/Button';
-import { Checkbox } from './checkbox';
-import { CheckboxStory2 } from './checkboxStories';
-import { SwitchStory2 } from './switchStories';
-import { SwitchStory4 } from './switchStories';
-import { BrowserRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom';
+import { Card, CardType } from '../../../../components/cards/Card';
+import { CardWrapper } from '../../../../components/cards/CardWrapper';
+import { Button, ButtonType, ButtonSize } from '../../../../components/button';
+import { Checkbox } from '../../../../components/checkbox';
+import { CheckboxStory2 } from '../../../../components/checkbox/CheckboxStoryContainer/checkboxStories';
+import { SwitchStory2 } from '../../../../components/switch/SwitchStoryContainer/switchStories';
+import { SwitchStory4 } from '../../../../components/switch/SwitchStoryContainer/switchStories';
+import { Link } from 'react-router-dom';
 
 export const ComponenetsOverview = () => {
 

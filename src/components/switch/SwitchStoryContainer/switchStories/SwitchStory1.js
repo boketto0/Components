@@ -1,6 +1,6 @@
 import './SwitchStory1.css'
 import { useState } from 'react'
-import { Switch, SwitchSize } from '../switch/Switch';
+import { Switch, SwitchSize } from '../../Switch';
 
 export const SwitchStory1 = () => {
 

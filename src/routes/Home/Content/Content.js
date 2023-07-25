@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-import { ComponenetsOverview } from './ComponentsOverview';
-import { SwitchStory } from './switch/SwitchStory';
-import { ButtonStory } from './button/ButtonStory';
-import { CheckboxStory } from './checkbox/ChecboxStory';
+import { ComponenetsOverview } from './ComponentsOverwiew/ComponentsOverview';
+import { SwitchStory } from '../../../components/switch/SwitchStoryContainer/SwitchStory';
+import { ButtonStory } from '../../../components/button/ButtonStory';
+import { CheckboxStory } from '../../../components/checkbox/CheckboxStoryContainer/ChecboxStory';
 
 const Content = () => {
   return (

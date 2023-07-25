@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ButtonPreview.css';
 import { Button, ButtonType, ButtonSize} from '../button/Button';
 import { IconButton } from '../button';
-import { Loader } from '../Loader';
+import { Loader } from '../loader/Loader';
 
 export const ButtonPreview = () => {
 

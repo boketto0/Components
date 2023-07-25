@@ -1,5 +1,5 @@
 import './CheckboxStory4.css'
-import { Checkbox } from '../checkbox/Checkbox'
+import { Checkbox } from '../../Checkbox'
 
 export const CheckboxStory4 = () => {
 

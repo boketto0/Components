@@ -1,7 +1,7 @@
 import './SwitchStory.css'
-import { SwitchStory1, SwitchStory2, SwitchStory3, SwitchStory4, SwitchStory5 } from '../switchStories'
-import { Card, CardType } from '../cards/Card'
-import { CardWrapper } from '../cards/CardWrapper'
+import { SwitchStory1, SwitchStory2, SwitchStory3, SwitchStory4, SwitchStory5 } from './switchStories'
+import { Card, CardType } from '../../cards/Card'
+import { CardWrapper } from '../../cards/CardWrapper'
 
 export const SwitchStory = () => {
 

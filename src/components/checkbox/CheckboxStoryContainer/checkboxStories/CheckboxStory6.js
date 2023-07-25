@@ -1,4 +1,4 @@
-import { Group } from '../checkbox/Group';
+import { Group } from '../../Group';
 
 export const CheckboxStory6 = () => {
   const options = [

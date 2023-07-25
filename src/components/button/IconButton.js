@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import "./IconButton.css";
 import { PropTypes } from 'prop-types';
-import { Loader } from '../Loader';
+import { Loader } from '../loader/Loader';
 
 export const IconButtonSize = {
     SMALL: "small",

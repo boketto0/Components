@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
-import { Checkbox } from '../checkbox/Checkbox'
-import { CheckboxGroup } from '../checkbox/CheckboxGroup';
+import { Checkbox } from '../../Checkbox'
+import { CheckboxGroup } from '../../CheckboxGroup';
 import './CheckboxStory3.css';
 
 export const CheckboxStory3 = (props) => {

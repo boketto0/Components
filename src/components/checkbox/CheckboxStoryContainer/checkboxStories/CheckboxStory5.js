@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CheckboxStory5.css';
-import { Checkbox } from '../checkbox';
-import { Button, ButtonType, ButtonSize } from '../button/Button';
+import { Checkbox } from '../..';
+import { Button, ButtonType, ButtonSize } from '../../../button/Button';
 
 export const CheckboxStory5 = () => {
   const size = ButtonSize.SMALL;

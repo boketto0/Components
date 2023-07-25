@@ -1,4 +1,4 @@
-import { Loader } from '../Loader';
+import { Loader } from '../loader/Loader';
 import { getColor } from './utils';
 import classnames from 'classnames';
 import { useCallback } from 'react';
