@@ -2,6 +2,7 @@ import classnames from 'classnames';
 import "./IconButton.css";
 import { PropTypes } from 'prop-types';
 import { Loader } from '../loader/Loader';
+import { getColor } from './utils';
 
 export const IconButtonSize = {
     SMALL: "small",
@@ -27,10 +28,13 @@ export const IconButton = (props) => {
       colored && `icon__${type}__${colored}`
     );
   
+    const loaderColor = getColor(type, colored);
+
     return (
       <div className={buttonClasses}>
-        {isLoading && (<div className={`icon-button-loader ${colored}`}> 
-        <Loader colored={colored} type={type}/></div>)}
+        <div className='loader'>
+            {isLoading && (<Loader color={loaderColor} type={type}/>)}
+        </div>
         <span>
             {icon && <div className={`icon__${type}__${colored}`}>{icon}</div>}
         </span>

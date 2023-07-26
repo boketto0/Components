@@ -43,9 +43,11 @@ export const Button = (props) => {
   return (
     <div className={buttonClasses} onClick={handleClick}>
       <div className='button-content'>
+        <div className='loader'>
+          {isLoading && (<Loader color={loaderColor} type={type}/>)}
+        </div>
           {icon && <span className={`icon icon__${type}__${colored}`}>{icon}</span>}
           {text && <span className={`text text__${type}__${disabled ? 'disabled' : ''}`}>{text}</span>}
-          {isLoading && (<Loader color={loaderColor} type={type}/>)}
       </div>
     </div>
     

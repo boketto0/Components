@@ -15,7 +15,7 @@
 
   .text {
     align-self: center;
-    margin: auto;
+    margin-left: 2px;
   }
 
   .button-small .text {
@@ -173,12 +173,10 @@
   .button-content {
     display: flex;
     align-items: center;
+    position: relative;
+    justify-content: center;
   }
 
   .button-design {
     margin: 5%;
-  }
-
-  .loader {
-    margin: 16px;
   }
