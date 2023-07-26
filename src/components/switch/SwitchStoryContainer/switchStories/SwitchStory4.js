@@ -1,8 +1,8 @@
-import './Cell4.css'
+import './SwitchStory4.css'
 import { useState } from 'react'
-import { Switch, SwitchSize } from '../Switch';
+import { Switch, SwitchSize } from '../../Switch';
 
-export const Cell4 = () => {
+export const SwitchStory4 = () => {
   const [isChecked1, setIsChecked1] = useState(false);
   const [isChecked2, setIsChecked2] = useState(false);
 

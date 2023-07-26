@@ -1,0 +1,14 @@
+.switch-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 300px;
+}
+
+.switch-list {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+}

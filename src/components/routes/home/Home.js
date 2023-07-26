@@ -1,33 +1,33 @@
 import './Home.css'
-import { Cell1, Cell2, Cell3, Cell4, Cell5 } from './components/cells'
-import { CardWrapper } from './components/cards/CardWrapper'
-import { Card, CardType } from './components/cards/Card'
+import { SwitchStory1, SwitchStory2, SwitchStory3, SwitchStory4, SwitchStory5 } from '../../switch/SwitchStoryContainer/switchStories'
+import { CardWrapper } from '../../cards/CardWrapper'
+import { Card, CardType } from '../../cards/Card'
 
 export default function Home() {
 
     const elements = [
         {
-            cell: <Cell1/>,
+            cell: <SwitchStory1/>,
             title: 'Basic',
             text: 'The most basic usage.'
         },
         {
-            cell: <Cell2/>,
+            cell: <SwitchStory2/>,
             title: 'Disabled',
             text: 'Disabled state of Switch.'
         },
         {
-            cell: <Cell3/>,
+            cell: <SwitchStory3/>,
             title: 'Text & icon',
             text: 'With text and icon.'
         },
         {
-            cell: <Cell4/>,
+            cell: <SwitchStory4/>,
             title: 'Two sizes',
             text: 'size="small" represents a small sized switch.'
         },
         {
-            cell: <Cell5/>,
+            cell: <SwitchStory5/>,
             title: 'Loading',
             text: 'Mark a pending state of switch.'
         }

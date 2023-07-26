@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Switch, SwitchSize } from '../Switch';
-import './Cell5.css';
+import { Switch, SwitchSize } from '../../Switch';
+import './SwitchStory5.css';
 
-export const Cell5 = () => {
+export const SwitchStory5 = () => {
   const [isChecked, ] = useState(false);
 
   return (
