@@ -7,13 +7,11 @@ export const SwitchStory2 = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
 
-  const handleSwitchChange = () => {
-    setIsChecked(!isChecked);
-  };
+    const disabled = ''
 
-  const handleDisableButtonClick = () => {
-    setIsDisabled(!isDisabled);
-  };
+    const handleDisableButtonClick = () => {
+      setIsDisabled(!isDisabled);
+    };
 
   const size = ''
 

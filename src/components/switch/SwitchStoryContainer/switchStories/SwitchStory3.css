@@ -1,29 +1,7 @@
-.switch-icon {
-  color: black;
-}
-  
-.icon-left {
-  margin-left: 24px;
-}
-
-.icon-right {
-  margin-right: 16px;
-  margin-top: 2px;
-  margin-bottom: 4px;
-}
-
 .list {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.cell3 {
     display: flex;
     align-items: baseline;
     justify-content: center;
     flex-direction: row;
+    gap: 16px;
 }
-
