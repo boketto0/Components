@@ -13,6 +13,11 @@ export const SwitchStory2 = () => {
       setIsDisabled(!isDisabled);
     };
 
+
+    const handleSwitchChange = () => {
+      setIsChecked(!isChecked)
+  }
+
   const size = ''
 
   return (
