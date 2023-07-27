@@ -13,26 +13,27 @@
     cursor:pointer;
   }
 
-  .text {
+  .texts {
     align-self: center;
     margin-left: 2px;
   }
 
-  .button-small .text {
+  .texts__small {
     font-size: 12px;
   }
 
-  .button-medium .text {
+  .texts__medium {
     font-size: 14px;
   }
 
-  .button-large .text {
+  .texts__large {
     font-size: 16px;
   }
 
   .button:hover {
     cursor: pointer;
   }
+/* TODO(Bekmina): Исправить стили текста кнопок */
 
   .button-link__pressed:hover,
   .button-link__selected:hover,
@@ -51,9 +52,11 @@
     cursor: not-allowed;
   }
 
-  .button-primary,
+  /* primary */
+
   .button-primary__pressed {
     background: #0065EB;
+    color: white;
   }
   
   .button-primary__disabled {
@@ -62,11 +65,14 @@
   
   .button-primary__selected {
     background: #1540C1;
+    color: white;
   }
+
+  /* secondary */
   
-  .button-secondary,
   .button-secondary__pressed {
     border: 1px solid #0065EB;
+    color: #0065EB;
   }
   
   .button-secondary__disabled {
@@ -75,41 +81,46 @@
   
   .button-secondary__selected {
     border: 1px solid #1540C1;
+    color: #1540C1;
   }
+
+  /* link и text */
   
-  .button-link,
-  .button-link__pressed {
+  .button-link__pressed,
+  .button-text__pressed {
     color: #006EFF;
   }
   
   .button-link__disabled,
-  .button-text {
+  .button-text__disabled {
     color: #EDEFF2;
   }
   
-  .button-link__selected {
+  .button-link__selected,
+  .button-text__selected {
     color: #1540C1;
+    
   }
   
-  .text__pressed,
-  .text__secondary__pressed,
-  .text__link__pressed,
-  .text__text__pressed {
+  .texts__pressed,
+  .texts__secondary__pressed,
+  .texts__link__pressed,
+  .texts__text__pressed {
     color: #0065EB;
   }
   
-  .text__disabled,
-  .text__primary__disabled,
-  .text__secondary__disabled,
-  .text__link__disabled,
-  .text__text__disabled {
+  .texts__disabled,
+  .texts__primary__disabled,
+  .texts__secondary__disabled,
+  .texts__link__disabled,
+  .texts__text__disabled {
     color: #B0B5C4;
   }
   
-  .text__selected,
+  .texts__selected,
   .text__secondary__selected,
-  .text__link__selected,
-  .text__text__selected {
+  .texts__link__selected,
+  .texts__text__selected {
     color: #1540C1;
   }
   
@@ -117,8 +128,8 @@
     text-decoration: underline;
   }
   
-  .text__primary__pressed,
-  .text__primary__selected {
+  .texts__primary__pressed,
+  .texts__primary__selected {
     color: #FFFFFF;
   }
   
@@ -166,8 +177,8 @@
   }
 
   .icon {
-    margin-right: 6px;
-    margin-bottom: 4px;
+    margin-right: 2px;
+    margin-bottom: 2px;
   }
 
   .button-content {

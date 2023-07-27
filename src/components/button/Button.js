@@ -33,7 +33,8 @@ export const Button = (props) => {
     size &&`button-${size}`,
     `button-${type}__${disabled}`,
     colored && `button-${type}__${colored}`,
-    colored && `text__${type}__${colored}`,
+    colored && `texts__${type}__${colored}`,
+    size && `texts__${size}`,
     `icon__${type}__${colored}`,
     { 'button-round': round }
   );
@@ -47,7 +48,7 @@ export const Button = (props) => {
           {isLoading && (<Loader color={loaderColor} type={type}/>)}
         </div>
           {icon && <span className={`icon icon__${type}__${colored}`}>{icon}</span>}
-          {text && <span className={`text text__${type}__${disabled ? 'disabled' : ''}`}>{text}</span>}
+          {text && <span className={`texts texts__${size} texts__${type}__${colored}`}>{text}</span>}
       </div>
     </div>
     

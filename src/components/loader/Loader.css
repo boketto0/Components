@@ -1,9 +1,9 @@
 .spinner {
   height: 14px;
   width: 14px;
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
+  border-left: 1px solid #c8c8c9;
+  border-bottom: 1px solid #c8c8c9;
+  border-right: 1px solid #c8c8c9;
   border-top: 1px solid transparent;
   border-radius: 50%;
   animation: spinner 1s linear infinite;
