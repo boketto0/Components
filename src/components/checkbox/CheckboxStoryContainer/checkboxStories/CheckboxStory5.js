@@ -3,7 +3,7 @@ import './CheckboxStory5.css';
 import { Checkbox } from '../..';
 import { Button, ButtonType, ButtonSize } from '../../../button/Button';
 
-export const CheckboxStory5 = () => {
+export function CheckboxStory5() {
   const size = ButtonSize.SMALL;
   const type = ButtonType.PRIMARY;
 
@@ -34,13 +34,12 @@ export const CheckboxStory5 = () => {
   const getCheckboxText = (checked, disabled) => {
     if (checked && disabled) {
       return 'Checked-Disabled';
-    } else if (checked && !disabled) {
+    } if (checked && !disabled) {
       return 'Checked-Enabled';
-    } else if (!checked && disabled) {
+    } if (!checked && disabled) {
       return 'Unchecked-Disabled';
-    } else {
-      return 'Unchecked-Enabled';
     }
+    return 'Unchecked-Enabled';
   };
 
   return (
@@ -52,9 +51,9 @@ export const CheckboxStory5 = () => {
         onChange={handleCheckboxChange}
       />
       <div className="list">
-        <Button colored={'selected'} size={size} type={type} text={buttonText} onClick={handleButtonClick} />
-        <Button colored={'selected'} size={size} type={type} text={isDisabled ? 'Enabled' : 'Disable'} onClick={handleDisableClick} />
+        <Button colored="selected" size={size} type={type} text={buttonText} onClick={handleButtonClick} />
+        <Button colored="selected" size={size} type={type} text={isDisabled ? 'Enabled' : 'Disable'} onClick={handleDisableClick} />
       </div>
     </div>
   );
-};
+}

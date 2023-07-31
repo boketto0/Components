@@ -3,8 +3,7 @@ import ListWrapper3 from './ListWrapper3';
 // import Item from '../images/list3_images/◼️ Background.png'
 
 function List3(props) {
-
-  const  listItems = [
+  const listItems = [
     {
       // picture: <img src={Item}/>,
       text: 'Что такое дизайн-система?',
@@ -24,22 +23,20 @@ function List3(props) {
     {
       // picture: <img src={Item}/>,
       text: 'Зачем нужна документация?',
-    }
-]
+    },
+  ];
 
-    return(
-        <ListWrapper3 className="list2-block">
+  return (
+    <ListWrapper3 className="list2-block">
 
-          { listItems.map((li) => {
-            return(
-              <div className='list3-item'>
-                <div className='list3-item__text'>{li.text}</div>
-                <div className='list3-item__picture'>{li.picture}</div>
-              </div>
-            )
-          })}
-      </ListWrapper3>
-    )
+      { listItems.map((li) => (
+        <div className="list3-item">
+          <div className="list3-item__text">{li.text}</div>
+          <div className="list3-item__picture">{li.picture}</div>
+        </div>
+      ))}
+    </ListWrapper3>
+  );
 }
 
 export default List3;

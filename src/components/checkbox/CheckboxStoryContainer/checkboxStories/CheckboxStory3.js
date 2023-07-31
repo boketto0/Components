@@ -1,13 +1,12 @@
 import React, { useCallback } from 'react';
-import { Checkbox } from '../../Checkbox'
+import { Checkbox } from '../../Checkbox';
 import { CheckboxGroup } from '../../CheckboxGroup';
 import './CheckboxStory3.css';
 import { PropTypes } from 'prop-types';
 import { CheckboxStory2 } from '.';
 
-export const CheckboxStory3 = (props) => {
-
-  const { onClick } = props
+export function CheckboxStory3(props) {
+  const { onClick } = props;
 
   const handleClick = useCallback(() => {
     if (onClick) {
@@ -43,8 +42,8 @@ export const CheckboxStory3 = (props) => {
       </CheckboxGroup>
     </div>
   );
-};
+}
 
 CheckboxStory3.propTypes = {
-  onClick: PropTypes.func
-}
+  onClick: PropTypes.func,
+};

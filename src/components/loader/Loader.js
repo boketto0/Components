@@ -1,9 +1,8 @@
-import './Loader.css'
-import React from 'react'
+import './Loader.css';
+import React from 'react';
 
-export const Loader = (props) => {
-    return(
-        <div className ='spinner'>
-        </div>
-    )
+export function Loader(props) {
+  return (
+    <div className="spinner" />
+  );
 }

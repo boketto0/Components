@@ -1,17 +1,17 @@
-import { Group } from '../../Group';
 import React from 'react';
+import { Group } from '../../Group';
 
-export const CheckboxStory6 = () => {
+export function CheckboxStory6() {
   const options = [
     { label: 'Apple', value: 'Apple' },
     { label: 'Pear', value: 'Pear' },
-    { label: 'Orange', value: 'Orange' }
+    { label: 'Orange', value: 'Orange' },
   ];
 
   const optionsProperty = [
     { disabled: false },
     { disabled: true, checked: true },
-    { disabled: true, indeterminate: true }
+    { disabled: true, indeterminate: true },
   ];
 
   return (
@@ -19,4 +19,4 @@ export const CheckboxStory6 = () => {
       <Group options={options} optionsProperty={optionsProperty} />
     </div>
   );
-};
+}

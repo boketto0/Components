@@ -3,13 +3,15 @@ import classnames from 'classnames';
 import './Checkbox.css';
 import { PropTypes } from 'prop-types';
 
-export const Checkbox = (props) => {
-  const { text, disabled, indeterminate, checked: checkedProps, onChange, onClick } = props;
+export function Checkbox(props) {
+  const {
+    text, disabled, indeterminate, checked: checkedProps, onChange, onClick,
+  } = props;
 
   const [checkedState, setCheckedState] = useState(checkedProps || false);
 
   const handleCheckboxChange = (e) => {
-    let newChecked = e.currentTarget.checked;
+    const newChecked = e.currentTarget.checked;
 
     if (!disabled) {
       if (checkedProps === undefined) {
@@ -28,7 +30,7 @@ export const Checkbox = (props) => {
     }
   }, [onClick]);
 
-  const checked = checkedProps || indeterminate ||  checkedState;
+  const checked = checkedProps || indeterminate || checkedState;
 
   const checkboxClasses = classnames('checkbox', {
     'checkbox-disabled': disabled,
@@ -43,12 +45,11 @@ export const Checkbox = (props) => {
   return (
     <label className={checkboxClasses} onClick={handleClick}>
       <input type="checkbox" checked={checked} onChange={handleCheckboxChange} disabled={disabled} />
-      <span className={checkmarkClasses}></span>
+      <span className={checkmarkClasses} />
       {text && <span className="label">{text}</span>}
     </label>
   );
-};
-
+}
 
 Checkbox.propTypes = {
   text: PropTypes.string,
@@ -56,5 +57,5 @@ Checkbox.propTypes = {
   indeterminate: PropTypes.bool,
   checked: PropTypes.bool,
   onChange: PropTypes.func,
-  onClick: PropTypes.func
-}
+  onClick: PropTypes.func,
+};

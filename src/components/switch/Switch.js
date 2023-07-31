@@ -1,16 +1,17 @@
-import { useState, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import './Switch.css';
-import React from 'react';
 import classnames from 'classnames';
 
 export const SwitchSize = {
   SMALL: 'small',
-  LARGE: 'large'
+  LARGE: 'large',
 };
 
-export const Switch = (props) => {
-  const { checked, onChange, disabled, onIcon, offIcon, onClick, size = SwitchSize.LARGE, loading } = props;
+export function Switch(props) {
+  const {
+    checked, onChange, disabled, onIcon, offIcon, onClick, size = SwitchSize.LARGE, loading,
+  } = props;
 
   const [isDragging, setIsDragging] = useState(false);
 
@@ -32,7 +33,7 @@ export const Switch = (props) => {
     'slider-small': size === SwitchSize.SMALL,
     'slider-large': size === SwitchSize.LARGE,
     'slider-disabled': disabled,
-    'slider-loading': loading
+    'slider-loading': loading,
   });
 
   return (
@@ -44,12 +45,11 @@ export const Switch = (props) => {
       <input type="checkbox" checked={checked} onChange={handleCheckboxChange} disabled={disabled} />
       <div className={sliderClassName}>
         {checked ? onIcon : offIcon}
-        <div className='container'>
-        </div>
+        <div className="container" />
       </div>
     </label>
   );
-};
+}
 
 Switch.propTypes = {
   checked: PropTypes.bool.isRequired,
@@ -59,5 +59,5 @@ Switch.propTypes = {
   onIcon: PropTypes.node,
   offIcon: PropTypes.node,
   onClick: PropTypes.func,
-  loading: PropTypes.bool
+  loading: PropTypes.bool,
 };

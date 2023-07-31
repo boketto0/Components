@@ -1,8 +1,8 @@
 import React from 'react';
-import { Checkbox } from '../checkbox/Checkbox';
 import { PropTypes } from 'prop-types';
+import { Checkbox } from './Checkbox';
 
-export const Group = ({ options, optionsProperty }) => {
+export function Group({ options, optionsProperty }) {
   return (
     <div className="checkbox-group">
       <div>
@@ -29,31 +29,31 @@ export const Group = ({ options, optionsProperty }) => {
         <Checkbox
           value={options[0].value}
           text={options[0].label}
-          disabled={true}
+          disabled
         />
         <Checkbox
           value={options[1].value}
           text={options[1].label}
-          disabled={true}
-          checked={true}
+          disabled
+          checked
         />
         <Checkbox
           value={options[2].value}
           text={options[2].label}
-          disabled={true}
-          indeterminate={true}
+          disabled
+          indeterminate
         />
       </div>
     </div>
   );
-};
+}
 
 Group.propTypes = {
-    options: PropTypes.arrayOf(
-        PropTypes.shape({
-            value: PropTypes.any.isRequired,
-            label: PropTypes.string.isRequired
-        })
-    ).isRequired,
-    optionsProperty: PropTypes.any.isRequired
-}
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.any.isRequired,
+      label: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  optionsProperty: PropTypes.any.isRequired,
+};

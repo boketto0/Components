@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
+import React from 'react';
 import { ComponenetsOverview } from './ComponentsOverwiew/ComponentsOverview';
 import { SwitchStory } from '../../../components/switch/SwitchStoryContainer/SwitchStory';
 import { ButtonStory } from '../../../components/button/ButtonStoryContainer/ButtonStory';
 import { CheckboxStory } from '../../../components/checkbox/CheckboxStoryContainer/ChecboxStory';
-import React from 'react';
 
-const Content = () => {
+function Content() {
   return (
     <div className="component-wrapper">
       <Routes>
@@ -16,6 +16,6 @@ const Content = () => {
       </Routes>
     </div>
   );
-};
+}
 
 export default Content;

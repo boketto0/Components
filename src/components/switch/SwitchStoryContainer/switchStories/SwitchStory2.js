@@ -3,7 +3,7 @@ import './SwitchStory2.css';
 import { Switch, SwitchSize } from '../../Switch';
 import { Button, ButtonType, ButtonSize } from '../../../button/Button';
 
-export const SwitchStory2 = () => {
+export function SwitchStory2() {
   const [isChecked, setIsChecked] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
 
@@ -15,14 +15,14 @@ export const SwitchStory2 = () => {
     setIsDisabled(!isDisabled);
   };
 
-  const size = ''
+  const size = '';
 
   return (
     <div>
       <Switch size={SwitchSize.LARGE} checked={isChecked} onChange={handleSwitchChange} disabled={isDisabled} />
       <span>{isChecked ? 'On' : 'Off'}</span>
       <Button
-        colored={'pressed'}
+        colored="pressed"
         type={ButtonType.PRIMARY}
         size={ButtonSize.SMALL}
         text={isDisabled ? 'Enable' : 'Disable'}
@@ -30,4 +30,4 @@ export const SwitchStory2 = () => {
       />
     </div>
   );
-};
+}

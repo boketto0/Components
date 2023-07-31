@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import './SliderbarMenu.css';
 import React from 'react';
 
-const SliderbarMenu = () => {
+function SliderbarMenu() {
   return (
     <div>
       <div className="sidebar">
@@ -31,6 +31,6 @@ const SliderbarMenu = () => {
       </div>
     </div>
   );
-};
+}
 
 export default SliderbarMenu;

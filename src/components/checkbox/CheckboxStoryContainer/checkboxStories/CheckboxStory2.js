@@ -1,16 +1,15 @@
-import './CheckboxStory2.css'
-import { Checkbox } from '../../Checkbox'
+import './CheckboxStory2.css';
 import React from 'react';
+import { Checkbox } from '../../Checkbox';
 
-export const CheckboxStory2 = () => {
+export function CheckboxStory2() {
+  const disabled = '';
 
-    const disabled = ''
-
-    return(
-        <div className='cell1'>
-            <Checkbox disabled />
-            <Checkbox checked disabled />
-            <Checkbox indeterminate disabled/>
-        </div>
-    )
+  return (
+    <div className="cell1">
+      <Checkbox disabled />
+      <Checkbox checked disabled />
+      <Checkbox indeterminate disabled />
+    </div>
+  );
 }
