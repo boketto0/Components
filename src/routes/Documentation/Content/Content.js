@@ -3,6 +3,7 @@ import { ComponenetsOverview } from './ComponentsOverwiew/ComponentsOverview';
 import { SwitchStory } from '../../../components/switch/SwitchStoryContainer/SwitchStory';
 import { ButtonStory } from '../../../components/button/ButtonStoryContainer/ButtonStory';
 import { CheckboxStory } from '../../../components/checkbox/CheckboxStoryContainer/ChecboxStory';
+import React from 'react';
 
 const Content = () => {
   return (

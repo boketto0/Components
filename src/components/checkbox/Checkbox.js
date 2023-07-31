@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import classnames from 'classnames';
 import './Checkbox.css';
+import { PropTypes } from 'prop-types';
 
 export const Checkbox = (props) => {
   const { text, disabled, indeterminate, checked: checkedProps, onChange, onClick } = props;
@@ -47,3 +48,13 @@ export const Checkbox = (props) => {
     </label>
   );
 };
+
+
+Checkbox.propTypes = {
+  text: PropTypes.string,
+  disabled: PropTypes.bool,
+  indeterminate: PropTypes.bool,
+  checked: PropTypes.bool,
+  onChange: PropTypes.func,
+  onClick: PropTypes.func
+}

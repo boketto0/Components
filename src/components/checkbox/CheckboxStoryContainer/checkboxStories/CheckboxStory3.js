@@ -2,6 +2,8 @@ import React, { useCallback } from 'react';
 import { Checkbox } from '../../Checkbox'
 import { CheckboxGroup } from '../../CheckboxGroup';
 import './CheckboxStory3.css';
+import { PropTypes } from 'prop-types';
+import { CheckboxStory2 } from '.';
 
 export const CheckboxStory3 = (props) => {
 
@@ -42,3 +44,7 @@ export const CheckboxStory3 = (props) => {
     </div>
   );
 };
+
+CheckboxStory3.propTypes = {
+  onClick: PropTypes.func
+}

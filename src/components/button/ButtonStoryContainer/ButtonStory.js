@@ -1,7 +1,8 @@
 import './ButtonStory.css'
 import { Card, CardType } from '../../cards/Card'
 import { CardWrapper } from '../../cards/CardWrapper'
-import { ButtonList1, ButtonList2, ButtonList3, ButtonList4, ButtonList5, ButtonPreview  } from './buttonList/index'
+import { ButtonList1, ButtonList2, ButtonList3, ButtonList4, ButtonList5} from './buttonList/index'
+import React from 'react';
 
 export const ButtonStory = () => {
 
@@ -43,9 +44,9 @@ export const ButtonStory = () => {
             </div>
             <div>
                 <CardWrapper>
-                { elements.map((el) => {
+                { elements.map((el, index) => {
                     return(
-                    <div>
+                    <div key={index}>
                         <Card cardType={CardType.THIRD} cell={el.cell} title={el.title} text={el.text}/>
                     </div>
                     )

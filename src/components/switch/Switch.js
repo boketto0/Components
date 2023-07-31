@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import './Switch.css';
+import React from 'react';
 import classnames from 'classnames';
 
 export const SwitchSize = {
@@ -56,5 +57,7 @@ Switch.propTypes = {
   disabled: PropTypes.bool,
   size: PropTypes.oneOf(Object.values(SwitchSize)),
   onIcon: PropTypes.node,
-  offIcon: PropTypes.node
+  offIcon: PropTypes.node,
+  onClick: PropTypes.func,
+  loading: PropTypes.bool
 };

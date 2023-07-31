@@ -3,6 +3,7 @@ import "./IconButton.css";
 import { PropTypes } from 'prop-types';
 import { Loader } from '../loader/Loader';
 import { getColor } from './utils';
+import React from 'react';
 
 export const IconButtonSize = {
     SMALL: "small",
@@ -46,6 +47,8 @@ export const IconButton = (props) => {
     size: PropTypes.oneOf(Object.values(IconButtonSize)),
     icon: PropTypes.node,
     colored: PropTypes.oneOf(['pressed', 'disabled', 'selected']),
-    icon_round: PropTypes.bool
+    icon_round: PropTypes.bool,
+    type: PropTypes.oneOf(Object.values(IconButtonType)),
+    isLoading: PropTypes.bool
   };
   

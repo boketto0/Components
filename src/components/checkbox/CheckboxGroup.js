@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Checkbox } from '.';
+import { PropTypes } from 'prop-types';
 
 export const CheckboxGroup = ({ children }) => {
   const [checkedItems, setCheckedItems] = useState([]);
@@ -70,3 +71,7 @@ export const CheckboxGroup = ({ children }) => {
     </div>
   );
 };
+
+CheckboxGroup.propTypes = {
+  children: PropTypes.node
+}

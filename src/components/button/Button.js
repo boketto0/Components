@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import { useCallback } from 'react';
 import './Button.css'
 import { PropTypes } from 'prop-types';
+import React from 'react';
 
 export const ButtonSize = {
   SMALL: "small",
@@ -61,7 +62,10 @@ Button.propTypes = {
   text: PropTypes.string,
   icon: PropTypes.node,
   round: PropTypes.bool,
-  isLoading: PropTypes.bool
+  isLoading: PropTypes.bool,
+  disabled: PropTypes.bool,
+  colored: PropTypes.string,
+  onClick: PropTypes.func
 };
 
 

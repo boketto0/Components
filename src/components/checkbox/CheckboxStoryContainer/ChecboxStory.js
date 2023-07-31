@@ -2,6 +2,7 @@ import './CheckboxStory.css'
 import { CheckboxStory1, CheckboxStory2, CheckboxStory3, CheckboxStory4, CheckboxStory5, CheckboxStory6 } from './checkboxStories/index'
 import { Card, CardType } from '../../cards/Card'
 import { CardWrapper } from '../../cards/CardWrapper'
+import React from 'react';
 
 export const CheckboxStory = () => {
 
@@ -47,9 +48,9 @@ export const CheckboxStory = () => {
             </div>
             <div>
                 <CardWrapper>
-                { elements.map((el) => {
+                { elements.map((el, index) => {
                     return(
-                    <div>
+                    <div key={index}>
                         <Card cardType={CardType.FIRST} cell={el.cell} title={el.title} text={el.text}/>
                     </div>
                     )

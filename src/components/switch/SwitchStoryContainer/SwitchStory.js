@@ -2,6 +2,7 @@ import './SwitchStory.css'
 import { SwitchStory1, SwitchStory2, SwitchStory3, SwitchStory4, SwitchStory5 } from './switchStories'
 import { Card, CardType } from '../../cards/Card'
 import { CardWrapper } from '../../cards/CardWrapper'
+import React from 'react';
 
 export const SwitchStory = () => {
 
@@ -46,9 +47,9 @@ export const SwitchStory = () => {
                 <div className='par-2'>Examples</div>
             </div>
             <CardWrapper>
-              { elements.map((el) => {
+              { elements.map((el, index) => {
                   return(
-                  <div>
+                  <div key={index}>
                     <Card cardType={CardType.FIRST} cell={el.cell} title={el.title} text={el.text}/>
                   </div>
                   )

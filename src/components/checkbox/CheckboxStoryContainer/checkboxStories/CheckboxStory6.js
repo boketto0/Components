@@ -1,4 +1,5 @@
 import { Group } from '../../Group';
+import React from 'react';
 
 export const CheckboxStory6 = () => {
   const options = [

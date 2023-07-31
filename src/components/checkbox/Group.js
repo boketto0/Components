@@ -1,5 +1,6 @@
 import React from 'react';
 import { Checkbox } from '../checkbox/Checkbox';
+import { PropTypes } from 'prop-types';
 
 export const Group = ({ options, optionsProperty }) => {
   return (
@@ -46,3 +47,13 @@ export const Group = ({ options, optionsProperty }) => {
     </div>
   );
 };
+
+Group.propTypes = {
+    options: PropTypes.arrayOf(
+        PropTypes.shape({
+            value: PropTypes.any.isRequired,
+            label: PropTypes.string.isRequired
+        })
+    ).isRequired,
+    optionsProperty: PropTypes.any.isRequired
+}

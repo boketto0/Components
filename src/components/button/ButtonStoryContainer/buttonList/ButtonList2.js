@@ -2,7 +2,8 @@ import './ButtonList2.css'
 import { ButtonType, ButtonSize, Button } from '../../Button'
 import { useState } from 'react'
 import { IconButton, IconButtonSize } from '../..'
-import Icon from '../../../../images/Vector.svg'
+import Icon from '../../../../assets/images/Vector.svg'
+import React from 'react';
 
 export const ButtonList2 = () => {
 
@@ -24,7 +25,7 @@ export const ButtonList2 = () => {
         <div>
             <div className='size-divider'>
                 {
-                    sizes.map(el => <div onClick={() => setSize(el.type)}>{el.text}</div>)
+                    sizes.map((el, index) => <div key={index} onClick={() => setSize(el.type)}>{el.text}</div>)
                 }
             </div>
             <div className='buttons-container'>

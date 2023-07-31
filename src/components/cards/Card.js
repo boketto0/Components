@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import React from 'react';
 import './Card.css';
+import { PropTypes } from 'prop-types';
 
 export const CardType = {
   FIRST: "first",
@@ -39,3 +40,11 @@ export const Card = (props) => {
     </div>
   );
 };
+
+Card.propTypes = {
+    cardType: PropTypes.oneOf(Object.values(CardType)),
+    cell: PropTypes.node,
+    title: PropTypes.string, 
+    text: PropTypes.string, 
+    component: PropTypes.node,
+}

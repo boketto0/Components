@@ -1,6 +1,7 @@
 import './ButtonList1.css';
 import { ButtonType, ButtonSize, Button } from '../../Button';
 import { useState } from 'react';
+import React from 'react';
 
 
 export const ButtonList1 = () => {
@@ -16,8 +17,8 @@ export const ButtonList1 = () => {
     return (
         <div>
             <div className='button-container'>
-                    {buttonConfigs.map((config) => (
-                        <Button colored={config.colored} size={ButtonSize.LARGE} text={config.text} icon={config.icon} isLoading={config.isLoading} type={config.type}/>
+                    {buttonConfigs.map((config, index) => (
+                        <Button key={index} colored={config.colored} size={ButtonSize.LARGE} text={config.text} icon={config.icon} isLoading={config.isLoading} type={config.type}/>
                     ))}
             </div>
         </div>

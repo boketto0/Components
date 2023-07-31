@@ -1,5 +1,6 @@
 import './CheckboxStory1.css'
 import { Checkbox } from '../../Checkbox'
+import React from 'react';
 
 export const CheckboxStory1 = () => {
 
