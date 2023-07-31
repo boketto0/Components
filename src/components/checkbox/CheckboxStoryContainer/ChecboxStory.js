@@ -1,10 +1,7 @@
-import './CheckboxStory.css';
-import React from 'react';
-import {
-  CheckboxStory1, CheckboxStory2, CheckboxStory3, CheckboxStory4, CheckboxStory5, CheckboxStory6,
-} from './checkboxStories/index';
-import { Card, CardType } from '../../cards/Card';
-import { CardWrapper } from '../../cards/CardWrapper';
+import './CheckboxStory.css'
+import { CheckboxStory1, CheckboxStory2, CheckboxStory3, CheckboxStory4, CheckboxStory5, CheckboxStory6 } from './checkboxStories/index'
+import { Card, CardType } from '../../cards/Card'
+import { CardWrapper } from '../../cards/CardWrapper'
 
 export function CheckboxStory() {
   const elements = [

@@ -68,8 +68,10 @@ export function CheckboxGroup({ children }) {
       }))}
     </div>
   );
+
 }
 
 CheckboxGroup.propTypes = {
   children: PropTypes.node,
 };
+

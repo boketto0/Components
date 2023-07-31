@@ -8,7 +8,8 @@ import { Checkbox } from '../../../../components/checkbox';
 import { CheckboxStory2 } from '../../../../components/checkbox/CheckboxStoryContainer/checkboxStories';
 import { SwitchStory2, SwitchStory4 } from '../../../../components/switch/SwitchStoryContainer/switchStories';
 
-export function ComponenetsOverview() {
+export const ComponenetsOverview = () => {
+
   const componentsStory = [
     {
       title: 'button',

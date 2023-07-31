@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import './ButtonList4.css';
 import React from 'react';
 import { ButtonType, Button } from '../../Button';
 import { ButtonSize } from '../..';
+=======
+import './ButtonList4.css'
+import { ButtonType, Button } from '../../Button'
+import { ButtonSize } from '../..'
+import React from 'react';
+>>>>>>> 7c08ad1 (везде добавлена проверка типов, добавлен key в map)
 
 export function ButtonList4() {
   return (

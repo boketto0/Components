@@ -1,6 +1,7 @@
 import './SwitchStory4.css';
 import React, { useState } from 'react';
 import { Switch, SwitchSize } from '../../Switch';
+import React from 'react';
 
 export function SwitchStory4() {
   const [isChecked1, setIsChecked1] = useState(false);

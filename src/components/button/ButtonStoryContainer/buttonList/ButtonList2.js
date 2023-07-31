@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 import './ButtonList2.css';
 import React, { useState } from 'react';
 import { ButtonType, ButtonSize, Button } from '../../Button';
 import { IconButton, IconButtonSize } from '../..';
 import Icon from '../../../../assets/images/Vector.svg';
+=======
+import './ButtonList2.css'
+import { ButtonType, ButtonSize, Button } from '../../Button'
+import { useState } from 'react'
+import { IconButton, IconButtonSize } from '../..'
+import Icon from '../../../../assets/images/Vector.svg'
+import React from 'react';
+>>>>>>> 7c08ad1 (везде добавлена проверка типов, добавлен key в map)
 
 export function ButtonList2() {
   const [size, setSize] = useState(ButtonSize.SMALL);
@@ -19,10 +28,23 @@ export function ButtonList2() {
     { type: ButtonSize.LARGE || IconButtonSize.LARGE, text: 'Large' },
   ];
 
+<<<<<<< HEAD
   return (
     <div>
       <div className="size-divider">
         {
+=======
+    const sizes = [
+        {type: ButtonSize.SMALL || IconButtonSize.SMALL, text: "Small"},
+        {type: ButtonSize.MEDIUM || IconButtonSize.MEDIUM, text: "Medium"},
+        {type: ButtonSize.LARGE || IconButtonSize.LARGE, text: "Large"}
+    ]
+
+    return (
+        <div>
+            <div className='size-divider'>
+                {
+>>>>>>> 7c08ad1 (везде добавлена проверка типов, добавлен key в map)
                     sizes.map((el, index) => <div key={index} onClick={() => setSize(el.type)}>{el.text}</div>)
                 }
       </div>

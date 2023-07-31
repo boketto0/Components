@@ -4,6 +4,7 @@ import { PropTypes } from 'prop-types';
 import React from 'react';
 import { Loader } from '../loader/Loader';
 import { getColor } from './utils';
+import React from 'react';
 
 export const IconButtonSize = {
   SMALL: 'small',

@@ -59,3 +59,13 @@ Checkbox.propTypes = {
   onChange: PropTypes.func,
   onClick: PropTypes.func,
 };
+
+
+Checkbox.propTypes = {
+  text: PropTypes.string,
+  disabled: PropTypes.bool,
+  indeterminate: PropTypes.bool,
+  checked: PropTypes.bool,
+  onChange: PropTypes.func,
+  onClick: PropTypes.func
+}

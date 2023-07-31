@@ -47,3 +47,7 @@ export function CheckboxStory3(props) {
 CheckboxStory3.propTypes = {
   onClick: PropTypes.func,
 };
+
+CheckboxStory3.propTypes = {
+  onClick: PropTypes.func
+}

@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import './ButtonList3.css';
 import React from 'react';
 import { ButtonType, Button, ButtonSize } from '../../Button';
 import Icon from '../../../../assets/images/Vector.svg';
 import { IconButton, IconButtonSize, IconButtonType } from '../..';
+=======
+import './ButtonList3.css'
+import { ButtonType, Button, ButtonSize } from '../../Button'
+import Icon from '../../../../assets/images/Vector.svg'
+import { IconButton, IconButtonSize, IconButtonType } from '../..'
+import React from 'react';
+>>>>>>> 7c08ad1 (везде добавлена проверка типов, добавлен key в map)
 
 export function ButtonList3() {
   return (
