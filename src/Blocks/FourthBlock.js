@@ -1,4 +1,5 @@
 import './FourthBlock.css'
+import React from 'react';
 import List3 from '../components/lists/listRow3/List3';
 import {Card, CardType, CardWrapper} from '../components/cards/Card'
 import Icon1 from '../images/card3/Card header-4.svg'
@@ -33,9 +34,9 @@ function FourthBlock() {
             <div className='fourth-block__text'>Будьте вкурсе всех последних
                 {"\n"}изменений и доработок в нашей дизайн системе
             <CardWrapper className="fourth-block__cards">
-                { elements.map((el) => {
+                { elements.map((el, index) => {
                     return(
-                    <Card picture={el.picture} title={el.title} text={el.text} subtitle={el.subtitle} cardType={CardType.THIRD}/>
+                    <Card key={index} picture={el.picture} title={el.title} text={el.text} subtitle={el.subtitle} cardType={CardType.THIRD}/>
                     )
                 })}
             </CardWrapper>

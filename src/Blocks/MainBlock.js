@@ -1,4 +1,5 @@
 import './MainBlock.css'
+import React from 'react';
 import Header from './Header';
 import FirstBlock from './FirstBlock';
 import SecondBlock from './SecondBlock';

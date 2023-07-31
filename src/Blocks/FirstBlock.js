@@ -2,6 +2,7 @@ import './FirstBlock.css'
 import Icon1 from '../images/Main_panel 3 (1).svg'
 import Icon2 from '../images/ДС изо 2.svg'
 import Icon3 from '../images/Main_panel 5.svg'
+import React from 'react'
 
 function FirstBlock() {
 

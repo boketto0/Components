@@ -1,4 +1,5 @@
 import './Footer.css'
+import React from 'react';
 import {Button, ButtonType} from '../components/button/Button';
 
 function Footer(props) {

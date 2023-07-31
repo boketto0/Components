@@ -1,4 +1,5 @@
 import './SecondBlock.css'
+import React from 'react';
 import {Button, ButtonType} from "../components/button/Button";
 import Icon from '../images/Illustrations.svg'
 import List1 from '../components/lists/listRow1/List1';
@@ -49,9 +50,9 @@ function SecondBlock(props) {
       <div className='second-block__title'>Компоненты</div>
       <div className='second-block__text'>База компонентов для создания интерфейсов любой сложности</div>
       <CardWrapper className="second-block_cards">
-        { elements.map((el) => {
+        { elements.map((el, index) => {
             return(
-            <Card title={el.title} text={el.text} picture={el.picture} cardType={CardType.FIRST}/>
+            <Card key={index} title={el.title} text={el.text} picture={el.picture} cardType={CardType.FIRST}/>
             )
           })}
       </CardWrapper>

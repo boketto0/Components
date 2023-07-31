@@ -1,4 +1,5 @@
 import './TrirdBlock.css'
+import React from 'react';
 import {Button, ButtonType} from "../components/button/Button";
 import List2 from '../components/lists/listRow2/List2';
 import {Card, CardType, CardWrapper} from '../components/cards/Card'
@@ -35,9 +36,9 @@ function ThirdBlock(props) {
                 {"\n"} системы для решения любых поставленных задач</div>
             </div>
             <CardWrapper className="second-block_cards">
-                { elements.map((el) => {
+                { elements.map((el, index) => {
                     return(
-                    <Card title={el.title} text={el.text} picture={el.picture} cardType={CardType.SECOND}/>
+                    <Card key={index} title={el.title} text={el.text} picture={el.picture} cardType={CardType.SECOND}/>
                     )
                 })}
             </CardWrapper>

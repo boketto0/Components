@@ -1,7 +1,7 @@
 import './Home.css';
-import SliderbarMenu from '../Documentation/SliderbarMenu/SliderbarMenu';
+import SliderbarMenu from "../Documentation/SliderbarMenu/SliderbarMenu"
 import { BrowserRouter as Router } from 'react-router-dom';
-import Content from '../Documentation/Content/Content';
+import Content from "../Documentation/Content/Content"
 import React from 'react';
 
 const Home = () => {

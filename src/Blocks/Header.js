@@ -1,4 +1,5 @@
 import './Header.css'
+import React from 'react';
 import Icon from "../images/Logo.svg"
 import {Button, ButtonType} from '../components/button/Button';
 
