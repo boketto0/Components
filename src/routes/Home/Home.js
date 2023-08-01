@@ -3,12 +3,14 @@ import SliderbarMenu from "../Documentation/SliderbarMenu/SliderbarMenu"
 import { BrowserRouter as Router } from 'react-router-dom';
 import Content from "../Documentation/Content/Content"
 import React from 'react';
+import Header from '../../Blocks/Header';
 
 const Home = () => {
 
   return (
     <div className="home">
         <Router>
+            <Header/>
             <SliderbarMenu/>
             <Content/>
         </Router>

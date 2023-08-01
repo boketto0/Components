@@ -4,7 +4,7 @@
     align-items: center;
     justify-content:space-between;
     text-align: center;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 58px;
     top: 0px;

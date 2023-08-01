@@ -1,27 +1,23 @@
-import './Header.css'
+import './Header.css';
 import React from 'react';
-import Icon from "../images/Logo.svg"
-import {Button, ButtonType} from '../components/button/Button';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Header = (props) => {
+  const navigate = useNavigate();
 
-    const icon = ""
-    const text = 'Задать вопрос'
-    const type = ButtonType.PRIMARY;
+  const handleGoToMain = () => {
+    navigate('/');
+  };
 
-    return(
-        <div className='header-block'>
-            <img className='header-icon' src={Icon}/>
-            <div className='a header-text'>
-                <div className='header-text1 header-text__design'>
-                    <a href = "#">Дизайн</a></div>
-                <div className='header-text2 header-text__design'>
-                    <a href = "#">Разработка</a></div>
-            </div>
-            <Button type={type} text={text} Type={ButtonType.PRIMARY} icon={icon} />
-        </div>
-    )
-
-}
+  return (
+    <div className='header-block'>
+      <div className='a header-text'>
+        <button className='header-text1 header-text__design' onClick={handleGoToMain}>
+          Main
+        </button>
+      </div>
+    </div>
+  );
+};
 
 export default Header;
