@@ -29,9 +29,13 @@
     color: black;
 }
 
-
 .header-text1 {
     color: #797E8B;
+}
+
+.header-text1:hover {
+    cursor: pointer;
+    box-shadow: 0 0 24px rgb(182, 182, 182);
 }
 
 .header-text2 {
