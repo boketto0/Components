@@ -2,10 +2,6 @@ import './ComponentsOverview.css';
 import { Card, CardType } from '../../../../components/cards/Card';
 import { CardWrapper } from '../../../../components/cards/CardWrapper';
 import { Button, ButtonType, ButtonSize } from '../../../../components/button';
-import { Checkbox } from '../../../../components/checkbox';
-import { CheckboxStory2 } from '../../../../components/checkbox/CheckboxStoryContainer/checkboxStories';
-import { SwitchStory2 } from '../../../../components/switch/SwitchStoryContainer/switchStories';
-import { SwitchStory4 } from '../../../../components/switch/SwitchStoryContainer/switchStories';
 import React from 'react';
 import { Link } from 'react-router-dom';
 

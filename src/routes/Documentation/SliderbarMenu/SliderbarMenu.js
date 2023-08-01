@@ -1,8 +1,16 @@
 import { NavLink } from 'react-router-dom';
 import './SliderbarMenu.css';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const SliderbarMenu = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    console.log('pathname', location.pathname)
+  }, [location.pathname])
+  
   return (
     <div>
       <div className="sidebar">
