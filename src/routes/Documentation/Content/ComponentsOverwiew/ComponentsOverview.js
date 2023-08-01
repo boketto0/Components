@@ -16,9 +16,7 @@ export const ComponenetsOverview = () => {
       title: 'button',
       component: (
         <div className='card-component'>
-          <Button colored={"pressed"} size={ButtonSize.MEDIUM} type={ButtonType.PRIMARY} text={'Button'} />
-          <Button colored={"pressed"} size={ButtonSize.LARGE} type={ButtonType.SECONDARY} text={'Button'} />
-          <Button colored={"pressed"} type={ButtonType.TEXT} text={'Button'} />
+          <Button colored={"pressed"} size={ButtonSize.LARGE} type={ButtonType.PRIMARY} text={'Documentation'} />
         </div>
       )
     },
@@ -26,8 +24,7 @@ export const ComponenetsOverview = () => {
       title: 'switch',
       component: (
         <div className='card-component'>
-          <SwitchStory2 />
-          <SwitchStory4 />
+          <Button colored={"pressed"} size={ButtonSize.LARGE} type={ButtonType.PRIMARY} text={'Documentation'} />
         </div>
       )
     },
@@ -35,8 +32,7 @@ export const ComponenetsOverview = () => {
       title: 'checkbox',
       component: (
         <div className='card-component'>
-          <Checkbox text={'Check all'} />
-          <CheckboxStory2 />
+          <Button colored={"pressed"} size={ButtonSize.LARGE} type={ButtonType.PRIMARY} text={'Documentation'} />
         </div>
       )
     }
