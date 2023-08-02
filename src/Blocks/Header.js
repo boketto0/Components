@@ -1,12 +1,14 @@
 import './Header.css';
 import React, { useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Button, ButtonSize, ButtonType } from '../components/button';
 import { RegistrationModal } from '../components/registrationModal/RegistrationModal';
 
 const Header = (props) => {
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const { id } = useParams
+  const location = useLocation
 
   const handleGoToMain = () => {
     navigate('/');
@@ -22,6 +24,7 @@ const Header = (props) => {
 
   return (
     <div className='header-block'>
+        {id && <span>История: {id}</span>}
       <div className='a header-text'>
         <div className='header-text1 header-text__design' onClick={handleGoToMain}>
           Main
