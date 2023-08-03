@@ -34,6 +34,7 @@ export const Card = (props) => {
             <div>{props.cell}</div>
             <div className="card-title">{props.title}</div>
             <div className="card-text">{props.text}</div>
+            <div>{props.documentation}</div>
           </div>
         )}
       </div>
@@ -47,4 +48,5 @@ Card.propTypes = {
     title: PropTypes.string, 
     text: PropTypes.string, 
     component: PropTypes.node,
+    documentation: PropTypes.node
 }

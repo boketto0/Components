@@ -3,9 +3,10 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    position: relative;
     margin-left: 300px;
     flex-direction: column;
+    top: 58px;
+    position: absolute;
 }
 
 .components-list {
