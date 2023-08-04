@@ -4,7 +4,7 @@ import { SwitchStory } from '../../../components/switch/SwitchStoryContainer/Swi
 import { ButtonStory } from '../../../components/button/ButtonStoryContainer/ButtonStory';
 import { CheckboxStory } from '../../../components/checkbox/CheckboxStoryContainer/ChecboxStory';
 import React from 'react';
-import { CardsDisplay } from '../../../components/display/CardsDisplay';
+import CardsDisplay from '../../../components/display/CardsDisplay';
 
 const Content = () => {
   const location = useLocation()
@@ -16,7 +16,7 @@ const Content = () => {
         <Route path="/checkbox" element={<CheckboxStory />} />
         <Route path="/switch" element={<SwitchStory />} />
         <Route path="/button" element={<ButtonStory />} />
-        <Route path='/card/:id' element={<CardsDisplay cards={[]}/>}/>
+        <Route path='/card/:id' element={<CardsDisplay/>}/>
       </Routes>
     </div>
   );

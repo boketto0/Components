@@ -1,14 +1,13 @@
-import './ButtonStory.css';
+import React from 'react';
+import { Link, Routes, Route } from 'react-router-dom';
+import { PropTypes } from 'prop-types';
 import { Card, CardType } from '../../cards/Card';
 import { CardWrapper } from '../../cards/CardWrapper';
 import { ButtonList1, ButtonList2, ButtonList3, ButtonList4, ButtonList5 } from './buttonList/index';
-import React from 'react';
 import { Button, ButtonSize, ButtonType } from '../Button';
-import { Routes, Route, Link } from 'react-router-dom';
-import { CardsDisplay } from '../../display/CardsDisplay';
-import { useNavigate } from 'react-router-dom';
+import CardsDisplay from '../../display/CardsDisplay';
 
-export const ButtonStory = () => {
+export const ButtonStory = ({ children, data }) => {
   const elements = [
     {
       id: 1,
@@ -44,12 +43,10 @@ export const ButtonStory = () => {
     },
   ];
 
-  const navigate = useNavigate();
-
   return (
     <div className='button-wrapper'>
       <div className='button-list'>
-        <div className='par-1'>Button</div>
+      <div className='par-1'>Button</div>
         <div className='text1'>To trigger an operation.</div>
         <div className='par-2'>When to use</div>
         <div className='text1'>
@@ -59,29 +56,36 @@ export const ButtonStory = () => {
       </div>
       <div>
         <CardWrapper>
-          {elements.map((el) => {
-            return (
-              <div key={el.id}>
-                <Card
-                  cardType={CardType.THIRD}
-                  cell={el.cell}
-                  title={el.title}
-                  text={el.text}
-                  documentation={
-                    <Button
-                      size={ButtonSize.MEDIUM}
-                      type={ButtonType.LINK}
-                      text={'Click'}
-                      colored={'pressed'}
-                      onClick={() => navigate(`/card/${el.id}`)}
-                    />
-                  }
-                />
-              </div>
-            );
-          })}
+          {elements.map((el) => (
+            <div key={el.id}>
+              <Card
+                cardType={CardType.THIRD}
+                cell={el.cell}
+                title={el.title}
+                text={el.text}
+                documentation={
+                  <Link to={`/${el.title}/${el.id}`}>
+                    <Button size={ButtonSize.MEDIUM} type={ButtonType.LINK} text={'Click'} colored={'pressed'} />
+                  </Link>
+                }
+              />
+            </div>
+          ))}
         </CardWrapper>
+
+        {children}
+
+        <Routes>
+          <Route path='/:componentType/:id' element={<CardsDisplay data={data} />} />
+        </Routes>
       </div>
     </div>
   );
 };
+
+ButtonStory.propTypes = {
+  children: PropTypes.node,
+  data: PropTypes.array.isRequired,
+};
+
+export default ButtonStory;
