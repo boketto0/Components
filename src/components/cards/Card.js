@@ -19,6 +19,7 @@ export const Card = (props) => {
             <div>{props.cell}</div>
             <div className="card-title">{props.title}</div>
             <div className="card-text">{props.text}</div>
+            <div>{props.documentation}</div>
           </div>
         )}
         {props.cardType === CardType.SECOND && (
@@ -26,6 +27,7 @@ export const Card = (props) => {
             <div className="card-title">{props.title}</div>
             <div className="card-text">{props.text}</div>
             <div className='card-component'>{props.component}</div>
+            <div>{props.documentation}</div>
           </div>
         )}
         {props.cardType === CardType.THIRD && (

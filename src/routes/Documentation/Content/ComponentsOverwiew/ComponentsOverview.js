@@ -12,7 +12,7 @@ export const ComponenetsOverview = () => {
       title: 'button',
       component: (
         <div className='card-component'>
-          <Button colored={"pressed"} size={ButtonSize.LARGE} type={ButtonType.PRIMARY} text={'Documentation'} />
+          <Button colored={"pressed"} size={ButtonSize.LARGE} type={ButtonType.PRIMARY} text={'Button'} />
         </div>
       )
     },
@@ -20,7 +20,7 @@ export const ComponenetsOverview = () => {
       title: 'switch',
       component: (
         <div className='card-component'>
-          <Button colored={"pressed"} size={ButtonSize.LARGE} type={ButtonType.PRIMARY} text={'Documentation'} />
+          <Button colored={"pressed"} size={ButtonSize.LARGE} type={ButtonType.PRIMARY} text={'Switch'} />
         </div>
       )
     },
@@ -28,7 +28,7 @@ export const ComponenetsOverview = () => {
       title: 'checkbox',
       component: (
         <div className='card-component'>
-          <Button colored={"pressed"} size={ButtonSize.LARGE} type={ButtonType.PRIMARY} text={'Documentation'} />
+          <Button colored={"pressed"} size={ButtonSize.LARGE} type={ButtonType.PRIMARY} text={'Checkbox'} />
         </div>
       )
     }
