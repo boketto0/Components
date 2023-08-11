@@ -3,11 +3,11 @@ import { CheckboxStory1, CheckboxStory2, CheckboxStory3, CheckboxStory4, Checkbo
 import { Card, CardType } from '../../cards/Card';
 import { CardWrapper } from '../../cards/CardWrapper';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button, ButtonType, ButtonSize } from '../../button';
 
-export const CheckboxStory = () => {
-  const elements = [
+
+export const checkboxElements = [
     {
       id: 1,
       cell: <CheckboxStory1 />,
@@ -82,6 +82,11 @@ export const CheckboxStory = () => {
     },
   ];
 
+export const CheckboxStory = () => {
+
+  const location = useLocation();
+  const componentName = location.pathname.split('/')[1]
+
   return (
     <div className='checkbox-wrapper'>
       <div className='checkbox-list'>
@@ -91,14 +96,23 @@ export const CheckboxStory = () => {
       </div>
       <div>
         <CardWrapper>
-          {elements.map((el) => (
+          {checkboxElements.map((el) => (
             <div key={el.id}>
               <Card
                 cardType={CardType.FIRST}
                 cell={el.cell}
                 title={el.title}
                 text={el.text}
-                documentation={el.documentation}
+                documentation={
+                    <Link to = {`/${componentName}/${el.id}`}>
+                      <Button
+                        size={ButtonSize.MEDIUM}
+                        type={ButtonType.LINK}
+                        text={'Click'}
+                        colored={'pressed'}
+                      />
+                    </Link>
+                }
               />
             </div>
           ))}

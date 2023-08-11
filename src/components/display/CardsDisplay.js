@@ -1,10 +1,11 @@
+import './CardsDisplay.css'
 import React from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Card, CardType } from '../cards/Card'; 
 
-export const CardsDisplay = ({ elements }) => {
-  const { componentName, id } = useParams();
+export const CardsDisplay = ({ elements, componentName, id }) => {
+  // const { componentName, id } = useParams();
   const navigate = useNavigate();
 
   const selectedCard = elements.find(card => card.id === parseInt(id));
@@ -27,20 +28,16 @@ export const CardsDisplay = ({ elements }) => {
   }
 
   return (
-    <div>
+    <div className='story-wrapper'>
       <div>
-        <Link to={`/${componentName}/${id}`}>Back to {componentName}</Link>
-      </div>
-      {/* <Card cardType={cardType}>  */}
-      <div>
-        {selectedCard.cell}
-        <div>{selectedCard.title}</div>
-        <div>{selectedCard.text}</div>
-        <div>{selectedCard.documentation}</div>
-      {/* </Card> */}
-      </div>
-      <div>
-        <button onClick={handleBackClick}>Back</button>
+        {/* <Link to={`/${componentName}/${id}`}>Back to {componentName}</Link> */}
+          <div>
+            {selectedCard.cell}
+            <div className="card-title">{selectedCard.title}</div>
+            <div className="card-text">{selectedCard.text}</div>
+            <div>{selectedCard.documentation}</div>
+          </div>
+        <div className='breadcrums' onClick={handleBackClick}>{`/${componentName}/${id}`}</div>
       </div>
     </div>
   );
@@ -57,4 +54,6 @@ CardsDisplay.propTypes = {
       cardType: PropTypes.string.isRequired, 
     })
   ).isRequired,
+  componentName: PropTypes.string,
+  id: PropTypes.number.isRequired
 };

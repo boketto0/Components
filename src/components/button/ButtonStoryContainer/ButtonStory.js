@@ -4,7 +4,7 @@ import { CardWrapper } from '../../cards/CardWrapper';
 import { ButtonList1, ButtonList2, ButtonList3, ButtonList4, ButtonList5 } from './buttonList/index';
 import React from 'react';
 import { Button, ButtonSize, ButtonType } from '../Button';
-import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 
 export const buttonElements = [
@@ -26,13 +26,7 @@ export const buttonElements = [
     cell: <ButtonList3 />,
     title: 'Icon',
     text:
-      'Button components can contain an Icon. This is done by setting the icon property or placing an Icon component within the Button. If you want specific control over the positioning and placement of the Icon, then that should be done by placing the Icon component within the Button rather than using the icon property.',
-    documentation: <Button
-    size={ButtonSize.MEDIUM}
-    type={ButtonType.LINK}
-    text={'Click'}
-    colored={'pressed'}
-    />
+      'Button components can contain an Icon. This is done by setting the icon property or placing an Icon component within the Button. If you want specific control over the positioning and placement of the Icon, then that should be done by placing the Icon component within the Button rather than using the icon property.'
   },
   {
     id: 4,

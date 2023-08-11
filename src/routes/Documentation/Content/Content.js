@@ -6,6 +6,8 @@ import { ButtonStory } from '../../../components/button/ButtonStoryContainer/But
 import { CheckboxStory } from '../../../components/checkbox/CheckboxStoryContainer/ChecboxStory';
 import { CardsDisplay } from '../../../components/display/CardsDisplay';
 import { buttonElements } from '../../../components/button/ButtonStoryContainer/ButtonStory';
+import { switchElements } from '../../../components/switch/SwitchStoryContainer/SwitchStory';
+import { checkboxElements } from '../../../components/checkbox/CheckboxStoryContainer/ChecboxStory';
 
 const Content = () => {
   const location = useLocation();
@@ -21,10 +23,12 @@ const Content = () => {
           path="/:componentName/:id"
           element={
             <CardsDisplay
+              componentName={location.pathname.split('/')[1]}
+              id={location.pathname.split('/')[2]}
               elements={[
                 ...buttonElements,
-                // ...SwitchStoryElements,
-                // ...CheckboxStoryElements,
+                ...switchElements,
+                ...checkboxElements,
               ]}
             />
           }

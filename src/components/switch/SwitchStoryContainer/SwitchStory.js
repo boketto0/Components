@@ -2,69 +2,47 @@ import './SwitchStory.css'
 import { SwitchStory1, SwitchStory2, SwitchStory3, SwitchStory4, SwitchStory5 } from './switchStories'
 import { Card, CardType } from '../../cards/Card'
 import { CardWrapper } from '../../cards/CardWrapper'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { Button, ButtonSize, ButtonType } from '../../button'
 import React from 'react';
 
+export const switchElements = [
+    {
+        id: 1,
+        cell: <SwitchStory1/>,
+        title: 'Basic',
+        text: 'The most basic usage.'
+    },
+    {
+        id: 2,
+        cell: <SwitchStory2/>,
+        title: 'Disabled',
+        text: 'Disabled state of Switch.'
+    },
+    {
+        id: 3,
+        cell: <SwitchStory3/>,
+        title: 'Text & icon',
+        text: 'With text and icon.'
+    },
+    {
+        id: 4,
+        cell: <SwitchStory4/>,
+        title: 'Two sizes',
+        text: 'size="small" represents a small sized switch.'
+    },
+    {
+        id: 5,
+        cell: <SwitchStory5/>,
+        title: 'Loading',
+        text: 'Mark a pending state of switch.'
+    }
+]
+
 export const SwitchStory = () => {
 
-    const elements = [
-        {
-            cell: <SwitchStory1/>,
-            title: 'Basic',
-            text: 'The most basic usage.',
-            documentation: <Button
-              size={ButtonSize.MEDIUM}
-              type={ButtonType.LINK}
-              text={'Click'}
-              colored={'pressed'}
-            />
-        },
-        {
-            cell: <SwitchStory2/>,
-            title: 'Disabled',
-            text: 'Disabled state of Switch.',
-            documentation: <Button
-            size={ButtonSize.MEDIUM}
-            type={ButtonType.LINK}
-            text={'Click'}
-            colored={'pressed'}
-          />
-        },
-        {
-            cell: <SwitchStory3/>,
-            title: 'Text & icon',
-            text: 'With text and icon.',
-            documentation: <Button
-            size={ButtonSize.MEDIUM}
-            type={ButtonType.LINK}
-            text={'Click'}
-            colored={'pressed'}
-          />
-        },
-        {
-            cell: <SwitchStory4/>,
-            title: 'Two sizes',
-            text: 'size="small" represents a small sized switch.',
-            documentation: <Button
-            size={ButtonSize.MEDIUM}
-            type={ButtonType.LINK}
-            text={'Click'}
-            colored={'pressed'}
-          />
-        },
-        {
-            cell: <SwitchStory5/>,
-            title: 'Loading',
-            text: 'Mark a pending state of switch.',
-            documentation: <Button
-            size={ButtonSize.MEDIUM}
-            type={ButtonType.LINK}
-            text={'Click'}
-            colored={'pressed'}
-          />
-        }
-    ]
+    const location = useLocation();
+    const componentName = location.pathname.split('/')[1]
 
     return(
         <div className='switch-wrapper'>
@@ -79,7 +57,7 @@ export const SwitchStory = () => {
                 <div className='par-2'>Examples</div>
             </div>
             <CardWrapper>
-              { elements.map((el, index) => {
+              { switchElements.map((el, index) => {
                   return(
                   <div key={index}>
                     <Card 
@@ -87,7 +65,16 @@ export const SwitchStory = () => {
                         cell={el.cell} 
                         title={el.title} 
                         text={el.text}
-                        documentation={el.documentation}
+                        documentation={
+                            <Link to = {`/${componentName}/${el.id}`}>
+                              <Button
+                                size={ButtonSize.MEDIUM}
+                                type={ButtonType.LINK}
+                                text={'Click'}
+                                colored={'pressed'}
+                              />
+                            </Link>
+                          }
                     />
                   </div>
                   )
