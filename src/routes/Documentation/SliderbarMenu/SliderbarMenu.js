@@ -3,6 +3,7 @@ import './SliderbarMenu.css';
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+/** TODO(Вынести SliderbarMenu в папку components) */
 const SliderbarMenu = () => {
 
   const location = useLocation();

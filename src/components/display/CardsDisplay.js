@@ -8,7 +8,7 @@ export const CardsDisplay = ({ elements, componentName, id }) => {
   // const { componentName, id } = useParams();
   const navigate = useNavigate();
 
-  const selectedCard = elements.find(card => card.id === parseInt(id));
+  const selectedCard = elements[componentName][id];
 
   if (!selectedCard) {
     return <div>Card not found</div>;
@@ -27,6 +27,9 @@ export const CardsDisplay = ({ elements, componentName, id }) => {
     cardType = CardType.FIRST;
   }
 
+  console.log(`Component Name - ${componentName}`);
+  console.log(`Id - ${id}`);
+
   return (
     <div className='story-wrapper'>
       <div>
@@ -42,7 +45,8 @@ export const CardsDisplay = ({ elements, componentName, id }) => {
     </div>
   );
 };
-
+/* eslint react/prop-types: 0 */
+/*
 CardsDisplay.propTypes = {
   elements: PropTypes.arrayOf(
     PropTypes.shape({
@@ -56,4 +60,4 @@ CardsDisplay.propTypes = {
   ).isRequired,
   componentName: PropTypes.string,
   id: PropTypes.number.isRequired
-};
+};*/
