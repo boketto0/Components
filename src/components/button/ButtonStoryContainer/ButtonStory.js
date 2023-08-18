@@ -16,10 +16,9 @@ export const buttonElements = [
   },
   {
     id: 2,
-    cell: <ButtonList2 />,
-    title: 'Size',
-    text:
-      'A default button size supports as well as a large and small size. If a large or small button is desired, set the size property to either large or small respectively. Omit the size property for a button with the default size.',
+    cell: <ButtonList4 />,
+    title: 'Disabled',
+    text: 'To mark a button as disabled, add the disabled property to the Button.',
   },
   {
     id: 3,
@@ -30,15 +29,15 @@ export const buttonElements = [
   },
   {
     id: 4,
-    cell: <ButtonList4 />,
-    title: 'Disabled',
-    text: 'To mark a button as disabled, add the disabled property to the Button.',
-  },
-  {
-    id: 5,
     cell: <ButtonList5 />,
     title: 'Loading',
     text: 'A loading indicator can be added to a button by setting the loading property on the Button.',
+  },
+  {
+    id: 5,
+    cell: <ButtonList2 />,
+    title: 'Size',
+    text: 'A default button size supports as well as a large and small size. If a large or small button is desired, set the size property to either large or small respectively. Omit the size property for a button with the default size.',
   },
 ];
 
@@ -73,7 +72,7 @@ export const ButtonStory = () => {
                     <Button
                       size={ButtonSize.MEDIUM}
                       type={ButtonType.LINK}
-                      text={'Click'}
+                      text={'Open'}
                       colored={'pressed'}
                     />
                   </Link>

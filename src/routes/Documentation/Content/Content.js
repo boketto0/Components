@@ -37,8 +37,7 @@ const Content = () => {
 
       return acc;
     }, {}),
-    cardType: "first"
-  },
+    cardType: "first"},
   };
 
   return (

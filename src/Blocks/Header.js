@@ -4,14 +4,17 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Button, ButtonSize, ButtonType } from '../components/button';
 import { RegistrationModal } from '../components/registrationModal/RegistrationModal';
 
-const Header = (props) => {
-  const navigate = useNavigate();
+const Header = ( ) => {
+  const navigate1 = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const { id } = useParams
-  const location = useLocation
+  const { componentName, id } = useParams();
+  const navigate2 = useNavigate();
+
+  console.log(`Component Name - ${componentName}`);
+  console.log(`Id - ${id}`);
 
   const handleGoToMain = () => {
-    navigate('/');
+    navigate1('/');
   };
 
   const handleOpenModal = () => {
@@ -22,11 +25,23 @@ const Header = (props) => {
     setIsModalOpen(false)
   }
 
+  const handleBackClick = () => {
+    navigate2(`/${componentName}`);
+  };
+
+
   return (
     <div className='header-block'>
         {id && <span>История: {id}</span>}
-        <div className='header-text1 header-text__design' onClick={handleGoToMain}>
-          Main
+        <Button
+          type={ButtonType.LINK}
+          text={"Main"}
+          onClick={handleGoToMain}
+        />
+        <div onClick={handleBackClick}>
+          <span className='componentName'>/{`${componentName}`}</span>
+          <span>/</span>
+          <span>{`${id}`}</span>
         </div>
         <div className='button-design'>
           <Button 
@@ -46,3 +61,5 @@ const Header = (props) => {
 };
 
 export default Header;
+
+/* eslint react/prop-types: 0 */

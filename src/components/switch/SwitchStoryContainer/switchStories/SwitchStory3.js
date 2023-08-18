@@ -25,6 +25,7 @@ export const SwitchStory3 = () => {
           checked={isChecked1}
           onChange={handleSwitch1Change}
         />
+        <span>{isChecked1 ? 'On' : 'Off'}</span>
         <Switch
           size={SwitchSize.LARGE}
           onIcon={<span className='icon icon-right'>1</span>}
@@ -32,9 +33,6 @@ export const SwitchStory3 = () => {
           checked={isChecked2}
           onChange={handleSwitch2Change}
         />
-      </div>
-      <div className='list'>
-        <span>{isChecked1 ? 'On' : 'Off'}</span>
         <span>{isChecked2 ? 'On' : 'Off'}</span>
       </div>
     </div>

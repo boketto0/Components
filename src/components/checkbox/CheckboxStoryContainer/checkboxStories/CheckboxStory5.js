@@ -52,8 +52,8 @@ export const CheckboxStory5 = () => {
         onChange={handleCheckboxChange}
       />
       <div className="list">
-        <Button colored={'selected'} size={size} type={type} text={buttonText} onClick={handleButtonClick} />
-        <Button colored={'selected'} size={size} type={type} text={isDisabled ? 'Enabled' : 'Disable'} onClick={handleDisableClick} />
+        <Button colored={'pressed'} size={size} type={type} text={buttonText} onClick={handleButtonClick} />
+        <Button colored={'pressed'} size={size} type={type} text={isDisabled ? 'Enabled' : 'Disable'} onClick={handleDisableClick} />
       </div>
     </div>
   );

@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import { Card, CardType } from '../cards/Card'; 
 
 export const CardsDisplay = ({ elements, componentName, id }) => {
-  // const { componentName, id } = useParams();
   const navigate = useNavigate();
 
   const selectedCard = elements[componentName][id];

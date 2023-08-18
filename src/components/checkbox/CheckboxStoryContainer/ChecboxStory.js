@@ -108,7 +108,7 @@ export const CheckboxStory = () => {
                       <Button
                         size={ButtonSize.MEDIUM}
                         type={ButtonType.LINK}
-                        text={'Click'}
+                        text={'Open'}
                         colored={'pressed'}
                       />
                     </Link>
