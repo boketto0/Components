@@ -44,6 +44,8 @@ export const Card = (props) => {
   );
 };
 
+/* eslint react/prop-types: 0 */
+
 Card.propTypes = {
     cardType: PropTypes.oneOf(Object.values(CardType)),
     cell: PropTypes.node,

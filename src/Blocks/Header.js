@@ -25,21 +25,22 @@ const Header = (props) => {
   return (
     <div className='header-block'>
         {id && <span>История: {id}</span>}
-      <div className='a header-text'>
         <div className='header-text1 header-text__design' onClick={handleGoToMain}>
           Main
         </div>
-        <Button 
-            type={ButtonType.PRIMARY} 
-            text={"Вход/Регистрация"} 
-            round 
-            onClick={handleOpenModal}
-            colored={"pressed"}
-        />
+        <div className='button-design'>
+          <Button 
+              type={ButtonType.PRIMARY} 
+              text={"Вход/Регистрация"} 
+              round 
+              onClick={handleOpenModal}
+              colored={"pressed"}
+              size={ButtonSize.MEDIUM}
+          />
+        </div>
         <RegistrationModal 
         isOpen={isModalOpen} 
         onClose={handleCloseModal}/>
-      </div>
     </div>
   );
 };

@@ -1,5 +1,4 @@
   .button {
-    position: relative;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -184,7 +183,6 @@
   .button-content {
     display: flex;
     align-items: center;
-    position: relative;
     justify-content: center;
   }
 

@@ -22,3 +22,13 @@
     box-shadow: 0 0 24px rgb(182, 182, 182);
     border-radius: 10px;
 }
+
+.componentName {
+    cursor: pointer;
+}
+
+.componentName:hover {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}

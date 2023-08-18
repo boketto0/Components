@@ -23,18 +23,22 @@ const Content = () => {
 
         return acc;
       }, {}),
-      cardType: "First"
+      cardType: "third"
     },
     'checkbox': {...checkboxElements.reduce((acc, el) => {
       acc[el.id] = el;
 
       return acc;
-    }, {})},
+    }, {}),
+    cardType: "first"
+  },
     'switch': {...switchElements.reduce((acc, el) => {
       acc[el.id] = el;
 
       return acc;
-    }, {})},
+    }, {}),
+    cardType: "first"
+  },
   };
 
   return (
