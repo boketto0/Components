@@ -31,7 +31,7 @@ export const Switch = (props) => {
   const sliderClassName = classnames('slider', {
     'slider-small': size === SwitchSize.SMALL,
     'slider-large': size === SwitchSize.LARGE,
-    'slider-disabled': disabled,
+    'slider-disabled': disabled || (checked && disabled),
     'slider-loading': loading
   });
 

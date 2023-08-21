@@ -41,8 +41,12 @@
   padding-left: 2px;
 }
 
-.slider:not([disabled]):hover {
+.slider:hover:not(.slider-disabled) {
   background-color: rgb(172, 168, 168);
+}
+
+.switch-on .slider:not(.slider-disabled):hover {
+  background-color: #5babf7;
 }
 
 .slider-small:before {
@@ -109,8 +113,8 @@
   background-color: #1890ff;
 }
 
-.switch-on .slider:not([disabled]):hover {
-  background-color: #5babf7;
+.switch-off .slider {
+  background-color: #ccc;
 }
 
 .switch-on .slider:before {
@@ -121,7 +125,18 @@
   transform: translateX(0);
 }
 
+.slider-disabled {
+  background-color:rgb(174, 171, 171);
+}
+
 .slider-disabled:hover {
   cursor: not-allowed;
 }
 
+.switch-off .slider-disabled {
+  background-color:rgb(174, 171, 171);
+}
+
+.switch-on .slider-disabled {
+  background-color:rgb(174, 171, 171);
+}

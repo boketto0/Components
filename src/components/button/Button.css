@@ -14,15 +14,14 @@
 
   .texts {
     align-self: center;
-    margin-left: 2px;
   }
 
   .texts__small {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .texts__medium {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .texts__large {
