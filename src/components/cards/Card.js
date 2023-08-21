@@ -27,6 +27,7 @@ export const Card = (props) => {
             <div className="card-title">{props.title}</div>
             <div className="card-text">{props.text}</div>
             <div className='card-component'>{props.component}</div>
+            <div>{props.picture}</div>
             <div>{props.documentation}</div>
           </div>
         )}
