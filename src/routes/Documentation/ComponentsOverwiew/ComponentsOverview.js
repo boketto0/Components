@@ -1,7 +1,7 @@
 import './ComponentsOverview.css';
-import { Card, CardType } from '../../../../components/cards/Card';
-import { CardWrapper } from '../../../../components/cards/CardWrapper';
-import { Button, ButtonType, ButtonSize } from '../../../../components/button';
+import { Card, CardType } from '../../../components/cards/Card';
+import { CardWrapper } from '../../../components/cards/CardWrapper';
+import { Button, ButtonType, ButtonSize } from '../../../components/button';
 import React from 'react';
 import { Link } from 'react-router-dom';
 

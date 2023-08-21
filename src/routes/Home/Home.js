@@ -1,22 +1,52 @@
 import './Home.css';
-import SliderbarMenu from "../Documentation/SliderbarMenu/SliderbarMenu"
-import { BrowserRouter as Router } from 'react-router-dom';
-import Content from "../Documentation/Content/Content"
+import SliderbarMenu from "../Documentation/SliderbarMenu/SliderbarMenu";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import React from 'react';
 import Header from '../../Blocks/Header';
-import { useLocation } from 'react-router-dom';
+import { Content } from '../../components/content/Content'
+import { CheckboxStory } from '../../components/checkbox/CheckboxStoryContainer/ChecboxStory';
+import { SwitchStory } from '../../components/switch/SwitchStoryContainer/SwitchStory';
+import { ButtonStory } from '../../components/button/ButtonStoryContainer/ButtonStory';
+import { buttonElements } from '../../components/button/ButtonStoryContainer/ButtonStory';
+import { checkboxElements } from '../../components/checkbox/CheckboxStoryContainer/ChecboxStory'
+import { switchElements } from '../../components/switch/SwitchStoryContainer/SwitchStory';
 
-const Home = () => {
+export const Home = () => {
+
+  const storiesMap = {
+    'button': {...buttonElements.reduce((acc, el) => {
+        acc[el.id] = el;
+
+        return acc;
+      }, {}),
+      cardType: "third"
+    },
+    'checkbox': {...checkboxElements.reduce((acc, el) => {
+      acc[el.id] = el;
+
+      return acc;
+    }, {}),
+    cardType: "first"
+  },
+    'switch': {...switchElements.reduce((acc, el) => {
+      acc[el.id] = el;
+
+      return acc;
+    }, {}),
+    cardType: "first"},
+  };
 
   return (
     <div className="home">
         <Router>
             <Header />
             <SliderbarMenu />
-            <Content />
+            <Content storiesMap={storiesMap}>
+              <Route path="/checkbox" element={<CheckboxStory />} />
+              <Route path="/switch" element={<SwitchStory />} />
+              <Route path="/button" element={<ButtonStory />} />
+            </Content>
         </Router>
     </div>
   );
 };
-
-export default Home;
