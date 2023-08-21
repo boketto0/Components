@@ -31,22 +31,20 @@ export const CardsDisplay = ({ elements, componentName, id }) => {
 
   return (
     <div className='story-wrapper'>
-      <div>
-        {/* <Link to={`/${componentName}/${id}`}>Back to {componentName}</Link> */}
-          {/* <Card CardType={cardType}> */}
-          <div>
+        <div className='breadcrums'>
+          <div onClick={handleBackClick}>
+          <span className='breadcrums-text1'>История:</span>
+          <span className='componentName'>{componentName}</span>
+          <span>/</span>
+          <span>{id}</span>
+          </div>
+        </div>
+        <div>
             {selectedCard.cell}
             <div className="card-title">{selectedCard.title}</div>
             <div className="card-text">{selectedCard.text}</div>
             <div>{selectedCard.documentation}</div>
-          {/* </Card> */}
-          </div>
-        <div onClick={handleBackClick}>
-          <span className='componentName'>{componentName}</span>
-          <span>/</span>
-          <span>{id}</span>
-        </div>
-      </div>
+         </div>
     </div>
   );
 };

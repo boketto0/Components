@@ -32,17 +32,11 @@ const Header = ( ) => {
 
   return (
     <div className='header-block'>
-        {id && <span>История: {id}</span>}
         <Button
           type={ButtonType.LINK}
           text={"Main"}
           onClick={handleGoToMain}
         />
-        <div onClick={handleBackClick}>
-          <span className='componentName'>/{`${componentName}`}</span>
-          <span>/</span>
-          <span>{`${id}`}</span>
-        </div>
         <div className='button-design'>
           <Button 
               type={ButtonType.PRIMARY} 
