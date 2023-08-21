@@ -36,11 +36,18 @@ export const Home = () => {
     cardType: "first"},
   };
 
+  const menuItems = [
+    { to: "/", label: "Componenets Overview" },
+    { to: "/button", label: "Button" },
+    { to: "/checkbox", label: "Checkbox" },
+    { to: "/switch", label: "Switch" },
+  ];
+
   return (
     <div className="home">
         <Router>
             <Header />
-            <SliderbarMenu />
+            <SliderbarMenu menuItems={menuItems}/>
             <Content storiesMap={storiesMap}>
               <Route path="/checkbox" element={<CheckboxStory />} />
               <Route path="/switch" element={<SwitchStory />} />
