@@ -10,6 +10,8 @@ import { ButtonStory } from '../../components/button/ButtonStoryContainer/Button
 import { buttonElements } from '../../components/button/ButtonStoryContainer/ButtonStory';
 import { checkboxElements } from '../../components/checkbox/CheckboxStoryContainer/ChecboxStory'
 import { switchElements } from '../../components/switch/SwitchStoryContainer/SwitchStory';
+import { DropdownStory } from '../../components/dropdown/DropdownStoryContainer/DropdownStory';
+import { dropdownElements } from '../../components/dropdown/DropdownStoryContainer/DropdownStory';
 
 export const Home = () => {
 
@@ -34,6 +36,12 @@ export const Home = () => {
       return acc;
     }, {}),
     cardType: "first"},
+    'dropdown': {...dropdownElements.reduce((acc, el) => {
+      acc[el.id] = el;
+
+      return acc;
+    }, {}),
+    cardType: "first"}
   };
 
   const menuItems = [
@@ -41,6 +49,7 @@ export const Home = () => {
     { to: "/button", label: "Button" },
     { to: "/checkbox", label: "Checkbox" },
     { to: "/switch", label: "Switch" },
+    { to: "/dropdown", label: "Dropdown"}
   ];
 
   return (
@@ -52,6 +61,7 @@ export const Home = () => {
               <Route path="/checkbox" element={<CheckboxStory />} />
               <Route path="/switch" element={<SwitchStory />} />
               <Route path="/button" element={<ButtonStory />} />
+              <Route path="/dropdown" element={<DropdownStory />} />
             </Content>
         </Router>
     </div>

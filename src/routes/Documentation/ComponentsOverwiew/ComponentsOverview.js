@@ -22,6 +22,10 @@ export const ComponenetsOverview = () => {
     {
       title: 'checkbox',
       picture: <img src={Icon3}/>
+    },
+    {
+      title: 'dropdown',
+      picture: <img src={Icon3}/>
     }
   ];
 

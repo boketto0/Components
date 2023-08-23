@@ -5,7 +5,6 @@ body, html {
   
   .home {
     min-height: 100vh;
-    background:#83a0ff;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     display: flex;
