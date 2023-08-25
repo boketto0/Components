@@ -61,6 +61,33 @@
     background: #EDEFF2;
   }
   
+  .button-primary__disabled {
+    background: #EDEFF2;
+  }
+  
+  .button-primary__selected {
+    background: #1540C1;
+  }
+  
+  .button-secondary,
+  .button-secondary__pressed {
+    border: 1px solid #0065EB;
+  }
+  
+  .button-secondary__disabled {
+    border: 1px solid #EDEFF2;
+  }
+  
+  .button-secondary__selected {
+    border: 1px solid #1540C1;
+  }
+  
+  .button-link,
+  .button-link__pressed {
+    color: #006EFF;
+  }
+  
+  .button-link__disabled,
   .button-primary__selected {
     background: #1540C1;
     color: white;

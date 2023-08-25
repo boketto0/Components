@@ -51,13 +51,4 @@ export const Switch = (props) => {
   );
 };
 
-Switch.propTypes = {
-  checked: PropTypes.bool.isRequired,
-  onChange: PropTypes.func.isRequired,
-  disabled: PropTypes.bool,
-  size: PropTypes.oneOf(Object.values(SwitchSize)),
-  onIcon: PropTypes.node,
-  offIcon: PropTypes.node,
-  onClick: PropTypes.func,
-  loading: PropTypes.bool
-};
+/* eslint react/prop-types: 0 */
