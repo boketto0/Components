@@ -1,5 +1,5 @@
 import './Home.css';
-import SliderbarMenu from "../Documentation/SliderbarMenu/SliderbarMenu";
+import SliderbarMenu from "../../components/sliderbarMenu/SliderbarMenu"
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import React from 'react';
 import Header from '../../Blocks/Header';
@@ -12,6 +12,8 @@ import { checkboxElements } from '../../components/checkbox/CheckboxStoryContain
 import { switchElements } from '../../components/switch/SwitchStoryContainer/SwitchStory';
 import { DropdownStory } from '../../components/dropdown/DropdownStoryContainer/DropdownStory';
 import { dropdownElements } from '../../components/dropdown/DropdownStoryContainer/DropdownStory';
+import { PaginationStory } from '../../components/pagination/PaginationStoryContainer/PaginationStory';
+import { paginationElements } from '../../components/pagination/PaginationStoryContainer/PaginationStory';
 
 export const Home = () => {
 
@@ -41,6 +43,12 @@ export const Home = () => {
 
       return acc;
     }, {}),
+    cardType: "first"},
+    'pagination': {...paginationElements.reduce((acc, el) => {
+      acc[el.id] = el;
+
+      return acc;
+    }, {}),
     cardType: "first"}
   };
 
@@ -49,7 +57,8 @@ export const Home = () => {
     { to: "/button", label: "Button" },
     { to: "/checkbox", label: "Checkbox" },
     { to: "/switch", label: "Switch" },
-    { to: "/dropdown", label: "Dropdown"}
+    { to: "/dropdown", label: "Dropdown"},
+    { to: "/pagination", label: "Pagination"}
   ];
 
   return (
@@ -62,6 +71,7 @@ export const Home = () => {
               <Route path="/switch" element={<SwitchStory />} />
               <Route path="/button" element={<ButtonStory />} />
               <Route path="/dropdown" element={<DropdownStory />} />
+              <Route path="/pagination" element={<PaginationStory/>} />
             </Content>
         </Router>
     </div>

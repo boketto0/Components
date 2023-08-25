@@ -1,7 +1,6 @@
 import './ComponentsOverview.css';
 import { Card, CardType } from '../../../components/cards/Card';
 import { CardWrapper } from '../../../components/cards/CardWrapper';
-import { Button, ButtonType, ButtonSize } from '../../../components/button';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Icon1 from '../../../assets/images/componentsPicture/button.svg'
@@ -25,6 +24,10 @@ export const ComponenetsOverview = () => {
     },
     {
       title: 'dropdown',
+      picture: <img src={Icon3}/>
+    },
+    {
+      title: 'pagination',
       picture: <img src={Icon3}/>
     }
   ];
