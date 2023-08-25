@@ -1,14 +1,13 @@
 .card {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px), 1fr);
     gap: 16px;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 900px;
 }
 
-/* @media (max-width: 50%) {
+@media (max-width: 50%) {
     .card {
-        flex-direction: column;
+        grid-template-columns: repeat(1, ifr);
     }
-} */
+}
