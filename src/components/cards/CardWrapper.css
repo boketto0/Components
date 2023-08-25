@@ -1,13 +1,9 @@
 .card {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px), 1fr);
+    display: flex;
+    flex-direction: row;
     gap: 16px;
-    margin: 0 auto;
-    max-width: 900px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-@media (max-width: 50%) {
-    .card {
-        grid-template-columns: repeat(1, ifr);
-    }
-}
