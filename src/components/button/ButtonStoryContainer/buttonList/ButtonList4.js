@@ -22,7 +22,7 @@ export const ButtonList4 = () => {
                 </div>
                 <div className='buttonlist4-container'>
                     <Button colored={"pressed"} type={ButtonType.LINK} text={"Link"}/>                    
-                    <Button colored={"disabled"} type={ButtonType.LINK} text={"Link disabled"}/>
+                    <Button colored={"disabled"} type={ButtonType.TEXT} text={"Link disabled"}/>
                 </div>
             </div>
         </div>

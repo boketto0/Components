@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import Icon1 from '../../../assets/images/componentsPicture/button.svg'
 import Icon2 from '../../../assets/images/componentsPicture/switch.svg'
 import Icon3 from '../../../assets/images/componentsPicture/checkbox.svg'
+import Icon4 from '../../../assets/images/componentsPicture/dropdown.svg'
+import Icon5 from '../../../assets/images/componentsPicture/pagination.svg'
 
 export const ComponenetsOverview = () => {
 
@@ -24,11 +26,11 @@ export const ComponenetsOverview = () => {
     },
     {
       title: 'dropdown',
-      picture: <img src={Icon3}/>
+      picture: <img src={Icon4}/>
     },
     {
       title: 'pagination',
-      picture: <img src={Icon3}/>
+      picture: <img src={Icon5}/>
     }
   ];
 
