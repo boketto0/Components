@@ -1,25 +1,32 @@
 import React, { useState } from 'react';
-import 'rc-slider/assets/index.css';
 import './Slider.css';
 
 export const Slider = () => {
-  const [values, setValues] = useState([10, 40]);
+  const [value, setValue] = useState(50); 
 
-  const handleSliderChange = (newValues) => {
-    setValues(newValues);
+  const handleChange = (e) => {
+    setValue(e.target.value);
   };
 
   return (
     <div className="slider-container">
-      <div className="slider-track">
-        <div className="slider-filled-track" style={{ width: `${values[1] - values[0]}%`, left: `${values[0]}%` }} />
-      </div>
-      {values.map((value, index) => (
-        <div key={index} className="slider-handle" style={{ left: `${value}%` }}>
+      <div className="slider">
+        <input
+          type="range"
+          min={0}
+          max={100}
+          value={value}
+          onChange={handleChange}
+          className="range-input"
+        />
+        <div className="slider-value" style={{ left: `${(value / 100) * 300}px` }}>
           {value}
         </div>
-      ))}
+      </div>
     </div>
   );
 };
+
+
+/* eslint react/prop-types: 0 */
 

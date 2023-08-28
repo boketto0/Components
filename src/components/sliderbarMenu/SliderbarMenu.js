@@ -19,6 +19,7 @@ const SliderbarMenu = ({ menuItems }) => {
             <li key={item.to}>
               <NavLink to={item.to} activeClassName="active-link">
                 {item.label}
+                <div className='active-block'></div>
               </NavLink>
             </li>
           ))}

@@ -4,6 +4,6 @@ import React from "react"
 export const SliderStory1 = () => {
 
     return(
-        <Slider/>
+        <Slider lockedStart={true} lockedEnd={false}/>
     )
 }
