@@ -1,0 +1,1 @@
+export { SliderStory1 } from "./SliderStory1"

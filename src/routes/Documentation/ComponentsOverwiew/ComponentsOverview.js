@@ -8,6 +8,7 @@ import Icon2 from '../../../assets/images/componentsPicture/switch.svg'
 import Icon3 from '../../../assets/images/componentsPicture/checkbox.svg'
 import Icon4 from '../../../assets/images/componentsPicture/dropdown.svg'
 import Icon5 from '../../../assets/images/componentsPicture/pagination.svg'
+import Icon6 from '../../../assets/images/componentsPicture/slider.svg'
 
 export const ComponenetsOverview = () => {
 
@@ -31,6 +32,10 @@ export const ComponenetsOverview = () => {
     {
       title: 'pagination',
       picture: <img src={Icon5}/>
+    },
+    {
+      title: 'slider',
+      picture: <img src={Icon6}/>
     }
   ];
 

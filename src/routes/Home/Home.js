@@ -14,6 +14,8 @@ import { DropdownStory } from '../../components/dropdown/DropdownStoryContainer/
 import { dropdownElements } from '../../components/dropdown/DropdownStoryContainer/DropdownStory';
 import { PaginationStory } from '../../components/pagination/PaginationStoryContainer/PaginationStory';
 import { paginationElements } from '../../components/pagination/PaginationStoryContainer/PaginationStory';
+import { SliderStory } from '../../components/slider/SliderContainerStory/SliderStory';
+import { sliderElements } from '../../components/slider/SliderContainerStory/SliderStory';
 
 export const Home = () => {
 
@@ -49,6 +51,12 @@ export const Home = () => {
 
       return acc;
     }, {}),
+    cardType: "first"},
+    'slider': {...sliderElements.reduce((acc, el) => {
+      acc[el.id] = el;
+
+      return acc;
+    }, {}),
     cardType: "first"}
   };
 
@@ -58,7 +66,8 @@ export const Home = () => {
     { to: "/checkbox", label: "Checkbox" },
     { to: "/switch", label: "Switch" },
     { to: "/dropdown", label: "Dropdown"},
-    { to: "/pagination", label: "Pagination"}
+    { to: "/pagination", label: "Pagination"},
+    { to: "/slider", label: "Slider" }
   ];
 
   return (
@@ -72,6 +81,7 @@ export const Home = () => {
               <Route path="/button" element={<ButtonStory />} />
               <Route path="/dropdown" element={<DropdownStory />} />
               <Route path="/pagination" element={<PaginationStory/>} />
+              <Route path="/slider" element={<SliderStory/>} />
             </Content>
         </Router>
     </div>
