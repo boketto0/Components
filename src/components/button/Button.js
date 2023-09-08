@@ -1,60 +1,71 @@
-import "./Button.css";
-import Loader from "../Loader";
-import {useState} from "react";
-import {PropTypes} from 'prop-types';
+import { Loader } from '../loader/Loader';
+import { getColor } from './utils';
+import classnames from 'classnames';
+import React, { useCallback } from 'react';
+import './Button.css';
+import { PropTypes } from 'prop-types';
+import React from 'react';
 
-export const ButtonType = {
-  PRIMARY: "primary",
-  SECONDARY: "secondary",
-  LINE: "line"
+export const ButtonSize = {
+  SMALL: 'small',
+  MEDIUM: 'medium',
+  LARGE: 'large',
 };
 
+export const ButtonType = {
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  LINK: 'link',
+  TEXT: 'text',
+};
 
-export const Button = (props) => {
+export function Button(props) {
+  const {
+    size, type = ButtonType.PRIMARY, text, disabled, colored, round, onClick, isLoading, icon,
+  } = props;
 
-    const [isLoading, setIsLoading] = useState(false);
+  const handleClick = useCallback(() => {
+    if (onClick) {
+      onClick();
+    }
+  }, [onClick]);
 
-    const handleClick = (e) => {
-        setIsLoading(true);
+  const buttonClasses = classnames(
+    'button',
+    type && `button-${type}`,
+    size && `button-${size}`,
+    `button-${type}__${disabled}`,
+    colored && `button-${type}__${colored}`,
+    colored && `texts__${type}__${colored}`,
+    size && `texts__${size}`,
+    `icon__${type}__${colored}`,
+    { 'button-round': round },
+  );
 
-    setTimeout(() => {
-        setIsLoading(false);
-        }, 5000);
-    };
+  const loaderColor = getColor(type, colored);
 
-    const defaultButtonType = ButtonType.PRIMARY;
-
-    const loader1 = "loader1"
-    const loader2 = "loader2"
-
-  return(
-    <div className={`
-        button button-${props.type || defaultButtonType}`}>
-        {props.icon && <div className="button-icon">{props.icon}</div>} 
-        {props.Type === ButtonType.PRIMARY && (
-          <div className=" button-text" onClick={handleClick}>
-            {!isLoading ? props.text : <Loader/>} 
-          </div>
-        )}
-        {props.Type === ButtonType.SECONDARY && (
-          <div className="button-text__border" onClick={handleClick}>
-             {!isLoading ? props.text : <Loader/>} 
-          </div>
-        )}
-        {props.Type === ButtonType.LINE && (
-          <div className="button-line__text">{props.text}</div>
-        )}
+  return (
+    <div className={buttonClasses} onClick={handleClick}>
+      <div className="button-content">
+        <div className="loader">
+          {isLoading && (<Loader color={loaderColor} type={type} />)}
+        </div>
+        {icon && <span className={`icon icon__${type}__${colored}`}>{icon}</span>}
+        {text && <span className={`texts texts__${size} texts__${type}__${colored}`}>{text}</span>}
+      </div>
     </div>
-  )
 
+  );
 }
 
 Button.propTypes = {
-    type:PropTypes.oneOf([
-        ButtonType.PRIMARY, 
-        ButtonType.SECONDARY, 
-        ButtonType.LINE
-      ]).isRequired,
-      text: PropTypes.string,
-      icon: PropTypes.element,
-}
+  size: PropTypes.oneOf(Object.values(ButtonSize)),
+  type: PropTypes.oneOf(Object.values(ButtonType)),
+  text: PropTypes.string,
+  icon: PropTypes.node,
+  round: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  disabled: PropTypes.bool,
+  colored: PropTypes.string,
+  onClick: PropTypes.func,
+};

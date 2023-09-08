@@ -1,0 +1,27 @@
+.size-divider {
+    box-sizing: border-box;
+    border: 1px solid rgb(81, 181, 224);
+    border-radius: 10px;
+    width: 320px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.size-divider:hover {
+    box-shadow: 0 0 10px rgb(81, 181, 224);
+}
+
+.text-design {
+    cursor: pointer;
+}
+
+.text-design:hover {
+    text-decoration: underline;
+    
+}

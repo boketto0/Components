@@ -1,60 +1,50 @@
-import './Card.css'
+import React from 'react';
+import './Card.css';
+import { PropTypes } from 'prop-types';
 
 export const CardType = {
-  FIRST: "first", 
-  SECOND: "second", 
-  THIRD: "third"
+  FIRST: 'first',
+  SECOND: 'second',
+  THIRD: 'third',
 };
 
-// TODO(Bekmina): стили CardWrapper подгонять 
-// к типом карточек(как в компоненте Button)
+export function Card(props) {
+  const defaultCardType = CardType.FIRST;
 
-export function CardWrapper(props) {
-    
-  const classes = "card "+ props.className; 
-  
-  return <div className={classes}>{props.children}</div>
+  return (
+    <div>
+      <div className={`card-${props.cardType || defaultCardType}`}>
+        {props.cardType === CardType.FIRST && (
+          <div>
+            <div>{props.cell}</div>
+            <div className="card-title">{props.title}</div>
+            <div className="card-text">{props.text}</div>
+          </div>
+        )}
+        {props.cardType === CardType.SECOND && (
+          <div>
+            <div className="card-title">{props.title}</div>
+            <div className="card-text">{props.text}</div>
+            <div className="card-component">{props.component}</div>
+          </div>
+        )}
+        {props.cardType === CardType.THIRD && (
+          <div>
+            <div className="card-component">{props.component}</div>
+            <div>{props.cell}</div>
+            <div className="card-title">{props.title}</div>
+            <div className="card-text">{props.text}</div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }
 
-export const Card = (props) => {
-
-  // прост card, отсылка в типе, map, elements снаружи
-  // 1 компонент карточек
-
-    return(
-        <div>
-            <div className={`card-${props.cardType}`}>
-            {props.cardType === CardType.FIRST && (
-                <div>
-                    <div className='card-circle'></div>
-                    <div className='card-content'>
-                        <div>{props.picture}</div>
-                        <div className="card-title">{props.title}</div>
-                        <div className="card-text">{props.text}</div>
-                    </div>
-                </div>
-            )}
-            {props.cardType === CardType.SECOND && (
-                <div>
-                    <div className='card-content'>
-                        <div className='card-picture'>{props.picture}</div>
-                        <div className="card2-title">{props.title}</div>
-                    </div>
-                </div>
-            )}
-            {props.cardType === CardType.THIRD && (
-                <div>
-                    <div className='card-content'>
-                        <div className='card2-picture'>{props.picture}</div>
-                        <div className='card3-textblock'>
-                            <div className="card-title">{props.title}</div>
-                            <div className="card3-subtitle">{props.subtitle}</div>
-                            <div className="card3-text">{props.text}</div>
-                        </div>
-                    </div>
-                </div>
-            )}
-            </div>
-        </div>
-    )
-}
+Card.propTypes = {
+  cardType: PropTypes.oneOf(Object.values(CardType)),
+  cell: PropTypes.node,
+  title: PropTypes.string,
+  text: PropTypes.string,
+  component: PropTypes.node,
+};

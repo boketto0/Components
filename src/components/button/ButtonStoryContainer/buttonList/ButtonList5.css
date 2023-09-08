@@ -1,0 +1,16 @@
+.buttons-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+}
+
+.buttonlist5-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+}

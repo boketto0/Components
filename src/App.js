@@ -1,10 +1,12 @@
 import './App.css';
-import MainBlock from './Blocks/MainBlock';
+import React from 'react';
+import Home from './routes/Home/Home';
+import React from 'react';
 
 function App() {
-  return(
-    <MainBlock></MainBlock>
-  )
+  return (
+    <Home />
+  );
 }
 
 export default App;

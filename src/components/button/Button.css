@@ -1,70 +1,193 @@
-.button {
+  .button {
     position: relative;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
+    align-items:center;
     justify-content:center;
-    align-items: center;
-    text-align: center;
     border-radius: 6px;
-  }
-  
-  .button-primary {
-    background-color: #006EFF;
-    width: 165px;
-    height: 32px;
-  }
-  
-  .button-primary:hover {
-    background-color: blue;
-    cursor: pointer;
-  }
-  
-  .button-icon {
-    margin-right: 8px;
-    height: 16px;
-    width: 16px;
-  }
-  
-  .button-text {
-    color: #FFFFFF;
-    line-height: 16px;
-    height: 16px;
     transition: .7s;
   }
+
+  .button:hover {
+    cursor:pointer;
+  }
+
+  .texts {
+    align-self: center;
+    margin-left: 2px;
+  }
+
+  .texts__small {
+    font-size: 12px;
+  }
+
+  .texts__medium {
+    font-size: 14px;
+  }
+
+  .texts__large {
+    font-size: 16px;
+  }
+
+  .button:hover {
+    cursor: pointer;
+  }
+/* TODO(Bekmina): Исправить стили текста кнопок */
+
+  .button-link__pressed:hover,
+  .button-link__selected:hover,
+  .button-text__pressed:hover,
+  .button-text__selected:hover,
+  .button-primary__pressed:hover,
+  .button-secondary__selected:hover,
+  .button-secondary__pressed:hover {
+    background: #92adff;
+  }
+
+  .button-link__disabled:hover,
+  .button-text__disabled:hover,
+  .button-primary__disabled:hover,
+  .button-secondary__disabled:hover {
+    cursor: not-allowed;
+  }
+
+  /* primary */
+
+  .button-primary__pressed {
+    background: #0065EB;
+    color: white;
+  }
   
-  .button-secondary {
-    border: 3px solid #006EFF;
-    width: 196px;
+  .button-primary__disabled {
+    background: #EDEFF2;
+  }
+  
+  .button-primary__selected {
+    background: #1540C1;
+    color: white;
+  }
+
+  /* secondary */
+  
+  .button-secondary__pressed {
+    border: 1px solid #0065EB;
+    color: #0065EB;
+  }
+  
+  .button-secondary__disabled {
+    border: 1px solid #EDEFF2;
+  }
+  
+  .button-secondary__selected {
+    border: 1px solid #1540C1;
+    color: #1540C1;
+  }
+
+  /* link и text */
+  
+  .button-link__pressed,
+  .button-text__pressed {
+    color: #006EFF;
+  }
+  
+  .button-link__disabled,
+  .button-text__disabled {
+    color: #EDEFF2;
+  }
+  
+  .button-link__selected,
+  .button-text__selected {
+    color: #1540C1;
+    
+  }
+  
+  .texts__pressed,
+  .texts__secondary__pressed,
+  .texts__link__pressed,
+  .texts__text__pressed {
+    color: #0065EB;
+  }
+  
+  .texts__disabled,
+  .texts__primary__disabled,
+  .texts__secondary__disabled,
+  .texts__link__disabled,
+  .texts__text__disabled {
+    color: #B0B5C4;
+  }
+  
+  .texts__selected,
+  .text__secondary__selected,
+  .texts__link__selected,
+  .texts__text__selected {
+    color: #1540C1;
+  }
+  
+  .button-link:hover {
+    text-decoration: underline;
+  }
+  
+  .texts__primary__pressed,
+  .texts__primary__selected {
+    color: #FFFFFF;
+  }
+  
+  .button-small {
+    width: 84px;
+    height: 32px;
+  }
+
+  .button-medium {
+    width: 100px;
+    height: 40px;
+  }
+
+  .button-large {
+    width: 124px;
     height: 48px;
   }
-  
-  .button-secondary:hover {
-    border: 3px solid blue;
-    cursor: pointer;
+
+  .button-round {
+    border-radius: 30px;
+  }
+
+  .icon__primary__pressed, 
+  .icon__primary__selected {
+    color: white;
+  }
+    
+  .icon__primary__disabled,
+  .icon__secondary__disabled,
+  .icon__link__disabled,
+  .icon__text__disabled   {
+    color: #B0B5C4;
+  }
+
+  .icon__secondary__pressed,
+  .icon__link__pressed,
+  .icon__text__pressed {
+    color: #006EFF;
   }
   
-  .button-text__border {
-    color:black;
-    line-height: 16px;
-    height: 16px;
+  .icon__secondary__selected,
+  .icon__link__selected,
+  .icon__text__selected {
+    color: #1540C1;
   }
-  
-  .button-secondary:hover .button-text__border {
-    color:grey;
+
+  .icon {
+    margin-right: 2px;
+    margin-bottom: 2px;
   }
-  
-  .button-line__text {
-    color:black;
-    line-height: 16px;
-    height: 16px;
-    width: 228px;
-    height: 64px;
+
+  .button-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
   }
-  
-  .button-line__text:hover {
-    color: grey;
-    text-decoration: underline;
-    cursor: pointer;
+
+  .button-design {
+    margin: 5%;
   }
-  
